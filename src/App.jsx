@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+// App.js
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import "./App.css";
 import Header from "./Components/header/header";
