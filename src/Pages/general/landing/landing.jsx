@@ -11,8 +11,8 @@ export default function Landing() {
           catelogue.
         </p>
         <span>
-          <Link to="/signup">Post an open role</Link>
-          <Link to="/signup">Find a role</Link>
+          <Link to="/auth/poster">Post an open role</Link>
+          <Link to="/auth/finder">Find a role</Link>
         </span>
       </section>
     </main>
