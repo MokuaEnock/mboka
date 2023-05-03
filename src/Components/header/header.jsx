@@ -8,9 +8,11 @@ export default function Header() {
         <Link to="/" className="logo">
           Mboka
         </Link>
+
         <span>
           <Link to="/">Home</Link>
         </span>
+        
         <Link to="/login">Login</Link>
       </div>
     </header>
