@@ -10,6 +10,7 @@ import Recruiter from "./Pages/recruiter/home/home";
 import ForgotPass from "./Pages/auth/forgot";
 import Login from "./Pages/auth/login";
 import FinderSignup from "./Pages/auth/signup";
+import PosterSignup from "./Pages/auth/poster";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="forgot" element={<ForgotPass />} />
           <Route path="login" element={<Login />} />
           <Route path="finder" element={<FinderSignup />} />
+          <Route path="poster" element={<PosterSignup />} />
         </Route>
       </Routes>
       <Footer />
