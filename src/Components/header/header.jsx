@@ -4,8 +4,10 @@ import "./header.css";
 export default function Header() {
   return (
     <header>
-      <div>
-        <Link to="/">Mboka</Link>
+      <div className="header">
+        <Link to="/" className="logo">
+          Mboka
+        </Link>
         <span>
           <Link to="/">Home</Link>
         </span>
