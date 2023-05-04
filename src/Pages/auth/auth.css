@@ -1,0 +1,14 @@
+.auth > form {
+  width: 80%;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.auth > form > div {
+  height: 100%;
+  width: 50%;
+  border: thin solid black;
+}
