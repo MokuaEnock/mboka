@@ -1,6 +1,6 @@
 import "./auth.css";
 
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -15,6 +15,8 @@ export default function Login() {
       <form onSubmit={handleSubmit}>
         <div>This is the image</div>
         <div>
+          <h2>Welcome back</h2>
+          <p>Login to continue on your journey</p>
           <label>
             Email:
             <input

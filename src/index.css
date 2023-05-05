@@ -12,11 +12,23 @@
 }
 
 :root {
-  --primary: #01411C;
+  --primary: #01411c;
 }
 
 a {
   text-decoration: none;
+}
+
+input:focus {
+  outline: none;
+  text-align: center;
+  border: thin solid;
+  font-size: 1.2rem;
+}
+
+button {
+  border: thin solid;
+  font-size: 1.2rem;
 }
 
 main {

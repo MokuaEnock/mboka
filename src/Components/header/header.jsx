@@ -12,8 +12,8 @@ export default function Header() {
         <span>
           <Link to="/">Home</Link>
         </span>
-        
-        <Link to="/login">Login</Link>
+
+        <Link to="/auth/login">Login</Link>
       </div>
     </header>
   );

@@ -1,6 +1,6 @@
 import "./auth.css";
 
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function PosterSignup() {
   const [email, setEmail] = useState("");
