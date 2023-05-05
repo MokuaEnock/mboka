@@ -11,6 +11,10 @@
   height: 100vh;
 }
 
+:root {
+  --primary: #01411C;
+}
+
 a {
   text-decoration: none;
 }
