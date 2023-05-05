@@ -25,8 +25,8 @@ export default function PosterSignup() {
       <form onSubmit={handleSubmit}>
         <div>This is the image</div>
         <div>
-          <h3>Hello there Job Seeker</h3>
-          <p>Find and do what you love.</p>
+          <h3>Hello there Recruiter</h3>
+          <p>Find the right talent.</p>
           <label>
             Email:
             <input
