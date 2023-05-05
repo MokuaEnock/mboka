@@ -25,6 +25,8 @@ export default function FinderSignup() {
       <form onSubmit={handleSubmit}>
         <div>This is the image</div>
         <div>
+          <h3>Hello there Job Seeker</h3>
+          <p>Find and do what you love.</p>
           <label>
             Email:
             <input
