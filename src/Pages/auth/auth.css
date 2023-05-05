@@ -11,4 +11,13 @@
   height: 100%;
   width: 50%;
   border: thin solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth > form > div > * {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
