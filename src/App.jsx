@@ -21,10 +21,7 @@ function App() {
         <Route element={<Notfound />} path="*"></Route>
         <Route element={<Recruiter />} path="/recruiter"></Route>
         <Route path="/auth">
-          <Route path="forgot" element={<ForgotPass />} />
-          <Route path="login" element={<Login />} />
-          <Route path="finder" element={<FinderSignup />} />
-          <Route path="poster" element={<PosterSignup />} />
+          
         </Route>
       </Routes>
       <Footer />
