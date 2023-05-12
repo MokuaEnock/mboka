@@ -13,8 +13,8 @@ export default function GeneralRoutes() {
     <>
       <Header />
       <Routes>
-        <Route element={<Landing />} path="/"></Route>
-        <Route element={<Notfound />} path="*"></Route>
+        <Route element={<Landing />} path="/" />
+        <Route element={<Notfound />} path="*" />
         <Route path="/auth">
           <Route path="forgot" element={<ForgotPass />} />
           <Route path="login" element={<Login />} />
