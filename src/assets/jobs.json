@@ -1,0 +1,94 @@
+{
+  "jobs": [
+    {
+      "title": "Software Engineer",
+      "company": "Acme Inc.",
+      "location": "San Francisco, CA",
+      "description": "We are seeking a talented software engineer to join our team and help us build the next generation of our flagship product. The ideal candidate will have experience with Java, Spring, and React, and will be passionate about delivering high-quality software that delights our customers.",
+      "requirements": [
+        "Bachelor's degree in computer science or related field",
+        "3+ years of experience as a software engineer",
+        "Experience with Java, Spring, and React",
+        "Strong problem-solving and analytical skills",
+        "Excellent communication and collaboration abilities"
+      ],
+      "salary": {
+        "range": "$100,000 - $150,000",
+        "currency": "USD"
+      },
+      "benefits": [
+        "Medical, dental, and vision insurance",
+        "401(k) plan with employer matching",
+        "Flexible work hours and remote work options",
+        "Paid time off and company holidays"
+      ],
+      "posted_date": "2023-05-01",
+      "expiry_date": "2023-06-01",
+      "responsibilities": [
+        "Design, develop, and maintain software applications using Java, Spring, and React",
+        "Write clean, scalable, and maintainable code that meets the highest standards of quality and performance",
+        "Collaborate with cross-functional teams to identify and solve complex software problems",
+        "Conduct code reviews and provide constructive feedback to improve code quality",
+        "Stay up-to-date with emerging trends and technologies in software engineering"
+      ],
+      "preferred_qualifications": [
+        "Master's degree in computer science or related field",
+        "Experience with AWS or other cloud platforms",
+        "Experience with Kubernetes and containerization",
+        "Experience with Agile development methodologies",
+        "Experience with unit testing and test-driven development"
+      ],
+      "work_environment": [
+        "Fast-paced and dynamic startup culture",
+        "Opportunities for professional growth and development",
+        "Collaborative and inclusive work environment"
+      ]
+    },
+    {
+      "title": "Marketing Manager",
+      "company": "XYZ Corporation",
+      "location": "New York, NY",
+      "description": "We are looking for an experienced marketing manager to join our team and help us drive growth for our product line. The ideal candidate will have a strong track record of success in developing and executing marketing campaigns, as well as a deep understanding of digital marketing channels and techniques.",
+      "requirements": [
+        "Bachelor's degree in marketing or related field",
+        "5+ years of experience in marketing, with a focus on digital channels",
+        "Strong analytical and problem-solving skills",
+        "Excellent written and verbal communication skills",
+        "Proven track record of success in developing and executing marketing campaigns"
+      ],
+      "salary": {
+        "range": "$90,000 - $120,000",
+        "currency": "USD"
+      },
+      "benefits": [
+        "Medical, dental, and vision insurance",
+        "401(k) plan with employer matching",
+        "Flexible work hours and remote work options",
+        "Paid time off and company holidays"
+      ],
+      "posted_date": "2023-04-28",
+      "expiry_date": "2023-05-28",
+      "responsibilities": [
+        "Develop and execute marketing strategies to drive growth for our product line",
+        "Create and manage marketing campaigns across digital channels, including email, social media, and search",
+        "Analyze data and insights to inform marketing strategies and optimize campaigns for maximum impact",
+        "Collaborate with cross-functional teams, including product and sales, to ensure alignment and effective execution",
+        "Track and report on marketing performance metrics to assess the effectiveness of campaigns and make data-driven decisions",
+        "Stay up-to-date with emerging trends and technologies in digital marketing",
+        "Manage and mentor a team of marketing professionals"
+      ],
+      "preferred_qualifications": [
+        "Master's degree in marketing or related field",
+        "Experience with marketing automation platforms, such as HubSpot or Marketo",
+        "Experience with A/B testing and experiment design",
+        "Experience with SEO and SEM",
+        "Experience in B2B marketing"
+      ],
+      "work_environment": [
+        "Collaborative and inclusive work environment",
+        "Opportunities for professional growth and development",
+        "Fast-paced and dynamic culture"
+      ]
+    }
+  ]
+}

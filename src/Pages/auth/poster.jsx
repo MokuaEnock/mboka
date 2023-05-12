@@ -1,5 +1,5 @@
 import "./auth.css";
-
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 export default function PosterSignup() {
@@ -9,8 +9,12 @@ export default function PosterSignup() {
   const [lastName, setLastName] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
 
+  let navigate = useNavigate();
+
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    navigate("/recruiter");
     console.log("Form submitted:", {
       email,
       password,
@@ -20,6 +24,7 @@ export default function PosterSignup() {
     });
     // add your API call to submit the form data here
   };
+
   return (
     <main id="poster" className="auth">
       <form onSubmit={handleSubmit}>
@@ -33,7 +38,7 @@ export default function PosterSignup() {
               type="email"
               value={email}
               onChange={(event) => setEmail(event.target.value)}
-              required
+              // required
             />
           </label>
           <label>
@@ -42,7 +47,7 @@ export default function PosterSignup() {
               type="password"
               value={password}
               onChange={(event) => setPassword(event.target.value)}
-              required
+              // required
             />
           </label>
           <label>
@@ -51,7 +56,7 @@ export default function PosterSignup() {
               type="text"
               value={firstName}
               onChange={(event) => setFirstName(event.target.value)}
-              required
+              // required
             />
           </label>
           <label>
@@ -60,7 +65,7 @@ export default function PosterSignup() {
               type="text"
               value={lastName}
               onChange={(event) => setLastName(event.target.value)}
-              required
+              // required
             />
           </label>
           <label>
@@ -69,7 +74,7 @@ export default function PosterSignup() {
               type="password"
               value={passwordConfirmation}
               onChange={(event) => setPasswordConfirmation(event.target.value)}
-              required
+              // required
             />
           </label>
           <button type="submit">Sign Up</button>
