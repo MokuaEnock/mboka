@@ -1,6 +1,6 @@
 .recruiter-aside {
   width: 15%;
-  background-color: dimgray;
+  background-color: var(--primary);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,7 +8,37 @@
 }
 
 .recruiter-aside > * {
+  width: 80%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.recruiter-aside > p {
+  font-size: 1rem;
+  color: white;
+}
+.recruiter-aside > h3 {
+  font-size: 3rem;
+  color: white;
+  height: 10%;
+  border-bottom: thin solid white;
+}
+
+.recruiter-aside > a {
+  font-size: 1rem;
   margin-top: 1vh;
   margin-bottom: 1vh;
-  
+  color: white;
+  height: 5%;
+}
+
+.recruiter-aside > a > * {
+  margin-right: 5%;
+}
+
+.recruiter-aside > a > :first-child {
+  font-size: 1.5rem;
 }
