@@ -1,0 +1,14 @@
+.recruiter-aside {
+  width: 15%;
+  background-color: dimgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.recruiter-aside > * {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  
+}

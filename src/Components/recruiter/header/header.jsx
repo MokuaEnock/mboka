@@ -1,5 +1,5 @@
 import "./header.css";
 
 export default function RecruiterHeader() {
-  return <nav>This is the recruiter header</nav>;
+  return <nav className="recruiter-header">This is the recruiter header</nav>;
 }
