@@ -12,10 +12,10 @@ export default function RecruiterHeader() {
       </form>
 
       <span>
-        <Link to="recruiter/settings">
+        <Link to="/recruiter/settings">
           <FaCog />
         </Link>
-        <Link to="recruiter/notifications">
+        <Link to="/recruiter/notifications">
           <FaBell />
         </Link>
         <Link to="recruiter/profile" id="recruiter-profile-image"></Link>
