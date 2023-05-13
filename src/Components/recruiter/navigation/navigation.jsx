@@ -5,7 +5,6 @@ import {
   FaBell,
   FaSuitcase,
   FaUserFriends,
-  FaClipboardList,
   FaCalendarAlt,
   FaChartBar,
   FaCog,
