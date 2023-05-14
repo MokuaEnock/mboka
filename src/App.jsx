@@ -11,6 +11,7 @@ import ForgotPass from "./Pages/auth/forgot";
 import Login from "./Pages/auth/login";
 import FinderSignup from "./Pages/auth/signup";
 import PosterSignup from "./Pages/auth/poster";
+import RecruiterJobs from "./Pages/recruiter/jobs/jobs";
 
 function App() {
   return (
@@ -19,7 +20,10 @@ function App() {
       <Routes>
         <Route element={<Landing />} path="/"></Route>
         <Route element={<Notfound />} path="*"></Route>
-        <Route element={<Recruiter />} path="/recruiter"></Route>
+        <Route path="/recruiter">
+          <Route element={<Recruiter />} path="" />
+          <Route element={<RecruiterJobs />} path="jobs" />
+        </Route>
         <Route path="/auth">
           <Route path="forgot" element={<ForgotPass />} />
           <Route path="login" element={<Login />} />
