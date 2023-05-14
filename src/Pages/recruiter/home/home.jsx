@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import RecruiterHeader from "../../../Components/recruiter/header/header";
 import RecruiterAside from "../../../Components/recruiter/navigation/navigation";
 import "./home.css";
@@ -25,7 +26,17 @@ export default function Recruiter() {
             </div>
           </article>
 
-          <article id="recruiter-dashboard-2"></article>
+          <article id="recruiter-dashboard-2">
+            <div id="recruiter-d1-header">
+              <h3>Quick Actions</h3>
+            </div>
+            <div id="recruiter-actions">
+              <span className="recruiter-dashboard-action">
+                <p></p>
+                <Link to="">Post a job</Link>
+              </span>
+            </div>
+          </article>
         </section>
       </section>
     </main>
