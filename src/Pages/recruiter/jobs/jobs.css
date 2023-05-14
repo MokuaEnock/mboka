@@ -1,0 +1,68 @@
+#recruiter-jobs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+}
+
+#recruiter-jobs > * {
+  height: 100%;
+}
+
+#recruiter-jobs > aside {
+  background-color: var(--primary);
+  width: 25%;
+}
+
+#recruiter-jobs > div {
+  width: 75%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  overflow-y: scroll;
+}
+
+.jobs-card {
+  border: thin solid grey;
+  height: 40vh;
+  margin: 1vw;
+  border-radius: 5px;
+}
+
+#recruiter-jobs-aside {
+  padding-left: 1%;
+  padding-right: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#recruiter-jobs-aside > * {
+  width: 100%;
+  margin-bottom: 1%;
+  color: white;
+}
+
+#recruiter-jobs-aside > div {
+  border: thin solid white;
+  height: 40%;
+  margin-bottom: 3vh;
+}
+
+#recruiter-jobs-aside > a {
+  height: 7%;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#recruiter-jobs-aside > a > * {
+  margin-right: 5%;
+}
+
+#recruiter-jobs-aside > a > :first-child {
+  font-size: 1.5rem;
+}
