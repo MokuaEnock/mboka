@@ -56,6 +56,15 @@
   justify-content: space-between;
 }
 
+#recruiter-d1-header > span {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
 #recruiter-job-cards {
   display: flex;
   flex-direction: row;
@@ -72,7 +81,6 @@
 
 #recruiter-dashboard-2 {
   width: 100%;
-  border: thin solid black;
   height: 50%;
   display: flex;
   flex-direction: column;
@@ -88,10 +96,11 @@
   align-items: center;
   justify-content: space-between;
 }
+
 .recruiter-dashboard-action {
   width: 20%;
   height: 80%;
-  border: thin solid black;
+  border: 2px solid var(--primary);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -100,12 +109,10 @@
 
 .recruiter-dashboard-action > * {
   width: 100%;
-  border: thin solid black;
 }
 
 .recruiter-dashboard-action > p {
   width: 100%;
-  border: thin solid black;
 }
 
 .recruiter-dashboard-action > a {

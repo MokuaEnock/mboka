@@ -13,11 +13,16 @@ export default function Recruiter() {
           <article id="recruiter-dashboard-1">
             <div id="recruiter-d1-header">
               <h3>Current Openings</h3>
-              <select>
-                <option value="latest">Latest</option>
-                <option value="oldest">Oldest</option>
-                <option value="category">Category</option>
-              </select>
+
+              <span>
+                <select>
+                  <option value="latest">Latest</option>
+                  <option value="oldest">Oldest</option>
+                  <option value="category">Category</option>
+                </select>
+
+                <Link to="jobs">View All</Link>
+              </span>
             </div>
             <div id="recruiter-job-cards">
               <span className="recruiter-job-card"></span>
