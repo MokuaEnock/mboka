@@ -1,0 +1,45 @@
+#recruiter-new-jobs {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+}
+
+#recruiter-new-jobs > * {
+  height: 100%;
+}
+
+#recruiter-new-jobs > div {
+  width: 80%;
+}
+
+#recruiter-new-jobs > aside {
+  border-top: thin solid white;
+  width: 20%;
+  background-color: var(--primary);
+  padding-left: 1%;
+  padding-right: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#recruiter-new-jobs > aside > * {
+  color: white;
+  font-size: 1rem;
+  font-weight: lighter;
+  margin-top: 1vh;
+  margin-bottom: 5vh;
+  width: 100%;
+  border: thin solid white;
+  height: 5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 1vw;
+}

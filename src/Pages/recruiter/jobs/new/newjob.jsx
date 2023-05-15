@@ -9,7 +9,14 @@ export default function RecruiterJobNew() {
       <section className="recruiter-container">
         <RecruiterHeader />
         <section id="recruiter-new-jobs" className="recruiter-cont">
-            New Job container
+          <div></div>
+          <aside>
+            <h4>1. Title</h4>
+            <h4>2. Requirements</h4>
+            <h4>3. Details</h4>
+            <h4>4. Review</h4>
+            <h4>5. Promote</h4>
+          </aside>
         </section>
       </section>
     </main>
