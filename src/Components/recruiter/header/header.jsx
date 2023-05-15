@@ -18,7 +18,7 @@ export default function RecruiterHeader() {
         <Link to="/recruiter/notifications">
           <FaBell />
         </Link>
-        <Link to="recruiter/profile" id="recruiter-profile-image"></Link>
+        <Link to="/recruiter/profile" id="recruiter-profile-image"></Link>
       </span>
     </nav>
   );

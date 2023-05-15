@@ -12,6 +12,7 @@ import Login from "./Pages/auth/login";
 import FinderSignup from "./Pages/auth/signup";
 import PosterSignup from "./Pages/auth/poster";
 import RecruiterJobs from "./Pages/recruiter/jobs/jobs";
+import RecruiterJobNew from "./Pages/recruiter/jobs/new/newjob";
 
 function App() {
   return (
@@ -22,7 +23,10 @@ function App() {
         <Route element={<Notfound />} path="*"></Route>
         <Route path="/recruiter">
           <Route element={<Recruiter />} path="" />
-          <Route element={<RecruiterJobs />} path="jobs" />
+          <Route path="jobs">
+            <Route element={<RecruiterJobs />} path="" />
+            <Route element={<RecruiterJobNew />} path="new"></Route>
+          </Route>
         </Route>
         <Route path="/auth">
           <Route path="forgot" element={<ForgotPass />} />
