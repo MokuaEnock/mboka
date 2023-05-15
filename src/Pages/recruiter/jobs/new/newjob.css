@@ -12,8 +12,14 @@
   height: 100%;
 }
 
-#recruiter-new-jobs > div {
+#recruiter-new-jobs > form {
   width: 80%;
+  overflow-y: hidden;
+}
+
+#recruiter-new-jobs > form > div {
+  height: 100%;
+  width: 100%;
 }
 
 #recruiter-new-jobs > aside {
@@ -34,6 +40,7 @@
   font-weight: lighter;
   margin-top: 1vh;
   margin-bottom: 5vh;
+  background-color: transparent;
   width: 100%;
   border: thin solid white;
   height: 5vh;
