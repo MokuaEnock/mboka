@@ -6,7 +6,7 @@ import RecruiterHeader from "../../../Components/recruiter/header/header";
 import RecruiterAside from "../../../Components/recruiter/navigation/navigation";
 import { Link } from "react-router-dom";
 
-let Jobdata = [
+let jobdata = [
   {
     id: 1,
     name: "Item 1",
@@ -52,14 +52,17 @@ export default function RecruiterJobs() {
         <RecruiterHeader />
         <section id="recruiter-jobs" className="recruiter-cont">
           <div>
-            <Link to="" className="jobs-card"></Link>
-            <Link to="" className="jobs-card"></Link>
-            <Link to="" className="jobs-card"></Link>
-            <Link to="" className="jobs-card"></Link>
-            <Link to="" className="jobs-card"></Link>
-            <Link to="" className="jobs-card"></Link>
-            <Link to="" className="jobs-card"></Link>
-            <Link to="" className="jobs-card"></Link>
+            {jobdata.map((job) => (
+              <Link
+                to={`/recruiter/jobs/${job.id}`}
+                className="jobs-card"
+                key={job.id}
+              >
+                {/* Render job card details */}
+                <h3>{job.name}</h3>
+                <p>{job.description}</p>
+              </Link>
+            ))}
           </div>
           <aside id="recruiter-jobs-aside">
             <div></div>
