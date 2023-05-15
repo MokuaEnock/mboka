@@ -50,3 +50,8 @@
   justify-content: flex-start;
   padding-left: 1vw;
 }
+
+#recruiter-new-jobs > aside > button.active {
+    background-color: white;
+    color: var(--primary);
+  }
