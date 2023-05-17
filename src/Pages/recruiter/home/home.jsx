@@ -38,7 +38,7 @@ export default function Recruiter() {
             <div id="recruiter-actions">
               <span className="recruiter-dashboard-action">
                 <p></p>
-                <Link to="">Post a job</Link>
+                <Link to="jobs/new">Post a job</Link>
               </span>
             </div>
           </article>

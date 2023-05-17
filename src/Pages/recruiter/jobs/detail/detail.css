@@ -1,0 +1,81 @@
+#recruiter-detailed-jobs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+}
+
+#recruiter-detailed-jobs > * {
+  height: 100%;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+}
+
+#recruiter-detailed-cont {
+  width: 75%;
+  overflow-y: scroll;
+}
+
+#recruiter-detailed-stats {
+  width: 100%;
+  height: 40vh;
+  border: thin solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#recruiter-detailed-stats > * {
+  width: 100%;
+  border: thin solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#recruiter-stats-header {
+  height: 20%;
+}
+
+#recruiter-stats-cont {
+  height: 80%;
+}
+
+.recruiter-stats-cont-div {
+  width: 24%;
+}
+
+#recruiter-stats-cont-graph {
+  width: 50%;
+}
+#recruiter-stats-cont > span {
+  height: 100%;
+  border: thin solid grey;
+}
+
+#recruiter-detailed-aside {
+  width: 25%;
+  background-color: var(--primary);
+}
+
+#recruiter-cands-header {
+  width: 100%;
+  margin-top: 3vh;
+  border: thin solid black;
+  height: 7vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#recruiter-cands-header > * {
+  border: thin solid black;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
