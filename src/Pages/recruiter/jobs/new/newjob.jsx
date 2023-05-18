@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import RecruiterHeader from "../../../../Components/recruiter/header/header";
 import RecruiterAside from "../../../../Components/recruiter/navigation/navigation";
 import "./newjob.css";
@@ -9,6 +9,8 @@ export default function RecruiterJobNew() {
   const detailsRef = useRef(null);
   const reviewRef = useRef(null);
   const promoteRef = useRef(null);
+  const settingsRef = useRef(null);
+  const candidatesRef = useRef(null);
   const [activeSection, setActiveSection] = useState(1);
 
   const handleButtonClick = (ref, sectionNumber) => {
@@ -45,21 +47,35 @@ export default function RecruiterJobNew() {
               className={activeSection === 3 ? "active" : ""}
               ref={detailsRef}
             >
-              pos details
+              Job details
             </div>
             <div
               id="job-post-review"
               className={activeSection === 4 ? "active" : ""}
               ref={reviewRef}
             >
-              review job
+              Review job
             </div>
             <div
               id="job-post-promote"
               className={activeSection === 5 ? "active" : ""}
               ref={promoteRef}
             >
-              promote job
+              Promote job
+            </div>
+            <div
+              id="job-post-settings"
+              className={activeSection === 6 ? "active" : ""}
+              ref={settingsRef}
+            >
+              Job settings
+            </div>
+            <div
+              id="job-post-candidates"
+              className={activeSection === 7 ? "active" : ""}
+              ref={candidatesRef}
+            >
+              Candidates
             </div>
           </form>
           <aside>
@@ -92,6 +108,18 @@ export default function RecruiterJobNew() {
               className={activeSection === 5 ? "active" : ""}
             >
               5. Promote
+            </button>
+            <button
+              onClick={() => handleButtonClick(settingsRef, 6)}
+              className={activeSection === 6 ? "active" : ""}
+            >
+              6. Settings
+            </button>
+            <button
+              onClick={() => handleButtonClick(candidatesRef, 7)}
+              className={activeSection === 7 ? "active" : ""}
+            >
+              7. Candidates
             </button>
           </aside>
         </section>
