@@ -1,8 +1,38 @@
 import { useParams } from "react-router-dom";
-
 import RecruiterHeader from "../../../../Components/recruiter/header/header";
 import RecruiterAside from "../../../../Components/recruiter/navigation/navigation";
 import "./detail.css";
+
+let applicants = {
+  applicants: [
+    {
+      id: 1,
+      name: "John Smith",
+      age: 28,
+      email: "john.smith@example.com",
+      phone: "+1 (555) 123-4567",
+      experience: 5,
+      education: "Bachelor's degree in Computer Science",
+      skills: ["Java", "Python", "JavaScript"],
+      desired_salary: 60000,
+      availability: "Full-time",
+      location: "New York",
+    },
+    {
+      id: 2,
+      name: "Emily Johnson",
+      age: 32,
+      email: "emily.johnson@example.com",
+      phone: "+1 (555) 987-6543",
+      experience: 8,
+      education: "Master's degree in Marketing",
+      skills: ["Digital Marketing", "Social Media Management", "SEO"],
+      desired_salary: 70000,
+      availability: "Full-time",
+      location: "Los Angeles",
+    },
+  ],
+};
 
 export default function RecruiterJobDetail() {
   let { id } = useParams();
@@ -32,7 +62,6 @@ export default function RecruiterJobDetail() {
 
             <div id="recruiter-candidates-name">
               <h3>Candidates</h3>
-
               <button>Filter by</button>
             </div>
 
@@ -45,10 +74,11 @@ export default function RecruiterJobDetail() {
             </div>
 
             <ul id="recruiter-detailed-candidates">
-              <li className="recruiter-detailed-candidates"></li>
-              <li className="recruiter-detailed-candidates"></li>
-              <li className="recruiter-detailed-candidates"></li>
-              <li className="recruiter-detailed-candidates"></li>
+              {applicants.applicants.map((applicant, index) => (
+                <li key={index} className="recruiter-detailed-candidates">
+                  {/* Render applicant details here */}
+                </li>
+              ))}
             </ul>
           </div>
           <aside id="recruiter-detailed-aside"></aside>
