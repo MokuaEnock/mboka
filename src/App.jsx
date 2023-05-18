@@ -14,6 +14,8 @@ import PosterSignup from "./Pages/auth/poster";
 import RecruiterJobs from "./Pages/recruiter/jobs/jobs";
 import RecruiterJobNew from "./Pages/recruiter/jobs/new/newjob";
 import RecruiterJobDetail from "./Pages/recruiter/jobs/detail/detail";
+import RecruiterCandidates from "./Pages/recruiter/candidates/candidates";
+import RecruiterCandidatesDetail from "./Pages/recruiter/candidates/detail/detail";
 
 function App() {
   return (
@@ -28,6 +30,10 @@ function App() {
             <Route element={<RecruiterJobs />} path="" />
             <Route element={<RecruiterJobNew />} path="new"></Route>
             <Route element={<RecruiterJobDetail />} path=":id"></Route>
+          </Route>
+          <Route path="candidates">
+            <Route element={<RecruiterCandidates />} path="" />
+            <Route element={<RecruiterCandidatesDetail />} path=":id" />
           </Route>
         </Route>
         <Route path="/auth">
