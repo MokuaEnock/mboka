@@ -12,7 +12,7 @@ export default function RecruiterCandidatesDetail() {
       <section className="recruiter-container">
         <RecruiterHeader />
         <section className="recruiter-cont">
-          <h2>Candidate Detail {id}</h2>
+          <h2>Candidate Detail {id} </h2>
         </section>
       </section>
     </main>

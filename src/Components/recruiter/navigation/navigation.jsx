@@ -9,6 +9,8 @@ import {
   FaChartBar,
   FaCog,
 } from "react-icons/fa";
+import { FiBookmark } from "react-icons/fi";
+
 import "./navigation.css";
 
 export default function RecruiterAside() {
@@ -23,6 +25,9 @@ export default function RecruiterAside() {
       </Link>
       <Link to="/recruiter/notifications">
         <FaBell /> Notifications
+      </Link>
+      <Link to="/recruiter/bookmarks">
+        <FiBookmark /> Bookmarks
       </Link>
       <p>RECRUITMENT</p>
       <Link to="/recruiter/jobs">

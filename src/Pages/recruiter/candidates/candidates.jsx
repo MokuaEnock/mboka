@@ -42,8 +42,13 @@ export default function RecruiterCandidates() {
       <RecruiterAside />
       <section className="recruiter-container">
         <RecruiterHeader />
-        <section className="recruiter-cont">
-          <ul>
+        <section className="recruiter-cont" id="recruiter-candidates">
+          <article>
+            <div></div>
+          </article>
+          <aside></aside>
+
+          {/* <ul>
             {applicants.applicants.map((applicant) => (
               <Link
                 key={applicant.id}
@@ -52,7 +57,7 @@ export default function RecruiterCandidates() {
                 <li>{applicant.name}</li>
               </Link>
             ))}
-          </ul>
+          </ul> */}
         </section>
       </section>
     </main>

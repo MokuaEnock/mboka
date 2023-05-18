@@ -1,0 +1,24 @@
+#recruiter-candidates {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 90%;
+  padding: 0;
+}
+
+#recruiter-candidates > * {
+  height: 100%;
+  padding-right: 1%;
+}
+
+#recruiter-candidates > article {
+  width: 75%;
+}
+
+#recruiter-candidates > aside {
+  width: 25%;
+  background-color: var(--primary);
+  border-top: thin solid white;
+}
