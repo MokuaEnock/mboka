@@ -30,14 +30,26 @@ export default function RecruiterJobDetail() {
               </div>
             </div>
 
-            <div id="recruiter-cands-header">
-              <p>Name</p>
-              <p>Rating</p>
-              <p>Stage</p>
-              <p>Application date</p>
+            <div id="recruiter-candidates-name">
+              <h3>Candidates</h3>
+
+              <button>Filter by</button>
             </div>
 
-            {/* <div id="recruiter-detailed-candidates"></div> */}
+            <div id="recruiter-cands-header">
+              <span>Name</span>
+              <span>Rating</span>
+              <span>Level</span>
+              <span>Stage</span>
+              <span>Application date</span>
+            </div>
+
+            <ul id="recruiter-detailed-candidates">
+              <li className="recruiter-detailed-candidates"></li>
+              <li className="recruiter-detailed-candidates"></li>
+              <li className="recruiter-detailed-candidates"></li>
+              <li className="recruiter-detailed-candidates"></li>
+            </ul>
           </div>
           <aside id="recruiter-detailed-aside"></aside>
         </section>

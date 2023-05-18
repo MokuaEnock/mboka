@@ -6,7 +6,7 @@ export default function Header() {
     <header>
       <div className="header">
         <Link to="/" className="logo">
-          Mboka
+          Insunity
         </Link>
 
         <span>
