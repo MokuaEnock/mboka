@@ -105,6 +105,7 @@ export default function RecruiterJobDetail() {
                 <h5>{selectedApplicant.name}</h5>
                 <p>{selectedApplicant.role}</p>
               </div>
+
               <div>
                 <span>{selectedApplicant.email}</span>
                 <span>{selectedApplicant.phone}</span>
