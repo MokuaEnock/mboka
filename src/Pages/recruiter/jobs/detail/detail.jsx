@@ -96,8 +96,6 @@ export default function RecruiterJobDetail() {
             </ul>
           </div>
           <aside id="recruiter-detailed-aside">
-            {/* <h3>Selected Applicant</h3>
-            <p>{selectedApplicant.name}</p> */}
             <h3>Candidate Details</h3>
             <div id="recruiter-da-header">
               <div>
