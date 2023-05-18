@@ -20,7 +20,6 @@
 #recruiter-detailed-stats {
   width: 100%;
   height: 40vh;
-  /* border: thin solid black; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,7 +28,6 @@
 
 #recruiter-detailed-stats > * {
   width: 100%;
-  /* border: thin solid black; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -55,15 +53,9 @@
   border: thin solid grey;
 }
 
-#recruiter-detailed-aside {
-  width: 25%;
-  background-color: var(--primary);
-}
-
 #recruiter-candidates-name {
   width: 100%;
   margin-top: 1vh;
-  /* border: thin solid black; */
   height: 6vh;
   display: flex;
   align-items: center;
@@ -84,7 +76,6 @@
 #recruiter-cands-header {
   width: 100%;
   margin-top: 1vh;
-  /* border: thin solid black; */
   border: thin solid grey;
   height: 7vh;
   display: flex;
@@ -94,7 +85,6 @@
 }
 
 #recruiter-cands-header > * {
-  /* border: thin solid black; */
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -103,7 +93,6 @@
 }
 
 #recruiter-detailed-candidates {
-  /* border: thin solid black; */
   height: max-content;
   list-style: none;
   margin: 0;
@@ -114,4 +103,34 @@
   width: 100%;
   height: 6vh;
   border: thin solid black;
+}
+
+#recruiter-detailed-aside {
+  border-top: thin solid white;
+  width: 25%;
+  background-color: var(--primary);
+  color: white;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#recruiter-detailed-aside > * {
+  border: thin solid white;
+  width: 100%;
+}
+
+#recruiter-da-button {
+  height: 7%;
+  font-size: 1rem;
+  background-color: transparent;
+  color: white;
+}
+
+#recruiter-da-button:hover {
+  background-color: white;
+  color: var(--primary);
 }

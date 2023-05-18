@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import RecruiterHeader from "../../../../Components/recruiter/header/header";
 import RecruiterAside from "../../../../Components/recruiter/navigation/navigation";
@@ -9,6 +10,7 @@ let applicants = {
       id: 1,
       name: "John Smith",
       age: 28,
+      role: "Data Scientist",
       email: "john.smith@example.com",
       phone: "+1 (555) 123-4567",
       experience: 5,
@@ -22,6 +24,7 @@ let applicants = {
       id: 2,
       name: "Emily Johnson",
       age: 32,
+      role: "Software Engineer",
       email: "emily.johnson@example.com",
       phone: "+1 (555) 987-6543",
       experience: 8,
@@ -35,7 +38,14 @@ let applicants = {
 };
 
 export default function RecruiterJobDetail() {
-  let { id } = useParams();
+  const { id } = useParams();
+  const [selectedApplicant, setSelectedApplicant] = useState(
+    applicants.applicants[0]
+  );
+
+  const handleApplicantClick = (applicant) => {
+    setSelectedApplicant(applicant);
+  };
 
   return (
     <main className="recruiter">
@@ -75,13 +85,77 @@ export default function RecruiterJobDetail() {
 
             <ul id="recruiter-detailed-candidates">
               {applicants.applicants.map((applicant, index) => (
-                <li key={index} className="recruiter-detailed-candidates">
-                  {/* Render applicant details here */}
+                <li
+                  key={index}
+                  className="recruiter-detailed-candidates"
+                  onClick={() => handleApplicantClick(applicant)}
+                >
+                  <p>{applicant.name}</p>
                 </li>
               ))}
             </ul>
           </div>
-          <aside id="recruiter-detailed-aside"></aside>
+          <aside id="recruiter-detailed-aside">
+            {/* <h3>Selected Applicant</h3>
+            <p>{selectedApplicant.name}</p> */}
+            <h3>Candidate Details</h3>
+            <div id="recruiter-da-header">
+              <div>
+                <span></span>
+                <h5>{selectedApplicant.name}</h5>
+                <p>{selectedApplicant.role}</p>
+              </div>
+              <div>
+                <span>{selectedApplicant.email}</span>
+                <span>{selectedApplicant.phone}</span>
+              </div>
+            </div>
+
+            <div id="recruiter-da-details">
+              <h3>Application details</h3>
+              <span className="recruiter-da-details">
+                <span>1</span>
+                <span>
+                  <p>Screening</p>
+                  <i>March 20 2023</i>
+                </span>
+              </span>
+
+              <span className="recruiter-da-details">
+                <span>2</span>
+                <span>
+                  <p>Design Challenge</p>
+                  <i>March 20 2023</i>
+                </span>
+              </span>
+
+              <span className="recruiter-da-details">
+                <span>1</span>
+                <span>
+                  <p>Screening</p>
+                  <i>March 20 2023</i>
+                </span>
+              </span>
+
+              <span className="recruiter-da-details">
+                <span>4</span>
+                <span>
+                  <p>HR Round</p>
+                  <i>March 20 2023</i>
+                </span>
+              </span>
+
+              <span className="recruiter-da-details">
+                <span>5</span>
+                <span>
+                  <p>Hired</p>
+                  <i>March 20 2023</i>
+                </span>
+              </span>
+            </div>
+
+            <button id="recruiter-da-button">View Details</button>
+          </aside>
         </section>
       </section>
     </main>
