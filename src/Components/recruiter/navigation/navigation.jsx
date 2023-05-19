@@ -16,7 +16,7 @@ import "./navigation.css";
 export default function RecruiterAside() {
   return (
     <aside className="recruiter-aside">
-      <h3>Mboka</h3>
+      <h3>Insunity</h3>
       <Link to="/recruiter">
         <FaHome /> Dashboard
       </Link>
