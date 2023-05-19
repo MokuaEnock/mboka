@@ -75,9 +75,60 @@ export default function RecruiterJobNew() {
                 <h2>Job Title and Summary</h2>
                 <p>Create the title and summary of your job. Keep it simple.</p>
               </div>
-              
+
+              <div className="new-job-container">
+                <label className="new-job-cont-text">
+                  <p>Job title</p>
+                  <input type="text" placeholder="Enter the job title" />
+                </label>
+
+                <label className="new-job-cont-select">
+                  <p>Job category</p>
+                  <select>
+                    <option disabled selected value="">
+                      Select job category
+                    </option>
+                    <option value="Data-science">Data Science</option>
+                  </select>
+                </label>
+
+                <label className="new-job-cont-select">
+                  <p>Job Type</p>
+                  <select>
+                    <option disabled selected value="">
+                      Select job type
+                    </option>
+                    <option value="hybrid">Freelance</option>
+                    <option value="full-time">Full time</option>
+                    <option value="contract">Contract</option>
+                    <option value="part-time">Part time</option>
+                  </select>
+                </label>
+
+                <label className="new-job-cont-select">
+                  <p>Employee Level</p>
+                  <select>
+                    <option value="entry-level">Entry Level</option>
+                    <option value="junior">Junior</option>
+                    <option value="mid-level">Mid Level</option>
+                    <option value="senior">Senior</option>
+                    <option value="lead">Lead</option>
+                    <option value="manager">Manager</option>
+                    <option value="executive">Executive</option>
+                  </select>
+                </label>
+              </div>
+
+              <div className="new-job-container">
+                <label className="new-job-cont-textarea">
+                  <p>Enter your job summary</p>
+                  <textarea placeholder="Text area"></textarea>
+                </label>
+              </div>
+
               {/* Next and Back buttons */}
               <div className="form-navigation">
+                <p></p>
                 <button type="button" onClick={handleNext}>
                   Next
                 </button>
