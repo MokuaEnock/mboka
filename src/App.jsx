@@ -16,6 +16,7 @@ import RecruiterJobNew from "./Pages/recruiter/jobs/new/newjob";
 import RecruiterJobDetail from "./Pages/recruiter/jobs/detail/detail";
 import RecruiterCandidates from "./Pages/recruiter/candidates/candidates";
 import RecruiterCandidatesDetail from "./Pages/recruiter/candidates/detail/detail";
+import SeekerHome from "./Pages/seeker/home/home";
 
 function App() {
   return (
@@ -36,6 +37,11 @@ function App() {
             <Route element={<RecruiterCandidatesDetail />} path=":id" />
           </Route>
         </Route>
+
+        <Route path="/seeker">
+          <Route path="" element={<SeekerHome />} />
+        </Route>
+
         <Route path="/auth">
           <Route path="forgot" element={<ForgotPass />} />
           <Route path="login" element={<Login />} />
