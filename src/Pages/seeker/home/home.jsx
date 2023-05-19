@@ -1,5 +1,15 @@
+import SeekerHeader from "../../../Components/seeker/header/header";
 import "./home.css";
 
 export default function SeekerHome() {
-  return <main className="seeker">seeker home</main>;
+  function Home() {
+    return <main className="seeker"></main>;
+  }
+
+  return (
+    <>
+      <SeekerHeader />
+      <Home />
+    </>
+  );
 }

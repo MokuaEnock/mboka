@@ -1,6 +1,7 @@
 import "./auth.css";
 
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function FinderSignup() {
   const [email, setEmail] = useState("");
@@ -8,6 +9,7 @@ export default function FinderSignup() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
+  let navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -20,6 +22,11 @@ export default function FinderSignup() {
     });
     // add your API call to submit the form data here
   };
+
+  function handleNavigate() {
+    navigate("/seeker");
+  }
+
   return (
     <main id="finder" className="auth">
       <form onSubmit={handleSubmit}>
@@ -33,7 +40,7 @@ export default function FinderSignup() {
               type="email"
               value={email}
               onChange={(event) => setEmail(event.target.value)}
-              required
+              // required
             />
           </label>
           <label>
@@ -42,7 +49,7 @@ export default function FinderSignup() {
               type="password"
               value={password}
               onChange={(event) => setPassword(event.target.value)}
-              required
+              // required
             />
           </label>
           <label>
@@ -51,7 +58,7 @@ export default function FinderSignup() {
               type="text"
               value={firstName}
               onChange={(event) => setFirstName(event.target.value)}
-              required
+              // required
             />
           </label>
           <label>
@@ -60,7 +67,7 @@ export default function FinderSignup() {
               type="text"
               value={lastName}
               onChange={(event) => setLastName(event.target.value)}
-              required
+              // required
             />
           </label>
           <label>
@@ -69,10 +76,12 @@ export default function FinderSignup() {
               type="password"
               value={passwordConfirmation}
               onChange={(event) => setPasswordConfirmation(event.target.value)}
-              required
+              // required
             />
           </label>
-          <button type="submit">Sign Up</button>
+          <button type="submit" onClick={handleNavigate}>
+            Sign Up
+          </button>
         </div>
       </form>
     </main>
