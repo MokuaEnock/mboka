@@ -21,63 +21,194 @@ export default function RecruiterJobNew() {
     setActiveSection(sectionNumber);
   };
 
+  const handleNext = () => {
+    const nextSection = activeSection + 1;
+    if (nextSection <= 7) {
+      handleButtonClick(getSectionRef(nextSection), nextSection);
+    }
+  };
+
+  const handleBack = () => {
+    const previousSection = activeSection - 1;
+    if (previousSection >= 1) {
+      handleButtonClick(getSectionRef(previousSection), previousSection);
+    }
+  };
+
+  const getSectionRef = (sectionNumber) => {
+    switch (sectionNumber) {
+      case 1:
+        return titleRef;
+      case 2:
+        return requirementsRef;
+      case 3:
+        return detailsRef;
+      case 4:
+        return reviewRef;
+      case 5:
+        return promoteRef;
+      case 6:
+        return settingsRef;
+      case 7:
+        return candidatesRef;
+      default:
+        return null;
+    }
+  };
+
   return (
     <main className="recruiter">
       <RecruiterAside />
       <section className="recruiter-container">
         <RecruiterHeader />
         <section id="recruiter-new-jobs" className="recruiter-cont">
-          <form>
+          {/* Form component  */}
+
+          <form id="new-job-form">
+            {/* Job title  */}
             <div
               id="job-post-title"
               className={activeSection === 1 ? "active" : ""}
               ref={titleRef}
             >
-              The title and summary
+              <div className="new-job-header">
+                <h2>Job Title and Summary</h2>
+                <p>Create the title and summary of your job. Keep it simple.</p>
+              </div>
+              
+              {/* Next and Back buttons */}
+              <div className="form-navigation">
+                <button type="button" onClick={handleNext}>
+                  Next
+                </button>
+              </div>
             </div>
+
+            {/* Job requirements */}
             <div
               id="job-post-requirements"
               className={activeSection === 2 ? "active" : ""}
               ref={requirementsRef}
             >
-              Requirements and qualifications
+              <div className="new-job-header">
+                <h2>Requirements and Qualifications</h2>
+                <p>Add the requirements and qualifications for the job.</p>
+              </div>
+              {/* Next and Back buttons */}
+              <div className="form-navigation">
+                <button type="button" onClick={handleBack}>
+                  Back
+                </button>
+                <button type="button" onClick={handleNext}>
+                  Next
+                </button>
+              </div>
             </div>
+
+            {/* Job post Details  */}
             <div
               id="job-post-details"
               className={activeSection === 3 ? "active" : ""}
               ref={detailsRef}
             >
-              Job details
+              <div className="new-job-header">
+                <h2>Job Details</h2>
+                <p>Add more details about the job.</p>
+              </div>
+              {/* Next and Back buttons */}
+              <div className="form-navigation">
+                <button type="button" onClick={handleBack}>
+                  Back
+                </button>
+                <button type="button" onClick={handleNext}>
+                  Next
+                </button>
+              </div>
             </div>
+
+            {/* Review job  */}
             <div
               id="job-post-review"
               className={activeSection === 4 ? "active" : ""}
               ref={reviewRef}
             >
-              Review job
+              <div className="new-job-header">
+                <h2>Review Job</h2>
+                <p>Review and make changes to the job posting.</p>
+              </div>
+              {/* Next and Back buttons */}
+              <div className="form-navigation">
+                <button type="button" onClick={handleBack}>
+                  Back
+                </button>
+                <button type="button" onClick={handleNext}>
+                  Next
+                </button>
+              </div>
             </div>
+
+            {/* Promote job  */}
             <div
               id="job-post-promote"
               className={activeSection === 5 ? "active" : ""}
               ref={promoteRef}
             >
-              Promote job
+              <div className="new-job-header">
+                <h2>Promote Job</h2>
+                <p>Promote the job to reach a wider audience.</p>
+              </div>
+              {/* Next and Back buttons */}
+              <div className="form-navigation">
+                <button type="button" onClick={handleBack}>
+                  Back
+                </button>
+                <button type="button" onClick={handleNext}>
+                  Next
+                </button>
+              </div>
             </div>
+
+            {/* Job settings  */}
             <div
               id="job-post-settings"
               className={activeSection === 6 ? "active" : ""}
               ref={settingsRef}
             >
-              Job settings
+              <div className="new-job-header">
+                <h2>Job Settings</h2>
+                <p>Configure settings for the job posting.</p>
+              </div>
+              {/* Next and Back buttons */}
+              <div className="form-navigation">
+                <button type="button" onClick={handleBack}>
+                  Back
+                </button>
+                <button type="button" onClick={handleNext}>
+                  Next
+                </button>
+              </div>
             </div>
+
+            {/* Candidates  */}
             <div
               id="job-post-candidates"
               className={activeSection === 7 ? "active" : ""}
               ref={candidatesRef}
             >
-              Candidates
+              <div className="new-job-header">
+                <h2>Candidates</h2>
+                <p>Manage candidates for the job.</p>
+              </div>
+              {/* Back button */}
+              <div className="form-navigation">
+                <button type="button" onClick={handleBack}>
+                  Back
+                </button>
+              </div>
             </div>
           </form>
+
+          {/* Aside component */}
           <aside>
             <button
               onClick={() => handleButtonClick(titleRef, 1)}

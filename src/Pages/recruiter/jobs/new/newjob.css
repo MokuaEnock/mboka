@@ -52,6 +52,26 @@
 }
 
 #recruiter-new-jobs > aside > button.active {
-    background-color: white;
-    color: var(--primary);
-  }
+  background-color: white;
+  color: var(--primary);
+}
+
+#new-job-form > * > * {
+  width: 100%;
+  padding-right: 1%;
+  padding-left: 1%;
+  height: max-content;
+  border: thin solid black;
+}
+
+.new-job-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.new-job-header > * {
+  border: thin solid black;
+  margin: 0;
+}
