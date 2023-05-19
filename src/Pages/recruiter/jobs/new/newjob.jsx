@@ -126,7 +126,6 @@ export default function RecruiterJobNew() {
                 </label>
               </div>
 
-              {/* Next and Back buttons */}
               <div className="form-navigation">
                 <p></p>
                 <button type="button" onClick={handleNext}>
@@ -145,7 +144,7 @@ export default function RecruiterJobNew() {
                 <h2>Requirements and Qualifications</h2>
                 <p>Add the requirements and qualifications for the job.</p>
               </div>
-              {/* Next and Back buttons */}
+
               <div className="form-navigation">
                 <button type="button" onClick={handleBack}>
                   Back
@@ -166,7 +165,7 @@ export default function RecruiterJobNew() {
                 <h2>Job Details</h2>
                 <p>Add more details about the job.</p>
               </div>
-              {/* Next and Back buttons */}
+
               <div className="form-navigation">
                 <button type="button" onClick={handleBack}>
                   Back
@@ -187,7 +186,7 @@ export default function RecruiterJobNew() {
                 <h2>Review Job</h2>
                 <p>Review and make changes to the job posting.</p>
               </div>
-              {/* Next and Back buttons */}
+
               <div className="form-navigation">
                 <button type="button" onClick={handleBack}>
                   Back
@@ -208,7 +207,16 @@ export default function RecruiterJobNew() {
                 <h2>Promote Job</h2>
                 <p>Promote the job to reach a wider audience.</p>
               </div>
-              {/* Next and Back buttons */}
+              <div id="new-job-promote">
+                <span className="new-job-promote">
+                  <h3>Free Plan</h3>
+                  <button>Select Plan</button>
+                </span>
+                <span className="new-job-promote">
+                  <h3>Premium Plan</h3>
+                  <button>Select Plan</button>
+                </span>
+              </div>
               <div className="form-navigation">
                 <button type="button" onClick={handleBack}>
                   Back
@@ -229,7 +237,7 @@ export default function RecruiterJobNew() {
                 <h2>Job Settings</h2>
                 <p>Configure settings for the job posting.</p>
               </div>
-              {/* Next and Back buttons */}
+
               <div className="form-navigation">
                 <button type="button" onClick={handleBack}>
                   Back
@@ -248,9 +256,61 @@ export default function RecruiterJobNew() {
             >
               <div className="new-job-header">
                 <h2>Candidates</h2>
-                <p>Manage candidates for the job.</p>
+                <p>
+                  Here are some reccomended candidates that fit your job
+                  perfectly.
+                </p>
               </div>
-              {/* Back button */}
+
+              <div id="new-job-candidates">
+                <span className="new-job-candidates">
+                  <p></p>
+                  <span>
+                    <button>Bookmark</button>
+                    <button>View</button>
+                  </span>
+                </span>
+
+                <span className="new-job-candidates">
+                  <p></p>
+                  <span>
+                    <button>Bookmark</button>
+                    <button>View</button>
+                  </span>
+                </span>
+
+                <span className="new-job-candidates">
+                  <p></p>
+                  <span>
+                    <button>Bookmark</button>
+                    <button>View</button>
+                  </span>
+                </span>
+
+                <span className="new-job-candidates">
+                  <p></p>
+                  <span>
+                    <button>Bookmark</button>
+                    <button>View</button>
+                  </span>
+                </span>
+
+                <span className="new-job-candidates">
+                  <p></p>
+                  <span>
+                    <button>Bookmark</button>
+                    <button>View</button>
+                  </span>
+                </span>
+
+                <span className="new-job-candidates">
+                  <p></p>
+                  <span>
+                    <button>Bookmark</button>
+                    <button>View</button>
+                  </span>
+                </span>
+              </div>
               <div className="form-navigation">
                 <button type="button" onClick={handleBack}>
                   Back
