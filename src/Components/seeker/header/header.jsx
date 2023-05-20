@@ -18,7 +18,7 @@ export default function SeekerHeader() {
         </Link>
 
         <span id="seeker-header-info">
-          <Link to="/recommendations" className="menu-link">
+          <Link to="/seeker/reccs" className="menu-link">
             <FaThumbsUp />
             <span>Recommendations</span>
           </Link>
