@@ -1,4 +1,5 @@
 import SeekerHeader from "../../../Components/seeker/header/header";
+import SeekerSearch from "../../../Components/seeker/search/search";
 import "./rec.css";
 
 export default function SeekerReccomdendations() {
@@ -8,6 +9,7 @@ export default function SeekerReccomdendations() {
   return (
     <>
       <SeekerHeader />
+      <SeekerSearch />
       <Container />
     </>
   );

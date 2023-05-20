@@ -1,4 +1,5 @@
 import SeekerHeader from "../../../Components/seeker/header/header";
+import SeekerSearch from "../../../Components/seeker/search/search";
 import "./home.css";
 
 export default function SeekerHome() {
@@ -9,6 +10,7 @@ export default function SeekerHome() {
   return (
     <>
       <SeekerHeader />
+      <SeekerSearch />
       <Home />
     </>
   );
