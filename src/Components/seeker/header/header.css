@@ -10,7 +10,6 @@
 }
 
 .seeker-h-cont {
-  border: thin solid white;
   height: 100%;
   width: 85%;
   display: flex;
@@ -28,10 +27,9 @@
   color: white;
 }
 
-.seeker-h-cont > span {
+#seeker-header-info {
   width: max-content;
   height: 100%;
-  border: thin solid white;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -43,4 +41,41 @@
   padding-right: 1vw;
   color: white;
   font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.seeker-h-cont > span > a > :first-child {
+  margin-right: 0.5vw;
+  font-size: 1.2rem;
+}
+
+#seeker-profile {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#seeker-settings-link {
+  font-size: 1.2rem;
+}
+
+.seeker-profile-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#seeker-profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  border-left: thin solid white;
 }

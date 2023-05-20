@@ -1,26 +1,15 @@
-import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   FaBookmark,
   FaEnvelope,
   FaListAlt,
   FaSearch,
   FaThumbsUp,
+  FaCog,
 } from "react-icons/fa";
 import "./header.css";
 
 export default function SeekerHeader() {
-  const history = useHistory();
-  const [selectedOption, setSelectedOption] = useState("");
-
-  const handleSelectChange = (event) => {
-    const selectedPage = event.target.value;
-    setSelectedOption(selectedPage);
-    if (selectedPage) {
-      history.push(`/${selectedPage}`);
-    }
-  };
-
   return (
     <nav className="seeker-header">
       <div className="seeker-h-cont">
@@ -28,7 +17,7 @@ export default function SeekerHeader() {
           Insunity
         </Link>
 
-        <div className="header-menu">
+        <span id="seeker-header-info">
           <Link to="/recommendations" className="menu-link">
             <FaThumbsUp />
             <span>Recommendations</span>
@@ -49,15 +38,18 @@ export default function SeekerHeader() {
             <FaListAlt />
             <span>Applied Jobs</span>
           </Link>
-        </div>
+        </span>
 
-        <div className="header-select">
-          <select value={selectedOption} onChange={handleSelectChange}>
-            <option value="">Menu</option>
-            <option value="seeker-profile">Profile</option>
-            <option value="seeker-settings">Settings</option>
-          </select>
-        </div>
+        <span id="seeker-profile">
+          <Link to="settings" className="seeker-settings-link">
+            <FaCog />
+          </Link>
+
+          <Link to="profile" className="seeker-profile-link">
+            <span id="seeker-profile-image"></span>
+            Enock Mokua
+          </Link>
+        </span>
       </div>
     </nav>
   );
