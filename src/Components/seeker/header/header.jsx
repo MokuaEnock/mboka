@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
 import {
   FaBookmark,
   FaEnvelope,
@@ -9,6 +10,17 @@ import {
 import "./header.css";
 
 export default function SeekerHeader() {
+  const history = useHistory();
+  const [selectedOption, setSelectedOption] = useState("");
+
+  const handleSelectChange = (event) => {
+    const selectedPage = event.target.value;
+    setSelectedOption(selectedPage);
+    if (selectedPage) {
+      history.push(`/${selectedPage}`);
+    }
+  };
+
   return (
     <nav className="seeker-header">
       <div className="seeker-h-cont">
@@ -16,34 +28,36 @@ export default function SeekerHeader() {
           Insunity
         </Link>
 
-        <span>
-          <Link to="/recommendations">
+        <div className="header-menu">
+          <Link to="/recommendations" className="menu-link">
             <FaThumbsUp />
-            Reccomendations
+            <span>Recommendations</span>
           </Link>
-          <Link to="/find-job">
+          <Link to="/find-job" className="menu-link">
             <FaSearch />
-            Explore
+            <span>Explore</span>
           </Link>
-          <Link to="/bookmarks">
+          <Link to="/bookmarks" className="menu-link">
             <FaBookmark />
-            Bookmarks
+            <span>Bookmarks</span>
           </Link>
-          <Link to="/messages">
+          <Link to="/messages" className="menu-link">
             <FaEnvelope />
-            Messages
+            <span>Messages</span>
           </Link>
-          <Link to="/applied-jobs">
+          <Link to="/applied-jobs" className="menu-link">
             <FaListAlt />
-            Applied Jobs
+            <span>Applied Jobs</span>
           </Link>
-        </span>
+        </div>
 
-        <select>
-          <option></option>
-          <option value="seeker-profile">Profile</option>
-          <option value="seeker-settings">Settings</option>
-        </select>
+        <div className="header-select">
+          <select value={selectedOption} onChange={handleSelectChange}>
+            <option value="">Menu</option>
+            <option value="seeker-profile">Profile</option>
+            <option value="seeker-settings">Settings</option>
+          </select>
+        </div>
       </div>
     </nav>
   );
