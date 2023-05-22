@@ -18,6 +18,7 @@ import RecruiterCandidates from "./Pages/recruiter/candidates/candidates";
 import RecruiterCandidatesDetail from "./Pages/recruiter/candidates/detail/detail";
 import SeekerHome from "./Pages/seeker/home/home";
 import SeekerReccomdendations from "./Pages/seeker/reccomendations/rec";
+import SeekerProfile from "./Pages/seeker/profile/profile";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
         <Route path="/seeker">
           <Route path="" element={<SeekerHome />} />
           <Route path="reccs" element={<SeekerReccomdendations />} />
+          <Route path="profile" element={<SeekerProfile />} />
         </Route>
 
         <Route path="/auth">
