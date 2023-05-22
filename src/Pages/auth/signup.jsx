@@ -32,24 +32,15 @@ export default function FinderSignup() {
       <form onSubmit={handleSubmit}>
         <div>This is the image</div>
         <div>
-          <h3>Hello there Job Seeker</h3>
-          <p>Find and do what you love.</p>
+          <h3>Welcome to Insunity</h3>
+          <p>Sign up today to mass apply to jobs that fit your skills.</p>
           <label className="auth-form-input">
             <p>Email Address</p>
             <input
               type="email"
               value={email}
+              placeholder="Email Address"
               onChange={(event) => setEmail(event.target.value)}
-              // required
-            />
-          </label>
-
-          <label className="auth-form-input">
-            <p>Password</p>
-            <input
-              type="password"
-              value={password}
-              onChange={(event) => setPassword(event.target.value)}
               // required
             />
           </label>
@@ -59,7 +50,19 @@ export default function FinderSignup() {
             <input
               type="text"
               value={lastName}
+              placeholder="Username"
               onChange={(event) => setLastName(event.target.value)}
+              // required
+            />
+          </label>
+
+          <label className="auth-form-input">
+            <p>Password</p>
+            <input
+              type="password"
+              value={password}
+              placeholder="Password"
+              onChange={(event) => setPassword(event.target.value)}
               // required
             />
           </label>
@@ -68,6 +71,7 @@ export default function FinderSignup() {
             <p>Confirm password</p>
             <input
               type="password"
+              placeholder="Password Confirmation"
               value={passwordConfirmation}
               onChange={(event) => setPasswordConfirmation(event.target.value)}
               // required
