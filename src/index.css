@@ -24,7 +24,7 @@ a {
 input:focus {
   outline: none;
   /* text-align: center; */
-  border: thin solid;
+  /* border: thin solid; */
   /* font-size: 1.2rem; */
 }
 

@@ -1,26 +1,52 @@
 import "./auth.css";
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function FinderSignup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [username, setUsername] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
   let navigate = useNavigate();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("Form submitted:", {
-      email,
-      password,
-      firstName,
-      lastName,
-      passwordConfirmation,
-    });
-    // add your API call to submit the form data here
+
+    // const formData = {
+    //   email: email,
+    //   username: username,
+    //   password: password,
+    //   password_confirmation: passwordConfirmation,
+    // };
+
+    const formData = {
+      seekers: {
+        email: email,
+        username: username,
+        password: password,
+        password_confirmation: passwordConfirmation,
+      },
+    };
+
+    try {
+      const response = await fetch("http://localhost:3000/seekers", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        console.log("Form submitted successfully");
+        handleNavigate();
+      } else {
+        const errorData = await response.json();
+        console.log("Form submission error:", errorData);
+      }
+    } catch (error) {
+      console.log("An error occurred while submitting the form:", error);
+    }
   };
 
   function handleNavigate() {
@@ -32,7 +58,7 @@ export default function FinderSignup() {
       <form onSubmit={handleSubmit}>
         <div>This is the image</div>
         <div>
-          <h3>Welcome to Insunity</h3>
+          <h3>Hello there, Job Seeker, welcome to Insunity</h3>
           <p>Sign up today to mass apply to jobs that fit your skills.</p>
           <label className="auth-form-input">
             <p>Email Address</p>
@@ -41,7 +67,6 @@ export default function FinderSignup() {
               value={email}
               placeholder="Email Address"
               onChange={(event) => setEmail(event.target.value)}
-              // required
             />
           </label>
 
@@ -49,10 +74,9 @@ export default function FinderSignup() {
             <p>Username</p>
             <input
               type="text"
-              value={lastName}
+              value={username}
               placeholder="Username"
-              onChange={(event) => setLastName(event.target.value)}
-              // required
+              onChange={(event) => setUsername(event.target.value)}
             />
           </label>
 
@@ -63,27 +87,21 @@ export default function FinderSignup() {
               value={password}
               placeholder="Password"
               onChange={(event) => setPassword(event.target.value)}
-              // required
             />
           </label>
 
           <label className="auth-form-input">
-            <p>Confirm password</p>
+            <p>Confirm Password</p>
             <input
               type="password"
-              placeholder="Password Confirmation"
+              placeholder="Confirm Password"
               value={passwordConfirmation}
               onChange={(event) => setPasswordConfirmation(event.target.value)}
-              // required
             />
           </label>
 
-          <button
-            type="submit"
-            onClick={handleNavigate}
-            className="auth-form-button"
-          >
-            Sign Up
+          <button type="submit" className="auth-form-button">
+            Join Insunity
           </button>
         </div>
       </form>
