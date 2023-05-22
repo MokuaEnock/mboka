@@ -7,17 +7,11 @@ export default function FinderSignup() {
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
+  const [formErrors, setFormErrors] = useState([]);
   let navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
-    // const formData = {
-    //   email: email,
-    //   username: username,
-    //   password: password,
-    //   password_confirmation: passwordConfirmation,
-    // };
 
     const formData = {
       seekers: {
@@ -38,10 +32,14 @@ export default function FinderSignup() {
       });
 
       if (response.ok) {
-        console.log("Form submitted successfully");
+        const responseData = await response.json();
+        const seekerId = responseData.id;
+        console.log("Form submitted successfully. Seeker ID:", seekerId);
+        localStorage.setItem("seekerId", seekerId);
         handleNavigate();
       } else {
         const errorData = await response.json();
+        setFormErrors(errorData.errors || []);
         console.log("Form submission error:", errorData);
       }
     } catch (error) {
@@ -103,6 +101,14 @@ export default function FinderSignup() {
           <button type="submit" className="auth-form-button">
             Join Insunity
           </button>
+
+          <div id="auth-form-errors">
+            {formErrors.map((error, index) => (
+              <p className="auth-form-error" key={index}>
+                {error}
+              </p>
+            ))}
+          </div>
         </div>
       </form>
     </main>
