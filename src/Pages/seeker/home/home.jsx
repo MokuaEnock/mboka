@@ -4,7 +4,13 @@ import "./home.css";
 
 export default function SeekerHome() {
   function Home() {
-    return <main className="seeker"></main>;
+    return (
+      <main className="seeker">
+        <section className="seeker-home">
+          <div></div>
+        </section>
+      </main>
+    );
   }
 
   return (
