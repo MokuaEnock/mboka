@@ -86,10 +86,13 @@ export default function SeekerSignup() {
   function SignupSection1() {
     return (
       <form className="seeker-signup-sections" ref={sectionRefs[0]}>
-        <p>This is signup section 1</p>
-        <button type="button" onClick={handleNextSection}>
-          Save
-        </button>
+        <div className="seeker-ss-cont"></div>
+        <div className="seeker-ss-buttons">
+          <p></p>
+          <button type="button" onClick={handleNextSection}>
+            Save
+          </button>
+        </div>
       </form>
     );
   }
@@ -97,10 +100,13 @@ export default function SeekerSignup() {
   function SignupSection2() {
     return (
       <form className="seeker-signup-sections" ref={sectionRefs[1]}>
-        <p>This is signup section 2</p>
-        <button type="button" onClick={handleNextSection}>
-          Save
-        </button>
+        <div className="seeker-ss-cont"></div>
+        <div className="seeker-ss-buttons">
+          <p></p>
+          <button type="button" onClick={handleNextSection}>
+            Save
+          </button>
+        </div>
       </form>
     );
   }
@@ -108,10 +114,13 @@ export default function SeekerSignup() {
   function SignupSection3() {
     return (
       <form className="seeker-signup-sections" ref={sectionRefs[2]}>
-        <p>This is signup section 3</p>
-        <button type="button" onClick={handleNextSection}>
-          Save
-        </button>
+        <div className="seeker-ss-cont"></div>
+        <div className="seeker-ss-buttons">
+          <p></p>
+          <button type="button" onClick={handleNextSection}>
+            Save
+          </button>
+        </div>
       </form>
     );
   }
@@ -119,10 +128,13 @@ export default function SeekerSignup() {
   function SignupSection4() {
     return (
       <form className="seeker-signup-sections" ref={sectionRefs[3]}>
-        <p>This is signup section 4</p>
-        <button type="button" onClick={handleNextSection}>
-          Save
-        </button>
+        <div className="seeker-ss-cont"></div>
+        <div className="seeker-ss-buttons">
+          <p></p>
+          <button type="button" onClick={handleNextSection}>
+            Save
+          </button>
+        </div>
       </form>
     );
   }
@@ -130,10 +142,13 @@ export default function SeekerSignup() {
   function SignupSection5() {
     return (
       <form className="seeker-signup-sections" ref={sectionRefs[4]}>
-        <p>This is signup section 5</p>
-        <button type="button" onClick={handleNextSection}>
-          Save
-        </button>
+        <div className="seeker-ss-cont"></div>
+        <div className="seeker-ss-buttons">
+          <p></p>
+          <button type="button" onClick={handleNextSection}>
+            Save
+          </button>
+        </div>
       </form>
     );
   }
@@ -141,10 +156,13 @@ export default function SeekerSignup() {
   function SignupSection6() {
     return (
       <form className="seeker-signup-sections" ref={sectionRefs[5]}>
-        <p>This is signup section 6</p>
-        <button type="button" onClick={handleNextSection}>
-          Save
-        </button>
+        <div className="seeker-ss-cont"></div>
+        <div className="seeker-ss-buttons">
+          <p></p>
+          <button type="button" onClick={handleNextSection}>
+            Save
+          </button>
+        </div>
       </form>
     );
   }
@@ -152,10 +170,13 @@ export default function SeekerSignup() {
   function SignupSection7() {
     return (
       <form className="seeker-signup-sections" ref={sectionRefs[6]}>
-        <p>This is signup section 7</p>
-        <button type="button" onClick={handleNextSection}>
-          Save
-        </button>
+        <div className="seeker-ss-cont"></div>
+        <div className="seeker-ss-buttons">
+          <p></p>
+          <button type="button" onClick={handleNextSection}>
+            Complete
+          </button>
+        </div>
       </form>
     );
   }
