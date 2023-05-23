@@ -27,7 +27,7 @@
 }
 
 #seeker-signup-header > h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--primary);
   font-weight: bold;
 }
@@ -90,6 +90,10 @@
   overflow-y: scroll;
 }
 
+.seeker-ss-cont > * {
+  margin-bottom: 1vh;
+}
+
 .seeker-ss-buttons {
   height: 10%;
   width: 100%;
@@ -113,3 +117,4 @@
   background-color: var(--primary);
   color: var(--secondary);
 }
+

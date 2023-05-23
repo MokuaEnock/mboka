@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import "./signup.css";
+import SeekerSectionHeader from "../../../Components/seeker/ss-header/header";
 
 export default function SeekerSignup() {
   const [currentSection, setCurrentSection] = useState(1);
@@ -86,7 +87,18 @@ export default function SeekerSignup() {
   function SignupSection1() {
     return (
       <form className="seeker-signup-sections" ref={sectionRefs[0]}>
-        <div className="seeker-ss-cont"></div>
+        <div className="seeker-ss-cont">
+          <SeekerSectionHeader
+            header={"Personal Details"}
+            paragraph={
+              "Please provide your personal information information for the sake of identification "
+            }
+          />
+
+          <div className="seeker-ss-conts">
+            <span className="seeker-ss-conts-cont"></span>
+          </div>
+        </div>
         <div className="seeker-ss-buttons">
           <p></p>
           <button type="button" onClick={handleNextSection}>
