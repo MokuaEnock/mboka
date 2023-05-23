@@ -48,7 +48,7 @@ export default function FinderSignup() {
   };
 
   function handleNavigate() {
-    navigate("/seeker/profile");
+    navigate("/seeker/signup");
   }
 
   return (

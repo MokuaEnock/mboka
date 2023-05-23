@@ -1,0 +1,65 @@
+#seeker-signup {
+  height: 100vh;
+  background-color: var(--secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#seeker-signup p {
+  margin: 0;
+}
+
+#seeker-signup > * {
+  width: 100%;
+}
+
+#seeker-signup-header {
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#seeker-signup-header > h3 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+#seeker-signup-header > div {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.seeker-sh-span {
+  border: thin solid var(--primary);
+  height: 70%;
+  width: 13%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-left: 1%;
+  padding-right: 1%;
+  background-color: white;
+  border-radius: 2.5px 10px 10px;
+}
+
+.seeker-sh-span > p {
+  font-size: 1rem;
+}
+
+.seeker-signup-sections {
+  height: 90%;
+  border: thin solid;
+}

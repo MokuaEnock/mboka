@@ -14,7 +14,11 @@
 }
 
 :root {
-  --primary: #01411c;
+  --primary: #2e3c4d;
+  --secondary: #edf4f8;
+  --third: #fefffe;
+  --four: #22a752;
+  --five: lightgrey;
 }
 
 a {

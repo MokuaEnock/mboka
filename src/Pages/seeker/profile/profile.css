@@ -79,6 +79,17 @@
   justify-content: center;
 }
 
+#seeker-pm-2 > :first-child > p {
+  font-size: 1.2rem;
+  margin-top: 1vh;
+}
+
+#seeker-pm-2 > :first-child > input {
+  font-size: 1.2rem;
+  border: thin solid black;
+  margin-bottom: 1vh;
+}
+
 #seeker-pm-2 > :last-child {
   width: 60%;
 }
