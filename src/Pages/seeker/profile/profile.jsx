@@ -6,11 +6,12 @@ export default function SeekerProfile() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [firstName, setFirstName] = useState("");
   const [secondName, setSecondName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [thirdName, setThirdName] = useState("");
   const [gender, setGender] = useState("");
   const [dob, setDob] = useState("");
   const [country, setCountry] = useState("");
   const [nationality, setNationality] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
 
   function handleImageChange(event) {
     const file = event.target.files[0];
@@ -24,11 +25,18 @@ export default function SeekerProfile() {
     formData.append("avatar", selectedImage);
     formData.append("first_name", firstName);
     formData.append("second_name", secondName);
-    formData.append("last_name", lastName);
+    formData.append("third_name", thirdName);
     formData.append("gender", gender);
     formData.append("dob", dob);
     formData.append("country", country);
     formData.append("nationality", nationality);
+    formData.append("phone_number", phoneNumber);
+
+    // Grab seeker_id from localStorage
+    const seekerId = localStorage.getItem("seeker_id");
+    formData.append("seeker_id", seekerId); // Append seeker_id to form data
+
+    console.log(formData);
 
     fetch("http://127.0.0.1:3000/seeker_details", {
       method: "POST",
@@ -49,7 +57,7 @@ export default function SeekerProfile() {
       <main className="seeker-profile-cont">
         <section id="seeker-profile-cont">
           <section id="seeker-profile-navigation"></section>
-          <form id="seeker-profile-main" onSubmit={handleFormSubmit}>
+          <form id="seeker-profile-main" onSubmit={handleFormSubmit} encType="multipart/form-data">
             <div id="seeker-pm-1">
               <h3>Profile Completeness</h3>
               <progress id="profile-progress" value="0" max="100"></progress>
@@ -92,8 +100,8 @@ export default function SeekerProfile() {
                   <input
                     type="text"
                     name="lastName"
-                    value={lastName}
-                    onChange={(event) => setLastName(event.target.value)}
+                    value={thirdName}
+                    onChange={(event) => setThirdName(event.target.value)}
                     placeholder="Last Name"
                   />
                 </label>
@@ -142,6 +150,17 @@ export default function SeekerProfile() {
                     value={nationality}
                     onChange={(event) => setNationality(event.target.value)}
                     placeholder="Nationality"
+                  />
+                </label>
+
+                <label>
+                  <p>Phone Number</p>
+                  <input
+                    type="number"
+                    name="phoneNumber"
+                    value={phoneNumber}
+                    onChange={(event) => setPhoneNumber(event.target.value)}
+                    placeholder="Phone Number"
                   />
                 </label>
               </span>
