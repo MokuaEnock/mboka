@@ -23,45 +23,61 @@ export default function SeekerSignup() {
     });
   }
 
+  function handleNextSection() {
+    const nextSection = currentSection + 1;
+    if (nextSection <= sectionRefs.length) {
+      scrollToSection(nextSection);
+    }
+  }
+
   function SignupHeader() {
+    const headerSpans = [
+      {
+        section: 1,
+        text: "Personal Details",
+      },
+      {
+        section: 2,
+        text: "Technical Skills",
+      },
+      {
+        section: 3,
+        text: "Education Background",
+      },
+      {
+        section: 4,
+        text: "Your Projects",
+      },
+      {
+        section: 5,
+        text: "Work Experience",
+      },
+      {
+        section: 6,
+        text: "Professional Courses",
+      },
+      {
+        section: 7,
+        text: "Other Details",
+      },
+    ];
+
     return (
       <div id="seeker-signup-header">
         <h3>Tell us about you</h3>
         <div>
-          <span className="seeker-sh-span" onClick={() => scrollToSection(1)}>
-            <p>1</p>
-            <p>Personal Details</p>
-          </span>
-
-          <span className="seeker-sh-span" onClick={() => scrollToSection(2)}>
-            <p>2</p>
-            <p>Technical Skills</p>
-          </span>
-
-          <span className="seeker-sh-span" onClick={() => scrollToSection(3)}>
-            <p>3</p>
-            <p>Education Background</p>
-          </span>
-
-          <span className="seeker-sh-span" onClick={() => scrollToSection(4)}>
-            <p>4</p>
-            <p>Your Projects</p>
-          </span>
-
-          <span className="seeker-sh-span" onClick={() => scrollToSection(5)}>
-            <p>5</p>
-            <p>Work Experience</p>
-          </span>
-
-          <span className="seeker-sh-span" onClick={() => scrollToSection(6)}>
-            <p>6</p>
-            <p>Professional Courses</p>
-          </span>
-
-          <span className="seeker-sh-span" onClick={() => scrollToSection(7)}>
-            <p>7</p>
-            <p>Other Details</p>
-          </span>
+          {headerSpans.map((headerSpan) => (
+            <span
+              key={headerSpan.section}
+              className={`seeker-sh-span ${
+                currentSection >= headerSpan.section ? "seeker-sh-span-2" : ""
+              }`}
+              onClick={() => scrollToSection(headerSpan.section)}
+            >
+              <p>{headerSpan.section}</p>
+              <p>{headerSpan.text}</p>
+            </span>
+          ))}
         </div>
       </div>
     );
@@ -71,7 +87,7 @@ export default function SeekerSignup() {
     return (
       <form className="seeker-signup-sections" ref={sectionRefs[0]}>
         <p>This is signup section 1</p>
-        <button type="button" onClick={() => scrollToSection(2)}>
+        <button type="button" onClick={handleNextSection}>
           Save
         </button>
       </form>
@@ -82,7 +98,7 @@ export default function SeekerSignup() {
     return (
       <form className="seeker-signup-sections" ref={sectionRefs[1]}>
         <p>This is signup section 2</p>
-        <button type="button" onClick={() => scrollToSection(1)}>
+        <button type="button" onClick={handleNextSection}>
           Save
         </button>
       </form>
@@ -93,7 +109,7 @@ export default function SeekerSignup() {
     return (
       <form className="seeker-signup-sections" ref={sectionRefs[2]}>
         <p>This is signup section 3</p>
-        <button type="button" onClick={() => scrollToSection(4)}>
+        <button type="button" onClick={handleNextSection}>
           Save
         </button>
       </form>
@@ -104,7 +120,7 @@ export default function SeekerSignup() {
     return (
       <form className="seeker-signup-sections" ref={sectionRefs[3]}>
         <p>This is signup section 4</p>
-        <button type="button" onClick={() => scrollToSection(3)}>
+        <button type="button" onClick={handleNextSection}>
           Save
         </button>
       </form>
@@ -115,7 +131,7 @@ export default function SeekerSignup() {
     return (
       <form className="seeker-signup-sections" ref={sectionRefs[4]}>
         <p>This is signup section 5</p>
-        <button type="button" onClick={() => scrollToSection(6)}>
+        <button type="button" onClick={handleNextSection}>
           Save
         </button>
       </form>
@@ -126,7 +142,7 @@ export default function SeekerSignup() {
     return (
       <form className="seeker-signup-sections" ref={sectionRefs[5]}>
         <p>This is signup section 6</p>
-        <button type="button" onClick={() => scrollToSection(5)}>
+        <button type="button" onClick={handleNextSection}>
           Save
         </button>
       </form>
@@ -137,7 +153,7 @@ export default function SeekerSignup() {
     return (
       <form className="seeker-signup-sections" ref={sectionRefs[6]}>
         <p>This is signup section 7</p>
-        <button type="button" onClick={() => scrollToSection(7)}>
+        <button type="button" onClick={handleNextSection}>
           Save
         </button>
       </form>
