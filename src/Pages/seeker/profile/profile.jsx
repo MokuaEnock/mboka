@@ -4,27 +4,52 @@ import "./profile.css";
 
 export default function SeekerProfile() {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [firstName, setFirstName] = useState("");
+  const [secondName, setSecondName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [gender, setGender] = useState("");
+  const [dob, setDob] = useState("");
+  const [country, setCountry] = useState("");
+  const [nationality, setNationality] = useState("");
 
   function handleImageChange(event) {
     const file = event.target.files[0];
-    const reader = new FileReader();
-
-    reader.onload = () => {
-      setSelectedImage(reader.result);
-    };
-
-    if (file) {
-      reader.readAsDataURL(file);
-    }
+    setSelectedImage(file);
   }
 
+  function handleFormSubmit(event) {
+    event.preventDefault();
 
-  function Profile() {
-    return (
+    const formData = new FormData();
+    formData.append("avatar", selectedImage);
+    formData.append("first_name", firstName);
+    formData.append("second_name", secondName);
+    formData.append("last_name", lastName);
+    formData.append("gender", gender);
+    formData.append("dob", dob);
+    formData.append("country", country);
+    formData.append("nationality", nationality);
+
+    fetch("http://127.0.0.1:3000/seeker_details", {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data); // Handle the response data
+      })
+      .catch((error) => {
+        console.error(error); // Handle any errors
+      });
+  }
+
+  return (
+    <>
+      <SeekerHeader />
       <main className="seeker-profile-cont">
         <section id="seeker-profile-cont">
           <section id="seeker-profile-navigation"></section>
-          <form id="seeker-profile-main">
+          <form id="seeker-profile-main" onSubmit={handleFormSubmit}>
             <div id="seeker-pm-1">
               <h3>Profile Completeness</h3>
               <progress id="profile-progress" value="0" max="100"></progress>
@@ -33,29 +58,54 @@ export default function SeekerProfile() {
             <div id="seeker-pm-2">
               <span>
                 <p>Upload your profile Image</p>
-                <img src={selectedImage} alt="profile" />
+                <img
+                  src={selectedImage ? URL.createObjectURL(selectedImage) : ""}
+                  alt="profile"
+                />
                 <input type="file" onChange={handleImageChange} />
               </span>
               <span>
                 <label>
                   <p>First Name</p>
-                  <input type="text" placeholder="First Name" />
+                  <input
+                    type="text"
+                    name="firstName"
+                    value={firstName}
+                    onChange={(event) => setFirstName(event.target.value)}
+                    placeholder="First Name"
+                  />
                 </label>
 
                 <label>
                   <p>Second Name</p>
-                  <input type="text" placeholder="Second Name" />
+                  <input
+                    type="text"
+                    name="secondName"
+                    value={secondName}
+                    onChange={(event) => setSecondName(event.target.value)}
+                    placeholder="Second Name"
+                  />
                 </label>
 
                 <label>
                   <p>Last Name</p>
-                  <input type="text" placeholder="Last Name" />
+                  <input
+                    type="text"
+                    name="lastName"
+                    value={lastName}
+                    onChange={(event) => setLastName(event.target.value)}
+                    placeholder="Last Name"
+                  />
                 </label>
 
                 <label>
                   <p>Gender</p>
-                  <select>
-                    <option disabled selected>
+                  <select
+                    name="gender"
+                    value={gender}
+                    onChange={(event) => setGender(event.target.value)}
+                  >
+                    <option disabled value="">
                       Select your gender
                     </option>
                     <option value="Male">Male</option>
@@ -65,7 +115,34 @@ export default function SeekerProfile() {
 
                 <label>
                   <p>Date of birth</p>
-                  <input type="date" />
+                  <input
+                    type="date"
+                    name="dob"
+                    value={dob}
+                    onChange={(event) => setDob(event.target.value)}
+                  />
+                </label>
+
+                <label>
+                  <p>Country</p>
+                  <input
+                    type="text"
+                    name="country"
+                    value={country}
+                    onChange={(event) => setCountry(event.target.value)}
+                    placeholder="Country"
+                  />
+                </label>
+
+                <label>
+                  <p>Nationality</p>
+                  <input
+                    type="text"
+                    name="nationality"
+                    value={nationality}
+                    onChange={(event) => setNationality(event.target.value)}
+                    placeholder="Nationality"
+                  />
                 </label>
               </span>
             </div>
@@ -74,13 +151,6 @@ export default function SeekerProfile() {
           </form>
         </section>
       </main>
-    );
-  }
-
-  return (
-    <>
-      <SeekerHeader />
-      <Profile />
     </>
   );
 }
