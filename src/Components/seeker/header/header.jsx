@@ -45,7 +45,7 @@ export default function SeekerHeader() {
             <FaCog />
           </Link>
 
-          <Link to="profile" className="seeker-profile-link">
+          <Link to="/seeker/profile" className="seeker-profile-link">
             <span id="seeker-profile-image"></span>
             Enock Mokua
           </Link>
