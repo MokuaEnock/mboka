@@ -1,7 +1,24 @@
+import React, { useState } from "react";
 import SeekerHeader from "../../../Components/seeker/header/header";
 import "./profile.css";
 
 export default function SeekerProfile() {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  function handleImageChange(event) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = () => {
+      setSelectedImage(reader.result);
+    };
+
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  }
+
+
   function Profile() {
     return (
       <main className="seeker-profile-cont">
@@ -10,15 +27,14 @@ export default function SeekerProfile() {
           <form id="seeker-profile-main">
             <div id="seeker-pm-1">
               <h3>Profile Completeness</h3>
-
               <progress id="profile-progress" value="0" max="100"></progress>
             </div>
 
             <div id="seeker-pm-2">
               <span>
                 <p>Upload your profile Image</p>
-                <img src="#" alt="profile" />
-                <input type="file" />
+                <img src={selectedImage} alt="profile" />
+                <input type="file" onChange={handleImageChange} />
               </span>
               <span>
                 <label>
