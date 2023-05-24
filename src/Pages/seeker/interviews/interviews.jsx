@@ -27,7 +27,21 @@ export default function SeekerInterviews() {
               <button>Next</button>
             </span>
           </div>
-          <article id="seeker-cont2"></article>
+
+          <article id="seeker-cont2">
+            <div id="seeker-cont2-head">
+              <h3>Kilimo Africa</h3>
+
+              <h5>Time: 90 mins</h5>
+
+              <h5>Passmark: 80%</h5>
+            </div>
+            <div id="seeker-cont2-body"></div>
+            <div id="seeker-cont2-foot">
+              <button>Mock Test</button>
+              <button>Start Test</button>
+            </div>
+          </article>
         </section>
       </main>
     );
