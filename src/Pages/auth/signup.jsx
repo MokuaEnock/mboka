@@ -1,6 +1,7 @@
 import "./auth.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Header from "../../Components/header/header";
 
 export default function FinderSignup() {
   const [email, setEmail] = useState("");
@@ -51,66 +52,77 @@ export default function FinderSignup() {
     navigate("/seeker/signup");
   }
 
-  return (
-    <main id="finder" className="auth">
-      <form onSubmit={handleSubmit}>
-        <div>This is the image</div>
-        <div>
-          <h3>Hello there, Job Seeker, welcome to Insunity</h3>
-          <p>Sign up today to mass apply to jobs that fit your skills.</p>
-          <label className="auth-form-input">
-            <p>Email Address</p>
-            <input
-              type="email"
-              value={email}
-              placeholder="Email Address"
-              onChange={(event) => setEmail(event.target.value)}
-            />
-          </label>
+  function Container() {
+    return (
+      <main id="finder" className="auth">
+        <form onSubmit={handleSubmit}>
+          <div>This is the image</div>
+          <div>
+            <h3>Hello there, Job Seeker, welcome to Insunity</h3>
+            <p>Sign up today to mass apply to jobs that fit your skills.</p>
+            <label className="auth-form-input">
+              <p>Email Address</p>
+              <input
+                type="email"
+                value={email}
+                placeholder="Email Address"
+                onChange={(event) => setEmail(event.target.value)}
+              />
+            </label>
 
-          <label className="auth-form-input">
-            <p>Username</p>
-            <input
-              type="text"
-              value={username}
-              placeholder="Username"
-              onChange={(event) => setUsername(event.target.value)}
-            />
-          </label>
+            <label className="auth-form-input">
+              <p>Username</p>
+              <input
+                type="text"
+                value={username}
+                placeholder="Username"
+                onChange={(event) => setUsername(event.target.value)}
+              />
+            </label>
 
-          <label className="auth-form-input">
-            <p>Password</p>
-            <input
-              type="password"
-              value={password}
-              placeholder="Password"
-              onChange={(event) => setPassword(event.target.value)}
-            />
-          </label>
+            <label className="auth-form-input">
+              <p>Password</p>
+              <input
+                type="password"
+                value={password}
+                placeholder="Password"
+                onChange={(event) => setPassword(event.target.value)}
+              />
+            </label>
 
-          <label className="auth-form-input">
-            <p>Confirm Password</p>
-            <input
-              type="password"
-              placeholder="Confirm Password"
-              value={passwordConfirmation}
-              onChange={(event) => setPasswordConfirmation(event.target.value)}
-            />
-          </label>
+            <label className="auth-form-input">
+              <p>Confirm Password</p>
+              <input
+                type="password"
+                placeholder="Confirm Password"
+                value={passwordConfirmation}
+                onChange={(event) =>
+                  setPasswordConfirmation(event.target.value)
+                }
+              />
+            </label>
 
-          <button type="submit" className="auth-form-button">
-            Join Insunity
-          </button>
+            <button type="submit" className="auth-form-button">
+              Join Insunity
+            </button>
 
-          <div id="auth-form-errors">
-            {formErrors.map((error, index) => (
-              <p className="auth-form-error" key={index}>
-                {error}
-              </p>
-            ))}
+            <div id="auth-form-errors">
+              {formErrors.map((error, index) => (
+                <p className="auth-form-error" key={index}>
+                  {error}
+                </p>
+              ))}
+            </div>
           </div>
-        </div>
-      </form>
-    </main>
+        </form>
+      </main>
+    );
+  }
+
+  return (
+    <>
+      <Header />
+      <Container />
+    </>
   );
 }

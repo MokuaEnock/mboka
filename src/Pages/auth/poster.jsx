@@ -1,6 +1,7 @@
 import "./auth.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import Header from "../../Components/header/header";
 
 export default function PosterSignup() {
   const [email, setEmail] = useState("");
@@ -25,61 +26,72 @@ export default function PosterSignup() {
     // add your API call to submit the form data here
   };
 
+  function Container() {
+    return (
+      <main id="poster" className="auth">
+        <form onSubmit={handleSubmit}>
+          <div>This is the image</div>
+          <div>
+            <h3>Hello there Recruiter</h3>
+            <p>Find the right talent.</p>
+            <label>
+              Email:
+              <input
+                type="email"
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
+                // required
+              />
+            </label>
+            <label>
+              Password:
+              <input
+                type="password"
+                value={password}
+                onChange={(event) => setPassword(event.target.value)}
+                // required
+              />
+            </label>
+            <label>
+              First Name:
+              <input
+                type="text"
+                value={firstName}
+                onChange={(event) => setFirstName(event.target.value)}
+                // required
+              />
+            </label>
+            <label>
+              Last Name:
+              <input
+                type="text"
+                value={lastName}
+                onChange={(event) => setLastName(event.target.value)}
+                // required
+              />
+            </label>
+            <label>
+              Confirm Password:
+              <input
+                type="password"
+                value={passwordConfirmation}
+                onChange={(event) =>
+                  setPasswordConfirmation(event.target.value)
+                }
+                // required
+              />
+            </label>
+            <button type="submit">Sign Up</button>
+          </div>
+        </form>
+      </main>
+    );
+  }
+
   return (
-    <main id="poster" className="auth">
-      <form onSubmit={handleSubmit}>
-        <div>This is the image</div>
-        <div>
-          <h3>Hello there Recruiter</h3>
-          <p>Find the right talent.</p>
-          <label>
-            Email:
-            <input
-              type="email"
-              value={email}
-              onChange={(event) => setEmail(event.target.value)}
-              // required
-            />
-          </label>
-          <label>
-            Password:
-            <input
-              type="password"
-              value={password}
-              onChange={(event) => setPassword(event.target.value)}
-              // required
-            />
-          </label>
-          <label>
-            First Name:
-            <input
-              type="text"
-              value={firstName}
-              onChange={(event) => setFirstName(event.target.value)}
-              // required
-            />
-          </label>
-          <label>
-            Last Name:
-            <input
-              type="text"
-              value={lastName}
-              onChange={(event) => setLastName(event.target.value)}
-              // required
-            />
-          </label>
-          <label>
-            Confirm Password:
-            <input
-              type="password"
-              value={passwordConfirmation}
-              onChange={(event) => setPasswordConfirmation(event.target.value)}
-              // required
-            />
-          </label>
-          <button type="submit">Sign Up</button>
-        </div>
-      </form>
-    </main>
+    <>
+      <Header />
+      <Container />
+    </>
   );
 }
