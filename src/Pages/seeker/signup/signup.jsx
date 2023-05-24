@@ -125,6 +125,31 @@ export default function SeekerSignup() {
               <input type="text" placeholder="City of residence" />
             </label>
           </div>
+
+          <div className="seeker-ss-conts-cont-custom">
+            <label className="seeker-ss-customs">
+              <p>Choose your gender</p>
+
+              <span>
+                <p>
+                  <input type="radio" name="gender" value="male" /> Male
+                </p>
+                <p>
+                  <input type="radio" name="gender" value="female" /> Female
+                </p>
+              </span>
+            </label>
+
+            <label className="seeker-ss-customs">
+              <p>Upload profile image (JPEG, JPG)</p>
+              <input type="file" accept="image/jpeg, image/jpg, image/png" />
+            </label>
+
+            <label className="seeker-ss-customs">
+              <p>Upload your resume (PDF)</p>
+              <input type="file" accept="application/pdf" />
+            </label>
+          </div>
         </div>
         <div className="seeker-ss-buttons">
           <p></p>

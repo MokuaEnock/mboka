@@ -121,7 +121,6 @@
 .seeker-ss-conts-cont-text {
   width: 100%;
   height: max-content;
-  border: thin solid black;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 1vw;
@@ -129,6 +128,76 @@
 }
 
 .seeker-ss-conts-cont-text > label {
-  border: thin solid black;
-  height: 8vh;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.seeker-ss-conts-cont-text > label > p {
+  font-size: 1rem;
+}
+
+.seeker-ss-conts-cont-text > label > input {
+  height: 60%;
+  width: 60%;
+  border: thin solid var(--five);
+  border-radius: 2.5px 10px 10px;
+  text-align: center;
+}
+
+.seeker-ss-conts-cont-custom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.seeker-ss-conts-cont-custom > * {
+  height: 10vh;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.seeker-ss-customs > * {
+  width: 100%;
+  color: var(--primary);
+}
+
+.seeker-ss-customs > input {
+  height: 50%;
+}
+
+.seeker-ss-customs > span {
+  display: flex;
+  width: 100%;
+  height: 60%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.seeker-ss-customs > span > * {
+  width: 40%;
+  border: thin solid var(--five);
+  border-radius: 2.5px 10px 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.seeker-ss-customs input[type="file"]::-webkit-file-upload-button {
+  color: var(--third);
+  font-size: 1rem;
+  width: 40%;
+  height: 100%;
+  background-color: var(--four);
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
 }
