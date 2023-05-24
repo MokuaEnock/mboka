@@ -34,9 +34,9 @@ export default function SeekerHeader() {
             <FaEnvelope />
             <span>Messages</span>
           </Link>
-          <Link to="/applied-jobs" className="menu-link">
+          <Link to="/seeker/interviews" className="menu-link">
             <FaListAlt />
-            <span>Applied Jobs</span>
+            <span>Interviews</span>
           </Link>
         </span>
 

@@ -7,7 +7,6 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
-  const [passwordConfirmation, setPasswordConfirmation] = useState("");
   // const [formErrors, setFormErrors] = useState([]);
   // let navigate = useNavigate();
   const handleSubmit = (event) => {
@@ -52,20 +51,8 @@ export default function Login() {
               />
             </label>
 
-            <label className="auth-form-input">
-              <p>Confirm Password</p>
-              <input
-                type="password"
-                placeholder="Confirm Password"
-                value={passwordConfirmation}
-                onChange={(event) =>
-                  setPasswordConfirmation(event.target.value)
-                }
-              />
-            </label>
-
             <button type="submit" className="auth-form-button">
-              Join Insunity
+              Continue to Insunity
             </button>
 
             {/* <div id="auth-form-errors">

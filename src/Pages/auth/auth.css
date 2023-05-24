@@ -24,11 +24,13 @@
 .auth > form > div > h3 {
   font-size: 1.5rem;
   color: var(--primary);
+  width: 70%;
   font-weight: bold;
 }
 
 .auth > form > div > p {
   color: grey;
+  width: 70%;
   font-size: 1rem;
 }
 
@@ -63,16 +65,16 @@
 
 .auth-form-button {
   width: 70%;
-  height: 6vh;
+  height: 7vh;
   background-color: transparent;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--primary);
   border-radius: 2.5px 10px 10px 10px;
 }
 
 .auth-form-button:hover {
-  background-color: var(--primary);
-  color: white;
+  background-color: var(--four);
+  color: var(--third);
 }
 
 #auth-form-errors {

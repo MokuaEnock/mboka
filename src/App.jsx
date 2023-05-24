@@ -20,6 +20,7 @@ import SeekerHome from "./Pages/seeker/home/home";
 import SeekerReccomdendations from "./Pages/seeker/reccomendations/rec";
 import SeekerProfile from "./Pages/seeker/profile/profile";
 import SeekerSignup from "./Pages/seeker/signup/signup";
+import SeekerInterviews from "./Pages/seeker/interviews/interviews";
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
           <Route path="reccs" element={<SeekerReccomdendations />} />
           <Route path="profile" element={<SeekerProfile />} />
           <Route path="signup" element={<SeekerSignup />} />
+          <Route path="interviews" element={<SeekerInterviews />} />
         </Route>
 
         <Route path="/auth">
