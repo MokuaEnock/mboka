@@ -1,28 +1,8 @@
 import { Link } from "react-router-dom";
 import "./landing.css";
+import Header from "../../../Components/header/header";
 
 export default function Landing() {
-  function Header() {
-    return (
-      <header>
-        <div className="header">
-          <Link to="/" className="logo">
-            Insunity
-          </Link>
-
-          <span>
-            <Link to="/">Home</Link>
-            <Link to="/">Interviews</Link>
-          </span>
-
-          <Link to="/auth/login" className="header-login">
-            Login
-          </Link>
-        </div>
-      </header>
-    );
-  }
-
   function Container() {
     return (
       <main className="landing">

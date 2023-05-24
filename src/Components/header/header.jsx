@@ -11,9 +11,12 @@ export default function Header() {
 
         <span>
           <Link to="/">Home</Link>
+          <Link to="/">Interviews</Link>
         </span>
 
-        <Link to="/auth/login">Login</Link>
+        <Link to="/auth/login" className="header-login">
+          Login
+        </Link>
       </div>
     </header>
   );
