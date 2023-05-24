@@ -9,9 +9,8 @@
 }
 
 #landing-1 > div {
-  border: thin solid white;
   height: 50%;
-  width: 85%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,4 +59,3 @@
 .landing-main > span > :last-child {
   color: var(--four);
 }
-
