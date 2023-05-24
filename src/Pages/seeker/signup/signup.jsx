@@ -146,6 +146,11 @@ export default function SeekerSignup() {
             </label>
 
             <label className="seeker-ss-customs">
+              <p>Upload your 3min video resume (MP4, MKV)</p>
+              <input type="file" accept="video/mp4, video/mkv" />
+            </label>
+
+            <label className="seeker-ss-customs">
               <p>Upload your resume (PDF)</p>
               <input type="file" accept="application/pdf" />
             </label>
