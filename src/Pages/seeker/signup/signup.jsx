@@ -150,6 +150,23 @@ export default function SeekerSignup() {
               <input type="file" accept="application/pdf" />
             </label>
           </div>
+
+          <SeekerSectionHeader
+            header={"Professional Summary"}
+            paragraph={"Provide us with an overview of your career journey"}
+          />
+
+          <div className="seeker-ss-conts-cont-textarea">
+            <label className="seeker-scc-textareas">
+              <p>Your professional summary</p>
+              <textarea maxLength="500" />
+            </label>
+
+            <label className="seeker-scc-textareas">
+              <p>Your career objectives</p>
+              <textarea maxLength="500" />
+            </label>
+          </div>
         </div>
         <div className="seeker-ss-buttons">
           <p></p>
