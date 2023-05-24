@@ -91,12 +91,39 @@ export default function SeekerSignup() {
           <SeekerSectionHeader
             header={"Personal Details"}
             paragraph={
-              "Please provide your personal information information for the sake of identification "
+              "Please provide your personal information for the sake of identification "
             }
           />
 
-          <div className="seeker-ss-conts">
-            <span className="seeker-ss-conts-cont"></span>
+          <div className="seeker-ss-conts-cont-text">
+            <label>
+              <p>First Name</p>
+              <input placeholder="First Name" />
+            </label>
+            <label>
+              <p>Second Name</p>
+              <input type="text" placeholder="Second Name" />
+            </label>
+
+            <label>
+              <p>Third Name</p>
+              <input type="text" placeholder="Third Name" />
+            </label>
+
+            <label>
+              <p>Phone Number</p>
+              <input type="number" placeholder="Phone Number" />
+            </label>
+
+            <label>
+              <p>Country of residence</p>
+              <input type="text" placeholder="Country of residence" />
+            </label>
+
+            <label>
+              <p>City of residence</p>
+              <input type="text" placeholder="City of residence" />
+            </label>
           </div>
         </div>
         <div className="seeker-ss-buttons">

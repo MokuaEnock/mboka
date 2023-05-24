@@ -95,7 +95,7 @@
 }
 
 .seeker-ss-buttons {
-  height: 10%;
+  height: 8%;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -118,3 +118,17 @@
   color: var(--secondary);
 }
 
+.seeker-ss-conts-cont-text {
+  width: 100%;
+  height: max-content;
+  border: thin solid black;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1vw;
+  row-gap: 1.5vh;
+}
+
+.seeker-ss-conts-cont-text > label {
+  border: thin solid black;
+  height: 8vh;
+}
