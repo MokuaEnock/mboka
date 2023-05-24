@@ -70,9 +70,6 @@
   text-align: center;
 }
 
-#seeker-cont1-foot > * {
-}
-
 #seeker-cont1-foot > span {
   width: 50%;
   display: flex;
@@ -99,7 +96,6 @@
 }
 
 #seeker-cont2 > * {
-  border: thin solid black;
   width: 100%;
 }
 
@@ -111,11 +107,9 @@
   background-color: var(--secondary);
 }
 
-#seeker-cont2-head > * {
-}
-
 #seeker-cont2-body {
   height: 83%;
+  overflow-y: scroll;
 }
 
 #seeker-cont2-foot {
@@ -125,7 +119,7 @@
   justify-content: space-between;
 }
 
-#seeker-cont2-foot > button {
+#seeker-cont2-foot > a {
   width: 12%;
   font-size: 1rem;
   border: thin solid var(--primary);

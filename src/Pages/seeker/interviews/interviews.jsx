@@ -1,8 +1,39 @@
+import React, { useState } from "react";
 import SeekerHeader from "../../../Components/seeker/header/header";
 import "./interviews.css";
+import { Link } from "react-router-dom";
+
+let interviewsData = [
+  {
+    id: 1,
+    heading: "Item 1",
+    text: "This is the text for Item 1.",
+  },
+  {
+    id: 2,
+    heading: "Item 2",
+    text: "This is the text for Item 2.",
+  },
+  {
+    id: 3,
+    heading: "Item 3",
+    text: "This is the text for Item 3.",
+  },
+  {
+    id: 4,
+    heading: "Item 4",
+    text: "This is the text for Item 4.",
+  },
+];
 
 export default function SeekerInterviews() {
+  const [selectedInterview, setSelectedInterview] = useState(interviewsData[0]);
+
   function Container() {
+    const handleInterviewClick = (interview) => {
+      setSelectedInterview(interview);
+    };
+
     return (
       <main className="seeker">
         <section className="seeker-interview">
@@ -12,10 +43,16 @@ export default function SeekerInterviews() {
               <button>Filter By</button>
             </span>
             <div id="seeker-cont1-body">
-              <div className="seeker-interview-card">Interview 1</div>
-              <div className="seeker-interview-card">Interview 2</div>
-              <div className="seeker-interview-card">Interview 3</div>
-              <div className="seeker-interview-card">Interview 4</div>
+              {interviewsData.map((interview) => (
+                <div
+                  className="seeker-interview-card"
+                  key={interview.id}
+                  onClick={() => handleInterviewClick(interview)}
+                >
+                  <h4>{interview.heading}</h4>
+                  <p>{interview.text}</p>
+                </div>
+              ))}
             </div>
             <span id="seeker-cont1-foot">
               <button>Back</button>
@@ -30,16 +67,16 @@ export default function SeekerInterviews() {
 
           <article id="seeker-cont2">
             <div id="seeker-cont2-head">
-              <h3>Kilimo Africa</h3>
-
+              <h3>{selectedInterview.heading}</h3>
               <h5>Time: 90 mins</h5>
-
               <h5>Passmark: 80%</h5>
             </div>
-            <div id="seeker-cont2-body"></div>
+            <div id="seeker-cont2-body">
+              <p>{selectedInterview.text}</p>
+            </div>
             <div id="seeker-cont2-foot">
-              <button>Mock Test</button>
-              <button>Start Test</button>
+              <Link>Mock Test</Link>
+              <Link to="">Start Test</Link>
             </div>
           </article>
         </section>
