@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SeekerHeader from "../../../Components/seeker/header/header";
 import SeekerSearch from "../../../Components/seeker/search/search";
 import "./home.css";
@@ -124,60 +124,103 @@ let jobData = {
   ],
 };
 
+const ITEMS_PER_PAGE = 3;
+
 export default function SeekerHome() {
-  const [selectedJob, setSelectedJob] = useState(jobData.jobs[0]);
+  const [selectedJob, setSelectedJob] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulating job data fetching delay
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+  }, []);
+
+  useEffect(() => {
+    const totalJobs = jobData.jobs.length;
+    const totalPages = Math.ceil(totalJobs / ITEMS_PER_PAGE);
+    setTotalPages(totalPages);
+
+    // Select the first job by default
+    setSelectedJob(jobData.jobs[0]);
+  }, []);
 
   const handleJobClick = (job) => {
     setSelectedJob(job);
   };
 
-  function Home() {
-    return (
-      <main className="seeker">
-        <section className="seeker-home">
-          <div id="seeker-home-1">
-            <div className="seeker-home-cont-info">
-              {jobData.jobs.map((job) => (
-                <div
-                  key={job.id}
-                  className={`seeker-job-card ${
-                    job === selectedJob ? "selected" : ""
-                  }`}
-                  onClick={() => handleJobClick(job)}
-                >
-                  <h4>{job.title}</h4>
-                  <p>{job.company}</p>
-                  <p>{job.location}</p>
-                </div>
-              ))}
-            </div>
-            <div className="seeker-home-cont-foot">
-              <button>Back</button>
-              <span>
-                <p>1</p>
-                <p>2</p>
-                <p>3</p>
-                <p>4</p>
-              </span>
-              <button>Next</button>
-            </div>
-          </div>
-          <div id="seeker-home-2">
-            <h3>{selectedJob.title}</h3>
-            <p>{selectedJob.company}</p>
-            <p>{selectedJob.location}</p>
-            <p>{selectedJob.description}</p>
-          </div>
-        </section>
-      </main>
-    );
-  }
+  const handlePreviousPage = () => {
+    setCurrentPage((prevPage) => prevPage - 1);
+  };
+
+  const handleNextPage = () => {
+    setCurrentPage((prevPage) => prevPage + 1);
+  };
+
+  const getVisibleJobs = () => {
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const endIndex = startIndex + ITEMS_PER_PAGE;
+    return jobData.jobs.slice(startIndex, endIndex);
+  };
 
   return (
     <>
       <SeekerHeader />
       <SeekerSearch />
-      <Home />
+      <main className="seeker">
+        <section className="seeker-home">
+          <div id="seeker-home-1">
+            <div className="seeker-home-cont-info">
+              {isLoading ? (
+                <div className="loading-spinner">Loading...</div>
+              ) : (
+                getVisibleJobs().map((job) => (
+                  <div
+                    key={job.id}
+                    className={`seeker-job-card ${
+                      job === selectedJob ? "selected" : ""
+                    }`}
+                    onClick={() => handleJobClick(job)}
+                  >
+                    <h4>{job.title}</h4>
+                    <p>{job.company}</p>
+                    <p>{job.location}</p>
+                  </div>
+                ))
+              )}
+            </div>
+            <div className="seeker-home-cont-foot">
+              <button disabled={currentPage === 1} onClick={handlePreviousPage}>
+                Back
+              </button>
+              <span>
+                <p>{currentPage}</p>
+                <p>/</p>
+                <p>{totalPages}</p>
+              </span>
+              <button
+                disabled={currentPage === totalPages}
+                onClick={handleNextPage}
+              >
+                Next
+              </button>
+            </div>
+          </div>
+          <div id="seeker-home-2">
+            {selectedJob && (
+              <>
+                <h3>{selectedJob.title}</h3>
+                <p>{selectedJob.company}</p>
+                <p>{selectedJob.location}</p>
+                <p>{selectedJob.description}</p>
+              </>
+            )}
+          </div>
+        </section>
+      </main>
     </>
   );
 }
