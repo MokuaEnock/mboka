@@ -22,4 +22,39 @@
 
 #seeker-detail-3 {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0.3%;
+  padding-right: 0.3%;
+}
+
+#seeker-detail-3 > * {
+  border: thin solid black;
+  width: 100%;
+}
+
+#seeker-detail-3-header {
+  height: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--primary);
+}
+
+#seeker-detail-3-header > h3 {
+  font-weight: lighter;
+  font-size: 1.5rem;
+}
+
+#seeker-detail-3-header > button {
+  font-size: 1rem;
+  height: 90%;
+  width: 17%;
+  border: thin solid var(--four);
+  background-color: var(--four);
+  color: var(--third);
+  border-radius: 2.5px;
+  /* border-radius: 2.5px 10px 10px; */
 }

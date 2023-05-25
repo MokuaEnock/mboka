@@ -1,0 +1,28 @@
+#code-editor-head {
+  height: 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#code-editor-head > span {
+  width: 40%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#code-editor-head > span > select {
+  height: 100%;
+  font-size: 1rem;
+  width: 40%;
+}
+
+#code-editor-head option {
+  font-size: 1rem;
+}
+
+#code-editor-output {
+  height: 40%;
+}
