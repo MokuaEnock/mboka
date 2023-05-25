@@ -124,7 +124,7 @@ let jobData = {
   ],
 };
 
-const ITEMS_PER_PAGE = 3;
+const ITEMS_PER_PAGE = 5;
 
 export default function SeekerHome() {
   const [selectedJob, setSelectedJob] = useState(null);

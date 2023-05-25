@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
 import {
+  FaRegThumbsUp,
+  FaSearch,
   FaBookmark,
   FaEnvelope,
   FaListAlt,
-  FaSearch,
-  FaThumbsUp,
   FaCog,
+  FaMicrophone,
+  FaCalendarCheck,
+  FaCheckCircle,
 } from "react-icons/fa";
 import "./header.css";
 
@@ -19,24 +22,25 @@ export default function SeekerHeader() {
 
         <span id="seeker-header-info">
           <Link to="/seeker/reccs" className="menu-link">
-            <FaThumbsUp />
+            <FaRegThumbsUp />
             <span>Recommendations</span>
           </Link>
-          {/* <Link to="/find-job" className="menu-link">
-            <FaSearch />
-            <span>Explore</span>
-          </Link> */}
+
           <Link to="/bookmarks" className="menu-link">
             <FaBookmark />
             <span>Bookmarks</span>
           </Link>
+          <Link to="/applied-jobs" className="menu-link">
+            <FaListAlt />
+            <span>Applied Jobs</span>
+          </Link>
+          <Link to="/seeker/interviews" className="menu-link">
+            <FaMicrophone />
+            <span>Interviews</span>
+          </Link>
           <Link to="/messages" className="menu-link">
             <FaEnvelope />
             <span>Messages</span>
-          </Link>
-          <Link to="/seeker/interviews" className="menu-link">
-            <FaListAlt />
-            <span>Interviews</span>
           </Link>
         </span>
 
