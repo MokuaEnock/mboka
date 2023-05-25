@@ -95,15 +95,15 @@ export default function SeekerInterviewDetail() {
         <div id="seeker-detail-2-cont">
           <p>{selectedQuestion.description}</p>
 
-          <span>
+          <div>
             <h5>Example Input</h5>
             <p>{selectedQuestion.exampleInput}</p>
-          </span>
+          </div>
 
-          <span>
+          <div>
             <h5>Example Output</h5>
             <p>{selectedQuestion.exampleOutput}</p>
-          </span>
+          </div>
         </div>
       </section>
 
