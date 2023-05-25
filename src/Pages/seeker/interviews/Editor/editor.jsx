@@ -6,12 +6,7 @@ const CodeEditor = () => {
   const [code, setCode] = useState("");
   const [output, setOutput] = useState("");
   const [message, setMessage] = useState("");
-  const [theme, setTheme] = useState("light");
-
-  const handleEditorChange = (value, event) => {
-    event.preventDefault()
-    setCode(value);
-  };
+  const [theme, setTheme] = useState("vs-light");
 
   const runCode = () => {
     if (code.trim() === "") {
@@ -21,15 +16,11 @@ const CodeEditor = () => {
     }
 
     try {
-      // Clear previous output and message
       setOutput("");
       setMessage("");
-      // Run the code and capture the output
       const result = eval(code);
-      // Update the output state with the result
-      setOutput(result);
+      setOutput(String(result));
     } catch (error) {
-      // If an error occurs, display it in the output
       setOutput("");
       setMessage(error.toString());
     }
@@ -46,7 +37,7 @@ const CodeEditor = () => {
       language="javascript"
       theme={theme}
       value={code}
-      onChange={handleEditorChange}
+      onChange={(value) => setCode(value)}
       options={{
         minimap: { enabled: false },
         scrollBeyondLastLine: false,
@@ -79,8 +70,8 @@ const CodeEditor = () => {
   const Output = () => (
     <div id="code-editor-output">
       <button onClick={runCode}>Run</button>
-      {message && <p>{message}</p>}
-      {output}
+      {message && <p className="error-message">{message}</p>}
+      {output && <p className="output">{output}</p>}
     </div>
   );
 
