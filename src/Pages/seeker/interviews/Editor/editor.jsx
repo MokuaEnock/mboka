@@ -6,8 +6,10 @@ const CodeEditor = () => {
   const [code, setCode] = useState("");
   const [output, setOutput] = useState("");
   const [message, setMessage] = useState("");
+  const [theme, setTheme] = useState("light");
 
-  const handleEditorChange = (value) => {
+  const handleEditorChange = (value, event) => {
+    event.preventDefault()
     setCode(value);
   };
 
@@ -33,11 +35,16 @@ const CodeEditor = () => {
     }
   };
 
+  const handleThemeChange = (event) => {
+    setTheme(event.target.value);
+  };
+
   const Code = () => (
     <MonacoEditor
       width="100%"
       height="50%"
       language="javascript"
+      theme={theme}
       value={code}
       onChange={handleEditorChange}
       options={{
@@ -53,9 +60,11 @@ const CodeEditor = () => {
     <div id="code-editor-head">
       <p>Time: 30mins</p>
       <span>
-        <select name="Theme">
-          <option value="light">VS Code Light</option>
-          <option value="dark">VS Code Dark</option>
+        <select name="Theme" value={theme} onChange={handleThemeChange}>
+          <option value="vs-light">VS Code Light</option>
+          <option value="vs-dark">VS Code Dark</option>
+          <option value="hc-black">High Contrast</option>
+          {/* Add more theme options here */}
         </select>
         <select name="language">
           <option value="javascript">JavaScript</option>

@@ -7,6 +7,10 @@
   justify-content: space-between;
 }
 
+.interview-detail p {
+  margin: 0;
+}
+
 .interview-detail > * {
   height: 100%;
   border: thin solid black;
@@ -31,7 +35,6 @@
 }
 
 #seeker-detail-3 > * {
-  border: thin solid black;
   width: 100%;
 }
 
