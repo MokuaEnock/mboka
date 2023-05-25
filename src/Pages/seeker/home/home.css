@@ -17,18 +17,76 @@
 .seeker-home {
   height: 83vh;
   width: 85%;
-  border: thin solid black;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 
-.seeker-home > * {
-  height: 100%;
-  border: thin solid black;
+#seeker-home-1 > * {
+  width: 100%;
 }
 
-.seeker-home > div {
-    width: 30%;
+.seeker-home > * {
+  height: 100%;
+  padding-left: 0.2%;
+  padding-right: 0.2%;
+}
+
+.seeker-home-cont-info {
+  height: 92%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 1%;
+}
+
+.seeker-job-card {
+  background-color: var(--secondary);
+  border: thin solid var(--five);
+  border-radius: 5px;
+}
+
+.seeker-home-cont-foot {
+  height: 8%;
+}
+
+#seeker-home-1 {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.seeker-home-cont-foot {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.seeker-home-cont-foot > button {
+  border: thin solid var(--primary);
+  background-color: transparent;
+  color: var(--primary);
+  width: 25%;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  border-radius: 2.5px 10px 10px;
+}
+
+.seeker-home-cont-foot > span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#seeker-home-2 {
+  border: thin solid var(--five);
+  width: 70%;
 }

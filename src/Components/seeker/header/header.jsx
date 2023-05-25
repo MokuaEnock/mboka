@@ -22,10 +22,10 @@ export default function SeekerHeader() {
             <FaThumbsUp />
             <span>Recommendations</span>
           </Link>
-          <Link to="/find-job" className="menu-link">
+          {/* <Link to="/find-job" className="menu-link">
             <FaSearch />
             <span>Explore</span>
-          </Link>
+          </Link> */}
           <Link to="/bookmarks" className="menu-link">
             <FaBookmark />
             <span>Bookmarks</span>
