@@ -24,7 +24,7 @@
 }
 
 .seeker-search-conts > * {
-  margin-right: 1vw;
+  margin-left: 1vw;
   height: 100%;
   border: thin solid var(--primary);
   background-color: transparent;
