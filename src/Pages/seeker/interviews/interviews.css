@@ -127,4 +127,8 @@
   color: var(--primary);
   border-radius: 2.5px 10px 10px;
   height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
