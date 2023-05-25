@@ -1,0 +1,25 @@
+.interview-detail {
+  background-color: var(--secondary);
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.interview-detail > * {
+  height: 100%;
+  border: thin solid black;
+}
+
+#seeker-detail-1 {
+  width: 15%;
+}
+
+#seeker-detail-2 {
+  width: 35%;
+}
+
+#seeker-detail-3 {
+  width: 50%;
+}
