@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "./detail.css";
 import CodeEditor from "../Editor/editor";
 
@@ -65,17 +66,50 @@ let questionsData = {
 };
 
 export default function SeekerInterviewDetail() {
+  const [selectedQuestion, setSelectedQuestion] = useState(
+    questionsData.questions[0]
+  );
+
+  const handleQuestionClick = (question) => {
+    setSelectedQuestion(question);
+  };
+
   return (
     <main className="interview-detail">
       <section id="seeker-detail-1">
-        <div className="seeker-detail-question-card">Question One</div>
-        <div className="seeker-detail-question-card">Question Two</div>
-        <div className="seeker-detail-question-card">Question Three</div>
+        {questionsData.questions.map((question) => (
+          <div
+            key={question.id}
+            className={`seeker-detail-question-card ${
+              question === selectedQuestion ? "selected" : ""
+            }`}
+            onClick={() => handleQuestionClick(question)}
+          >
+            {question.title}
+          </div>
+        ))}
       </section>
-      <section id="seeker-detail-2"></section>
+
+      <section id="seeker-detail-2">
+        <h3>{selectedQuestion.title}</h3>
+        <div id="seeker-detail-2-cont">
+          <p>{selectedQuestion.description}</p>
+
+          <span>
+            <h5>Example Input</h5>
+            <p>{selectedQuestion.exampleInput}</p>
+          </span>
+
+          <span>
+            <h5>Example Output</h5>
+            <p>{selectedQuestion.exampleOutput}</p>
+          </span>
+        </div>
+      </section>
+
       <section id="seeker-detail-3">
         <div id="seeker-detail-3-header">
-          <h3>Smallest distance</h3>
+          <h3></h3>
           <button>Submit</button>
         </div>
         <CodeEditor />

@@ -1,23 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import MonacoEditor from "react-monaco-editor";
 import "./editor.css";
-import { Function as SafeFunction } from "vm";
 
 const CodeEditor = () => {
   const [code, setCode] = useState("");
   const [output, setOutput] = useState("");
   const [message, setMessage] = useState("");
   const [theme, setTheme] = useState("vs-light");
-
-  useEffect(() => {
-    const debounceTimeout = setTimeout(() => {
-      runCode();
-    }, 300);
-
-    return () => {
-      clearTimeout(debounceTimeout);
-    };
-  }, [code]);
 
   const runCode = () => {
     if (code.trim() === "") {
@@ -27,13 +16,13 @@ const CodeEditor = () => {
     }
 
     try {
-      const evaluatedCode = new SafeFunction(code);
-      const result = evaluatedCode();
-      setOutput(String(result));
-      setMessage("");
-    } catch (error) {
-      setMessage(error.toString());
       setOutput("");
+      setMessage("");
+      const result = eval(code);
+      setOutput(String(result));
+    } catch (error) {
+      setOutput("");
+      setMessage(error.toString());
     }
   };
 
