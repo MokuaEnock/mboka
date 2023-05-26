@@ -97,7 +97,6 @@
 
 #seeker-home-2 > * {
   width: 100%;
-  border: thin solid black;
   padding-left: 0.2%;
   padding-right: 0.2%;
 }
@@ -178,15 +177,15 @@
 
 #seeker-h2b-attrs > :last-child > * {
   border: thin solid var(--primary);
-  height: 100%;
+  height: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 2.5px 10px 10px;
   color: var(--primary);
   font-size: 1rem;
-  padding-left: 0.2vw;
-  padding-right: 0.2vw;
+  padding-left: 0.4vw;
+  padding-right: 0.4vw;
   margin-left: 1vw;
 }
 
