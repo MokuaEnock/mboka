@@ -44,6 +44,11 @@
   border-radius: 5px;
 }
 
+.seeker-job-card-selected {
+  border: thin solid var(--primary);
+  background-color: transparent;
+}
+
 .seeker-home-cont-foot {
   height: 8%;
 }

@@ -181,7 +181,7 @@ export default function SeekerHome() {
                   <div
                     key={job.id}
                     className={`seeker-job-card ${
-                      job === selectedJob ? "selected" : ""
+                      job === selectedJob ? "seeker-job-card-selected" : ""
                     }`}
                     onClick={() => handleJobClick(job)}
                   >
