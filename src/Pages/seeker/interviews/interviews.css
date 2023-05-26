@@ -120,15 +120,14 @@
 }
 
 #seeker-cont2-foot > a {
-  width: 12%;
+  width: 14%;
   font-size: 1rem;
-  border: thin solid var(--primary);
-  background-color: transparent;
-  color: var(--primary);
-  border-radius: 2.5px 10px 10px;
-  height: 70%;
+  border: thin solid var(--third);
+  color: var(--third);
+  background-color: var(--four);
+  border-radius: 5px;
+  height: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-

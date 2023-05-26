@@ -75,7 +75,7 @@ export default function SeekerInterviews() {
               <p>{selectedInterview.text}</p>
             </div>
             <div id="seeker-cont2-foot">
-              <Link>Mock Test</Link>
+              <p></p>
               <Link to={`/seeker/interviews/${selectedInterview.id}`}>
                 Start Test
               </Link>

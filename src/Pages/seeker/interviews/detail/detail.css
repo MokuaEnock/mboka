@@ -67,7 +67,6 @@
 
 #seeker-detail-2 > * {
   width: 100%;
-  /* border: thin solid black; */
 }
 
 #seeker-detail-2 > h3 {
@@ -98,11 +97,12 @@
 
 #seeker-detail-2-cont > div > h5 {
   font-size: 1.2rem;
-  /* font-weight: bold; */
   color: var(--primary);
 }
+
 #seeker-detail-2-cont > div {
 }
+
 #seeker-detail-2-cont > div {
   width: 100%;
 }
