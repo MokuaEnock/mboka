@@ -22,6 +22,7 @@ import SeekerProfile from "./Pages/seeker/profile/profile";
 import SeekerSignup from "./Pages/seeker/signup/signup";
 import SeekerInterviews from "./Pages/seeker/interviews/interviews";
 import SeekerInterviewDetail from "./Pages/seeker/interviews/detail/detail";
+import SeekerResume from "./Pages/seeker/resume/resume";
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
             <Route path="" element={<SeekerInterviews />} />
             <Route path=":id" element={<SeekerInterviewDetail />} />
           </Route>
+          <Route path="resumes" element={<SeekerResume />}></Route>
         </Route>
 
         <Route path="/auth">

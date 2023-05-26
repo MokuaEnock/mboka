@@ -29,7 +29,7 @@ export default function SeekerHeader() {
             <FaMicrophone />
             <span>Interviews</span>
           </Link>
-          <Link to="resumes" className="menu-link">
+          <Link to="/seeker/resumes" className="menu-link">
             <AiOutlineFileText />
             <span>Resume</span>
           </Link>
