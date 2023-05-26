@@ -1,6 +1,14 @@
 import "./search.css";
 
 export default function SeekerSearch() {
+  // Define the categories of tech jobs
+  const categories = [
+    { id: 1, name: "All" },
+    { id: 2, name: "Data Science" },
+    { id: 3, name: "Machine Learning" },
+    { id: 4, name: "Web Development" },
+  ];
+
   return (
     <section className="seeker-search">
       <div id="seeker-search-cont">
@@ -9,14 +17,10 @@ export default function SeekerSearch() {
           <button type="submit"></button>
         </form>
 
-        {/* <select>
-          <option selected>Sort By</option>
-        </select> */}
-
         <span className="seeker-search-conts">
-          <button>All</button>
-          <button>Data Science</button>
-          <button>Machine Learning</button>
+          {categories.map((category) => (
+            <button key={category.id}>{category.name}</button>
+          ))}
         </span>
       </div>
     </section>
