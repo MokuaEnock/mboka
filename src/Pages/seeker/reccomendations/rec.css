@@ -1,0 +1,13 @@
+#seeker-reccs {
+  border: thin solid black;
+  width: 85%;
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#seeker-reccs > * {
+  border: thin solid black;
+}

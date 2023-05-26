@@ -210,14 +210,57 @@ export default function SeekerHome() {
             </div>
           </div>
           <div id="seeker-home-2">
-            {selectedJob && (
+            {/* {selectedJob && (
               <>
                 <h3>{selectedJob.title}</h3>
                 <p>{selectedJob.company}</p>
                 <p>{selectedJob.location}</p>
                 <p>{selectedJob.description}</p>
               </>
-            )}
+            )} */}
+            <div id="seeker-home-2-head">
+              <h3>Job Title</h3>
+              <span>
+                <p>Applicants: 35</p>
+                <p>Suitability: 6.5</p>
+                <p>Your Rank: 19</p>
+              </span>
+            </div>
+            <div id="seeker-home-2-body">
+              <div id="seeker-h2b-attrs">
+                <span>
+                  <h5>Company Name</h5>
+                  <i>Location</i>
+                </span>
+
+                <span>
+                  <p>Remote</p>
+                  <p>Mid-Level</p>
+                  <p>Salary Range</p>
+                </span>
+              </div>
+
+              <h4>Description</h4>
+              <p id="seeker-h2b-description">This is the job description</p>
+              <h4>Responsibilities</h4>
+              <ul>
+                <li>Responsibility 1</li>
+                <li>Responsibility 2</li>
+                <li>Responsibility 3</li>
+                <li>Responsibility 4</li>
+              </ul>
+              <h4>Qualifications</h4>
+              <ul>
+                <li>Qualification 1</li>
+                <li>Qualification 2</li>
+                <li>Qualification 3</li>
+                <li>Qualification 4</li>
+              </ul>
+            </div>
+            <div id="seeker-home-2-foot">
+              <p></p>
+              <button>Apply</button>
+            </div>
           </div>
         </section>
       </main>
