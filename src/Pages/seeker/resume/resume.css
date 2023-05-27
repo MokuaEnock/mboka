@@ -1,0 +1,24 @@
+.seeker-resumes {
+  width: 85%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.seeker-resumes > * {
+  height: 100%;
+  border: thin solid black;
+}
+
+#seeker-resumes-1 {
+  width: 20%;
+}
+
+#seeker-resumes-2 {
+  width: 60%;
+}
+
+#seeker-resumes-3 {
+  width: 20%;
+}

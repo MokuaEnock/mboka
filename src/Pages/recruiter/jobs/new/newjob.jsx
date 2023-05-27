@@ -3,6 +3,76 @@ import RecruiterHeader from "../../../../Components/recruiter/header/header";
 import RecruiterAside from "../../../../Components/recruiter/navigation/navigation";
 import "./newjob.css";
 
+function NewJobSectionHeader({ header, text }) {
+  return (
+    <div className="new-job-header">
+      <h2>{header}</h2>
+      <p>{text}</p>
+    </div>
+  );
+}
+
+let skillsData = [
+  {
+    id: 1,
+    name: "JavaScript",
+    description:
+      "A high-level programming language for building interactive web pages.",
+  },
+  {
+    id: 2,
+    name: "Python",
+    description:
+      "A versatile programming language known for its simplicity and readability.",
+  },
+  {
+    id: 3,
+    name: "HTML",
+    description:
+      "The standard markup language for creating web pages and web applications.",
+  },
+  {
+    id: 4,
+    name: "CSS",
+    description:
+      "A stylesheet language used for describing the presentation of a document written in HTML.",
+  },
+  {
+    id: 5,
+    name: "React",
+    description: "A JavaScript library for building user interfaces.",
+  },
+  {
+    id: 6,
+    name: "Node.js",
+    description: "A JavaScript runtime built on Chrome's V8 JavaScript engine.",
+  },
+  {
+    id: 7,
+    name: "Ruby",
+    description:
+      "A dynamic, object-oriented programming language known for its simplicity and productivity.",
+  },
+  {
+    id: 8,
+    name: "Java",
+    description:
+      "A general-purpose programming language used for building a wide range of applications.",
+  },
+  {
+    id: 9,
+    name: "SQL",
+    description:
+      "A programming language used for managing and manipulating relational databases.",
+  },
+  {
+    id: 10,
+    name: "Git",
+    description:
+      "A distributed version control system for tracking changes in source code during software development.",
+  },
+];
+
 export default function RecruiterJobNew() {
   const titleRef = useRef(null);
   const requirementsRef = useRef(null);
@@ -71,10 +141,10 @@ export default function RecruiterJobNew() {
               className={activeSection === 1 ? "active" : ""}
               ref={titleRef}
             >
-              <div className="new-job-header">
-                <h2>Job Title and Summary</h2>
-                <p>Create the title and summary of your job. Keep it simple.</p>
-              </div>
+              <NewJobSectionHeader
+                header={"Job Title and Summary"}
+                text={"Create the title and summary of your job."}
+              />
 
               <div className="new-job-container">
                 <label className="new-job-cont-text">
@@ -140,9 +210,51 @@ export default function RecruiterJobNew() {
               className={activeSection === 2 ? "active" : ""}
               ref={requirementsRef}
             >
-              <div className="new-job-header">
-                <h2>Requirements and Qualifications</h2>
-                <p>Add the requirements and qualifications for the job.</p>
+              <NewJobSectionHeader
+                header={"Requirements and Qualifications"}
+                text={"Add the requirements and qualifications for the job."}
+              />
+
+              <div id="job-post-requirements-1">
+                <p>Select skills that the desired candidate will have</p>
+                <div className="job-post-requirements-1-cont">
+                  {skillsData.map((skill) => (
+                    <div key={skill.id} className="skill-container">
+                      <input
+                        type="checkbox"
+                        id={skill.id}
+                        value={skill.name}
+                        onChange={(e) => {
+                          const isChecked = e.target.checked;
+                          const container = e.target.parentNode;
+                          container.classList.toggle("selected", isChecked);
+                        }}
+                      />
+                      <label htmlFor={skill.id}>{skill.name}</label>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div id="job-post-requirements-1">
+                <p>Select technologies relevant to the job</p>
+                <div className="job-post-requirements-1-cont">
+                  {skillsData.map((skill) => (
+                    <div key={skill.id} className="skill-container">
+                      <input
+                        type="checkbox"
+                        id={skill.id}
+                        value={skill.name}
+                        onChange={(e) => {
+                          const isChecked = e.target.checked;
+                          const container = e.target.parentNode;
+                          container.classList.toggle("selected", isChecked);
+                        }}
+                      />
+                      <label htmlFor={skill.id}>{skill.name}</label>
+                    </div>
+                  ))}
+                </div>
               </div>
 
               <div className="form-navigation">
