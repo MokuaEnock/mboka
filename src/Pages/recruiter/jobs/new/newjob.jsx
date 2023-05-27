@@ -73,6 +73,50 @@ let skillsData = [
   },
 ];
 
+let techData = [
+  {
+    name: "React",
+    description: "A JavaScript library for building user interfaces",
+  },
+  {
+    name: "Angular",
+    description: "A TypeScript-based web application framework",
+  },
+  {
+    name: "Vue.js",
+    description: "A progressive JavaScript framework",
+  },
+  {
+    name: "Express.js",
+    description: "A minimal and flexible Node.js web application framework",
+  },
+  {
+    name: "Django",
+    description: "A high-level Python web framework",
+  },
+  {
+    name: "Ruby on Rails",
+    description: "A server-side web application framework written in Ruby",
+  },
+  {
+    name: "Spring Boot",
+    description: "An opinionated framework for building Java applications",
+  },
+  {
+    name: "Laravel",
+    description: "A PHP framework for web applications",
+  },
+  {
+    name: "ASP.NET Core",
+    description:
+      "A cross-platform framework for building modern web applications",
+  },
+  {
+    name: "Flask",
+    description: "A lightweight Python web framework",
+  },
+];
+
 export default function RecruiterJobNew() {
   const titleRef = useRef(null);
   const requirementsRef = useRef(null);
@@ -236,25 +280,34 @@ export default function RecruiterJobNew() {
                 </div>
               </div>
 
-              <div id="job-post-requirements-1">
+              <div id="job-post-requirements-2">
                 <p>Select technologies relevant to the job</p>
-                <div className="job-post-requirements-1-cont">
-                  {skillsData.map((skill) => (
-                    <div key={skill.id} className="skill-container">
+                <div className="job-post-requirements-2-cont">
+                  {techData.map((tech) => (
+                    <div key={tech.id} className="tech-container">
                       <input
                         type="checkbox"
-                        id={skill.id}
-                        value={skill.name}
+                        id={tech.id}
+                        value={tech.name}
                         onChange={(e) => {
                           const isChecked = e.target.checked;
-                          const container = e.target.parentNode;
+                          const container = e.target.parentNode.parentNode;
                           container.classList.toggle("selected", isChecked);
                         }}
                       />
-                      <label htmlFor={skill.id}>{skill.name}</label>
+                      <label htmlFor={tech.id}>{tech.name}</label>
                     </div>
                   ))}
                 </div>
+              </div>
+
+              <div id="job-post-requirments-3">
+                <p>Enter the requirements, each on a new line.</p>
+                <textarea
+                  rows={5}
+                  id="job-post-requirments-3-ta"
+                  placeholder="Enter requirements, each on a new line..."
+                ></textarea>
               </div>
 
               <div className="form-navigation">
@@ -273,9 +326,18 @@ export default function RecruiterJobNew() {
               className={activeSection === 3 ? "active" : ""}
               ref={detailsRef}
             >
-              <div className="new-job-header">
-                <h2>Job Details</h2>
-                <p>Add more details about the job.</p>
+              <NewJobSectionHeader
+                header={"Qualifications"}
+                text={"Add quaifications about the role"}
+              />
+
+              <div id="job-post-requirments-3">
+                <p>Enter the qualifications, each on a new line.</p>
+                <textarea
+                  rows={5}
+                  id="job-post-requirments-3-ta"
+                  placeholder="Enter qualifications, each on a new line..."
+                ></textarea>
               </div>
 
               <div className="form-navigation">
