@@ -34,7 +34,7 @@ function Container() {
 
       if (response.ok) {
         const responseData = await response.json();
-        const seekerId = responseData.id;
+        const seekerId = responseData.user.id;
         console.log("Form submitted successfully. Seeker ID:", seekerId);
         localStorage.setItem("seekerId", seekerId);
         handleNavigate();

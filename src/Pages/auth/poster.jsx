@@ -15,7 +15,7 @@ function Container() {
     event.preventDefault();
 
     const formData = {
-      recruiters: {
+      recruiter: {
         email: email,
         company_name: companyName,
         password: password,
@@ -34,8 +34,8 @@ function Container() {
 
       if (response.ok) {
         const responseData = await response.json();
-        const recruiterId = responseData.id;
-        console.log("Form submitted successfully. Recruiter ID:", recruiterId);
+        const recruiterId = responseData.user.id;
+        console.log(recruiterId);
         localStorage.setItem("recruiterId", recruiterId);
         handleNavigate();
       } else {
