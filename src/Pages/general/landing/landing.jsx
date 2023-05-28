@@ -22,14 +22,40 @@ export default function Landing() {
               </form>
               <p>Browse job offers by keyword or Location</p>
             </span>
+
+            <div>
+              <Link to="/auth/finder">Join Insunity</Link>
+            </div>
           </div>
           <div id="landing-1-2"></div>
         </section>
+
         <section id="landing-2">
-          <div id="landing-2-1"></div>
-          <div id="landing-2-1"></div>
+          <div id="landing-2-1">
+            <div>
+              <span></span>
+              <p>OUR SERVICES</p>
+            </div>
+            <div>
+              <h3>Create your profile and let our team handle the rest</h3>
+              <p>
+                We use advanced machine learning algorithms to match you and
+                your future employer. Reduce the time spent on evaluating your
+                potential and let us do it for you.
+              </p>
+            </div>
+          </div>
+          <div id="landing-2-2">
+            <span className="landing-2-2"></span>
+            <span className="landing-2-2"></span>
+            <span className="landing-2-2"></span>
+            <span className="landing-2-2"></span>
+          </div>
         </section>
-        <div id="landing-3"></div>
+
+        <div id="landing-3">
+          
+        </div>
         <section id="landing-4"></section>
       </main>
     );
