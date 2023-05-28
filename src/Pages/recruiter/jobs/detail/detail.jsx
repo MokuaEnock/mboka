@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import RecruiterHeader from "../../../../Components/recruiter/header/header";
 import RecruiterAside from "../../../../Components/recruiter/navigation/navigation";
 import "./detail.css";
+import { RadarChart } from "../../../../Components/charts/radar";
+import ChartArea from "../../../../Components/charts/area";
 
 let applicants = {
   applicants: [
@@ -64,8 +66,12 @@ export default function RecruiterJobDetail() {
                 </select>
               </div>
               <div id="recruiter-stats-cont">
-                <span className="recruiter-stats-cont-div"></span>
-                <span className="recruiter-stats-cont-div"></span>
+                <span className="recruiter-stats-cont-div">
+                  <h3>Total Applications</h3>
+                </span>
+                <span className="recruiter-stats-cont-div">
+                  <h3>Total Rejections</h3>
+                </span>
                 <span id="recruiter-stats-cont-graph"></span>
               </div>
             </div>

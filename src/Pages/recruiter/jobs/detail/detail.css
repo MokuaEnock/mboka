@@ -41,16 +41,48 @@
   height: 80%;
 }
 
+#recruiter-stats-header > select {
+  height: 70%;
+  width: 10%;
+  border: thin solid var(--primary);
+  background-color: transparent;
+  color: var(--primary);
+  border-radius: 4px;
+}
+
+#recruiter-stats-header > select:focus {
+  outline: none;
+}
+
 .recruiter-stats-cont-div {
-  width: 24%;
+  width: 24.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: var(--secondary);
+  color: var(--primary);
+  border: thin solid var(--five);
+}
+
+.recruiter-stats-cont-div > h3 {
+  font-size: 1.2rem;
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 #recruiter-stats-cont-graph {
   width: 50%;
+  border: thin solid var(--five);
 }
+
 #recruiter-stats-cont > span {
   height: 100%;
-  border: thin solid grey;
+  /* border: thin solid grey; */
 }
 
 #recruiter-candidates-name {
@@ -63,14 +95,22 @@
 }
 
 #recruiter-candidates-name > h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 #recruiter-candidates-name > button {
-  border: thin solid black;
-  height: 100%;
+  border: thin solid var(--primary);
+  background-color: transparent;
+  color: var(--primary);
+  border-radius: 2.5px 10px 10px;
+  height: 90%;
   width: 13%;
   font-size: 1rem;
+}
+
+#recruiter-candidates-name > button:hover {
+  background-color: var(--primary);
+  color: var(--secondary);
 }
 
 #recruiter-cands-header {
