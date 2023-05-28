@@ -54,9 +54,24 @@ export default function Landing() {
         </section>
 
         <div id="landing-3">
-          
+          <div id="landing-3-1"></div>
+          <div id="landing-3-2">
+            <div className="landing-3-2"></div>
+            <div className="landing-3-2"></div>
+            <div className="landing-3-2"></div>
+            <div className="landing-3-2"></div>
+            <div className="landing-3-2"></div>
+            <div className="landing-3-2"></div>
+          </div>
         </div>
-        <section id="landing-4"></section>
+        <section id="landing-4">
+          <div id="landing-4-1"></div>
+          <div id="landing-4-2">
+            <div className="landing-4-2"></div>
+            <div className="landing-4-2"></div>
+            <div className="landing-4-2"></div>
+          </div>
+        </section>
       </main>
     );
   }
