@@ -4,17 +4,54 @@ import { useState } from "react";
 import Header from "../../Components/header/header";
 
 function Container() {
-  let [email, setEmail] = useState("");
-  let navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [passwordConfirmation, setPasswordConfirmation] = useState("");
+  const [formErrors, setFormErrors] = useState([]);
+  const navigate = useNavigate();
 
-  function handleSubmit(event) {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    handleNavigate();
-  }
 
-  function handleNavigate() {
+    const formData = {
+      job_seeker: {
+        email,
+        username,
+        password,
+        password_confirmation: passwordConfirmation,
+      },
+    };
+
+    try {
+      const response = await fetch("http://localhost:3000/job_seekers", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        const responseData = await response.json();
+        const seekerId = responseData.id;
+        console.log("Form submitted successfully. Seeker ID:", seekerId);
+        localStorage.setItem("seekerId", seekerId);
+        handleNavigate();
+      } else {
+        const errorData = await response.json();
+        setFormErrors(errorData.errors || []);
+        console.log("Form submission error:", errorData);
+      }
+    } catch (error) {
+      console.log("An error occurred while submitting the form:", error);
+    }
+  };
+
+  const handleNavigate = () => {
     navigate("/seeker/signup");
-  }
+  };
+
   return (
     <main id="finder" className="auth">
       <form onSubmit={handleSubmit}>
@@ -34,24 +71,45 @@ function Container() {
 
           <label className="auth-form-input">
             <p>Username</p>
-            <input type="text" placeholder="Username" />
+            <input
+              type="text"
+              placeholder="Username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
           </label>
 
           <label className="auth-form-input">
             <p>Password</p>
-            <input type="password" placeholder="Password" />
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
           </label>
 
           <label className="auth-form-input">
             <p>Confirm Password</p>
-            <input type="password" placeholder="Confirm Password" />
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              value={passwordConfirmation}
+              onChange={(e) => setPasswordConfirmation(e.target.value)}
+            />
           </label>
 
           <button type="submit" className="auth-form-button">
             Join Insunity
           </button>
 
-          <div id="auth-form-errors">{/* Form errors rendering */}</div>
+          <div id="auth-form-errors">
+            {formErrors.map((error, index) => (
+              <p className="auth-form-error" key={index}>
+                {error}
+              </p>
+            ))}
+          </div>
         </div>
       </form>
     </main>
