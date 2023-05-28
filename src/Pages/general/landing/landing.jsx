@@ -5,30 +5,32 @@ import Header from "../../../Components/header/header";
 export default function Landing() {
   function Container() {
     return (
-      <main className="landing">
+      <main className="landing" id="landing">
         <section id="landing-1">
-          <div className="landing-main">
-            <h1>We power organizations through the right talent</h1>
-            <p>
-              Find the right candidate for your next role by exploring our
-              talent catalogue.
-            </p>
+          <div id="landing-1-1">
+            <h2>Find The Job That You Deserve</h2>
+            <form></form>
+
             <span>
-              <Link to="/auth/poster">Post an open role</Link>
-              <Link to="/auth/finder">Find a role</Link>
+              <form>
+                <input
+                  type="text"
+                  placeholder="Search job title, keywords or Company"
+                />
+                <input type="text" placeholder="Province, city or region" />
+                <button type="submit">Search</button>
+              </form>
+              <p>Browse job offers by keyword or Location</p>
             </span>
           </div>
-
-          <div className="landing-main2">
-            <h2>The process</h2>
-
-            <div>
-              <span></span>
-            </div>
-          </div>
+          <div id="landing-1-2"></div>
         </section>
-
-        <section id="landing-2"></section>
+        <section id="landing-2">
+          <div id="landing-2-1"></div>
+          <div id="landing-2-1"></div>
+        </section>
+        <div id="landing-3"></div>
+        <section id="landing-4"></section>
       </main>
     );
   }
