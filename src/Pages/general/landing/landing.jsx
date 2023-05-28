@@ -24,7 +24,8 @@ export default function Landing() {
             </span>
 
             <div>
-              <Link to="/auth/finder">Join Insunity</Link>
+              <Link to="/auth/finder">For Seekers</Link>
+              <Link to="/auth/poster">For Posters</Link>
             </div>
           </div>
           <div id="landing-1-2"></div>
@@ -64,6 +65,7 @@ export default function Landing() {
             <div className="landing-3-2"></div>
           </div>
         </div>
+
         <section id="landing-4">
           <div id="landing-4-1"></div>
           <div id="landing-4-2">
