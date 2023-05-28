@@ -31,7 +31,7 @@
 .auth > form > div > p {
   color: grey;
   width: 70%;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .auth-form-input > p {
@@ -65,11 +65,12 @@
 
 .auth-form-button {
   width: 70%;
+  border: 2px solid;
   height: 7vh;
   background-color: transparent;
   font-size: 1.2rem;
   color: var(--primary);
-  border-radius: 2.5px 10px 10px 10px;
+  border-radius: 4px;
 }
 
 .auth-form-button:hover {
