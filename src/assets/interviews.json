@@ -1,0 +1,764 @@
+{
+  "questions": [
+    {
+      "question": "Write a function in Python to calculate the factorial of a given number.",
+      "testCases": [
+        {
+          "input": 5,
+          "expectedOutput": 120
+        },
+        {
+          "input": 0,
+          "expectedOutput": 1
+        },
+        {
+          "input": 10,
+          "expectedOutput": 3628800
+        },
+        {
+          "input": 3,
+          "expectedOutput": 6
+        },
+        {
+          "input": 6,
+          "expectedOutput": 720
+        }
+      ]
+    },
+    {
+      "question": "Implement a binary search algorithm in JavaScript to find the index of a given element in a sorted array.",
+      "testCases": [
+        {
+          "input": { "array": [2, 4, 6, 8, 10], "element": 6 },
+          "expectedOutput": 2
+        },
+        {
+          "input": { "array": [1, 3, 5, 7, 9], "element": 9 },
+          "expectedOutput": 4
+        },
+        {
+          "input": { "array": [1, 2, 3, 4, 5], "element": 10 },
+          "expectedOutput": -1
+        },
+        {
+          "input": { "array": [11, 22, 33, 44, 55], "element": 11 },
+          "expectedOutput": 0
+        },
+        {
+          "input": { "array": [], "element": 5 },
+          "expectedOutput": -1
+        }
+      ]
+    },
+    {
+      "question": "Write a Java program to sort an array of integers in ascending order using the bubble sort algorithm.",
+      "testCases": [
+        {
+          "input": [5, 3, 8, 2, 1],
+          "expectedOutput": [1, 2, 3, 5, 8]
+        },
+        {
+          "input": [9, 7, 2, 4, 6],
+          "expectedOutput": [2, 4, 6, 7, 9]
+        },
+        {
+          "input": [1, 2, 3, 4, 5],
+          "expectedOutput": [1, 2, 3, 4, 5]
+        },
+        {
+          "input": [10, 8, 6, 4, 2],
+          "expectedOutput": [2, 4, 6, 8, 10]
+        },
+        {
+          "input": [],
+          "expectedOutput": []
+        }
+      ]
+    },
+    {
+      "question": "Implement a function in C++ to reverse a string in-place.",
+      "testCases": [
+        {
+          "input": "Hello, World!",
+          "expectedOutput": "!dlroW ,olleH"
+        },
+        {
+          "input": "OpenAI",
+          "expectedOutput": "IAnepo"
+        },
+        {
+          "input": "Racecar",
+          "expectedOutput": "racecaR"
+        },
+        {
+          "input": "12345",
+          "expectedOutput": "54321"
+        },
+        {
+          "input": "",
+          "expectedOutput": ""
+        }
+      ]
+    },
+    {
+      "question": "Write a function in Python to check if a given string is a palindrome.",
+      "testCases": [
+        {
+          "input": "radar",
+          "expectedOutput": true
+        },
+        {
+          "input": "level",
+          "expectedOutput": true
+        },
+        {
+          "input": "algorithm",
+          "expectedOutput": false
+        },
+        {
+          "input": "madam",
+          "expectedOutput": true
+        },
+        {
+          "input": "",
+          "expectedOutput": true
+        }
+      ]
+    },
+    {
+      "question": "Implement a function in Java to find the maximum subarray sum in a given array of integers.",
+      "testCases": [
+        {
+          "input": [-2, 1, -3, 4, -1, 2, 1, -5, 4],
+          "expectedOutput": 6
+        },
+        {
+          "input": [1, 2, 3, -6, 2, 4, -2, 1],
+          "expectedOutput": 8
+        },
+        {
+          "input": [-1, -2, -3, -4, -5],
+          "expectedOutput": -1
+        },
+        {
+          "input": [10, -12, 5, 8, -10, 2],
+          "expectedOutput": 13
+        },
+        {
+          "input": [3, -1, 5, -2, 4],
+          "expectedOutput": 9
+        }
+      ]
+    },
+    {
+      "question": "Write a Python function to check if a given binary tree is a binary search tree.",
+      "testCases": [
+        {
+          "input": {
+            "value": 5,
+            "left": {
+              "value": 3,
+              "left": {
+                "value": 2,
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "value": 4,
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "value": 7,
+              "left": null,
+              "right": {
+                "value": 8,
+                "left": null,
+                "right": null
+              }
+            }
+          },
+          "expectedOutput": true
+        },
+        {
+          "input": {
+            "value": 10,
+            "left": {
+              "value": 5,
+              "left": {
+                "value": 2,
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "value": 15,
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "value": 20,
+              "left": null,
+              "right": null
+            }
+          },
+          "expectedOutput": false
+        },
+        {
+          "input": {
+            "value": 1,
+            "left": {
+              "value": 2,
+              "left": null,
+              "right": null
+            },
+            "right": {
+              "value": 3,
+              "left": null,
+              "right": null
+            }
+          },
+          "expectedOutput": false
+        },
+        {
+          "input": {
+            "value": 4,
+            "left": {
+              "value": 2,
+              "left": {
+                "value": 1,
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "value": 3,
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "value": 5,
+              "left": null,
+              "right": null
+            }
+          },
+          "expectedOutput": true
+        },
+        {
+          "input": null,
+          "expectedOutput": true
+        }
+      ]
+    },
+    {
+      "question": "Implement a function in C# to reverse a linked list.",
+      "testCases": [
+        {
+          "input": {
+            "value": 1,
+            "next": {
+              "value": 2,
+              "next": {
+                "value": 3,
+                "next": {
+                  "value": 4,
+                  "next": null
+                }
+              }
+            }
+          },
+          "expectedOutput": {
+            "value": 4,
+            "next": {
+              "value": 3,
+              "next": {
+                "value": 2,
+                "next": {
+                  "value": 1,
+                  "next": null
+                }
+              }
+            }
+          }
+        },
+        {
+          "input": {
+            "value": 7,
+            "next": {
+              "value": 5,
+              "next": {
+                "value": 3,
+                "next": null
+              }
+            }
+          },
+          "expectedOutput": {
+            "value": 3,
+            "next": {
+              "value": 5,
+              "next": {
+                "value": 7,
+                "next": null
+              }
+            }
+          }
+        },
+        {
+          "input": null,
+          "expectedOutput": null
+        },
+        {
+          "input": {
+            "value": 10,
+            "next": null
+          },
+          "expectedOutput": {
+            "value": 10,
+            "next": null
+          }
+        },
+        {
+          "input": {
+            "value": 1,
+            "next": {
+              "value": 2,
+              "next": null
+            }
+          },
+          "expectedOutput": {
+            "value": 2,
+            "next": {
+              "value": 1,
+              "next": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "question": "Write a JavaScript function to find the intersection of two arrays and return the result as a new array.",
+      "testCases": [
+        {
+          "input": { "array1": [1, 2, 3, 4, 5], "array2": [4, 5, 6, 7, 8] },
+          "expectedOutput": [4, 5]
+        },
+        {
+          "input": {
+            "array1": [10, 20, 30, 40, 50],
+            "array2": [30, 40, 50, 60, 70]
+          },
+          "expectedOutput": [30, 40, 50]
+        },
+        {
+          "input": { "array1": [1, 2, 3, 4, 5], "array2": [6, 7, 8, 9, 10] },
+          "expectedOutput": []
+        },
+        {
+          "input": { "array1": [1, 2, 3, 4, 5], "array2": [] },
+          "expectedOutput": []
+        },
+        {
+          "input": { "array1": [], "array2": [1, 2, 3, 4, 5] },
+          "expectedOutput": []
+        }
+      ]
+    },
+    {
+      "question": "Implement a function in Python to check if a given string is an anagram of another string.",
+      "testCases": [
+        {
+          "input": { "string1": "listen", "string2": "silent" },
+          "expectedOutput": true
+        },
+        {
+          "input": { "string1": "triangle", "string2": "integral" },
+          "expectedOutput": true
+        },
+        {
+          "input": { "string1": "python", "string2": "typhon" },
+          "expectedOutput": true
+        },
+        {
+          "input": { "string1": "hello", "string2": "world" },
+          "expectedOutput": false
+        },
+        {
+          "input": { "string1": "test", "string2": "text" },
+          "expectedOutput": false
+        }
+      ]
+    },
+    {
+      "question": "Write a Java program to implement a queue using two stacks.",
+      "testCases": [
+        {
+          "input": [1, 2, 3, 4, 5],
+          "expectedOutput": 1
+        },
+        {
+          "input": [10, 20, 30, 40, 50],
+          "expectedOutput": 10
+        },
+        {
+          "input": [100, 200, 300, 400, 500],
+          "expectedOutput": 100
+        },
+        {
+          "input": [],
+          "expectedOutput": null
+        },
+        {
+          "input": [7, 8, 9, 10],
+          "expectedOutput": 7
+        }
+      ]
+    },
+    {
+      "question": "Implement a function in C++ to find the longest common prefix among an array of strings.",
+      "testCases": [
+        {
+          "input": ["flower", "flow", "flight"],
+          "expectedOutput": "fl"
+        },
+        {
+          "input": ["dog", "racecar", "car"],
+          "expectedOutput": ""
+        },
+        {
+          "input": ["apple", "ape", "apricot"],
+          "expectedOutput": "ap"
+        },
+        {
+          "input": ["programming", "program", "progress"],
+          "expectedOutput": "pro"
+        },
+        {
+          "input": ["open", "opposite", "option"],
+          "expectedOutput": "op"
+        }
+      ]
+    },
+    {
+      "question": "Write a Python function to find all permutations of a given string.",
+      "testCases": [
+        {
+          "input": "abc",
+          "expectedOutput": ["abc", "acb", "bac", "bca", "cab", "cba"]
+        },
+        {
+          "input": "xyz",
+          "expectedOutput": ["xyz", "xzy", "yxz", "yzx", "zxy", "zyx"]
+        },
+        {
+          "input": "123",
+          "expectedOutput": ["123", "132", "213", "231", "312", "321"]
+        },
+        {
+          "input": "abcd",
+          "expectedOutput": [
+            "abcd",
+            "abdc",
+            "acbd",
+            "acdb",
+            "adbc",
+            "adcb",
+            "bacd",
+            "badc",
+            "bcad",
+            "bcda",
+            "bdac",
+            "bdca",
+            "cabd",
+            "cadb",
+            "cbad",
+            "cbda",
+            "cdab",
+            "cdba",
+            "dabc",
+            "dacb",
+            "dbac",
+            "dbca",
+            "dcab",
+            "dcba"
+          ]
+        },
+        {
+          "input": "hello",
+          "expectedOutput": [
+            "hello",
+            "hell",
+            "hlel",
+            "hlelo",
+            "hleo",
+            "hloel",
+            "hlole",
+            "hlol",
+            "hle",
+            "hleol",
+            "hlelo",
+            "hlelo",
+            "hlloe",
+            "hll",
+            "hlo",
+            "hoell",
+            "hoe",
+            "hoel",
+            "holel",
+            "holle",
+            "holl",
+            "e",
+            "ehll",
+            "ehlol",
+            "ehllo",
+            "ehlo",
+            "eholl",
+            "el",
+            "elhol",
+            "elhlo",
+            "elhlo",
+            "ellho",
+            "ell",
+            "eohll",
+            "eohl",
+            "eolhl",
+            "eollh",
+            "eo",
+            "eohll",
+            "eohl",
+            "eolhl",
+            "eollh",
+            "lhel",
+            "lhelo",
+            "lheol",
+            "lhleo",
+            "lholl",
+            "lhol",
+            "lhlo",
+            "lehl",
+            "lehol",
+            "lehol",
+            "lehlo",
+            "lelho",
+            "lell",
+            "loehl",
+            "loelh",
+            "lohel",
+            "lohle",
+            "lohl",
+            "lolhe",
+            "lol",
+            "lo",
+            "loehl",
+            "loelh",
+            "lohel",
+            "lohle",
+            "lohl",
+            "lolhe",
+            "l",
+            "lehl",
+            "lehol",
+            "lehol",
+            "lehlo",
+            "lelho",
+            "lell",
+            "lh",
+            "lhel",
+            "lhelo",
+            "lheol",
+            "lhleo",
+            "lholl",
+            "lhol",
+            "lhlo",
+            "l",
+            "lehl",
+            "lehol",
+            "lehol",
+            "lehlo",
+            "lelho",
+            "lell",
+            "loehl",
+            "loelh",
+            "lohel",
+            "lohle",
+            "lohl",
+            "lolhe",
+            "lol",
+            "lo",
+            "loehl",
+            "loelh",
+            "lohel",
+            "lohle",
+            "lohl",
+            "lolhe"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "Implement a function in JavaScript to convert a binary number to a decimal number.",
+      "testCases": [
+        {
+          "input": "101010",
+          "expectedOutput": 42
+        },
+        {
+          "input": "111111",
+          "expectedOutput": 63
+        },
+        {
+          "input": "10011",
+          "expectedOutput": 19
+        },
+        {
+          "input": "1100101",
+          "expectedOutput": 101
+        },
+        {
+          "input": "101",
+          "expectedOutput": 5
+        }
+      ]
+    },
+    {
+      "question": "Write a Python function to remove duplicates from a given array and return the result.",
+      "testCases": [
+        {
+          "input": [1, 2, 3, 3, 4, 4, 5],
+          "expectedOutput": [1, 2, 3, 4, 5]
+        },
+        {
+          "input": [10, 20, 30, 10, 20],
+          "expectedOutput": [10, 20, 30]
+        },
+        {
+          "input": [1, 1, 1, 1],
+          "expectedOutput": [1]
+        },
+        {
+          "input": [],
+          "expectedOutput": []
+        },
+        {
+          "input": [7, 8, 9, 10],
+          "expectedOutput": [7, 8, 9, 10]
+        }
+      ]
+    },
+    {
+      "question": "Implement a function in C++ to find the prime factors of a given number.",
+      "testCases": [
+        {
+          "input": 12,
+          "expectedOutput": [2, 2, 3]
+        },
+        {
+          "input": 28,
+          "expectedOutput": [2, 2, 7]
+        },
+        {
+          "input": 17,
+          "expectedOutput": [17]
+        },
+        {
+          "input": 64,
+          "expectedOutput": [2, 2, 2, 2, 2, 2]
+        },
+        {
+          "input": 99,
+          "expectedOutput": [3, 3, 11]
+        }
+      ]
+    },
+    {
+      "question": "Write a Java program to implement a binary search algorithm to find the index of a given element in a sorted array.",
+      "testCases": [
+        {
+          "input": {
+            "array": [2, 5, 8, 12, 16, 23, 38, 56, 72, 91],
+            "target": 23
+          },
+          "expectedOutput": 5
+        },
+        {
+          "input": {
+            "array": [4, 7, 9, 13, 18, 21, 29, 35, 42, 50],
+            "target": 13
+          },
+          "expectedOutput": 3
+        },
+        {
+          "input": {
+            "array": [1, 3, 5, 7, 9, 11, 13, 15, 17, 19],
+            "target": 10
+          },
+          "expectedOutput": -1
+        },
+        {
+          "input": {
+            "array": [2, 4, 6, 8, 10, 12, 14, 16, 18, 20],
+            "target": 2
+          },
+          "expectedOutput": 0
+        },
+        {
+          "input": {
+            "array": [1, 3, 5, 7, 9, 11, 13, 15, 17, 19],
+            "target": 19
+          },
+          "expectedOutput": 9
+        }
+      ]
+    },
+    {
+      "question": "Implement a function in Python to find the nth Fibonacci number using recursion.",
+      "testCases": [
+        {
+          "input": 1,
+          "expectedOutput": 0
+        },
+        {
+          "input": 2,
+          "expectedOutput": 1
+        },
+        {
+          "input": 5,
+          "expectedOutput": 3
+        },
+        {
+          "input": 8,
+          "expectedOutput": 13
+        },
+        {
+          "input": 10,
+          "expectedOutput": 34
+        }
+      ]
+    },
+    {
+      "question": "Write a JavaScript function to find the factorial of a given number.",
+      "testCases": [
+        {
+          "input": 0,
+          "expectedOutput": 1
+        },
+        {
+          "input": 5,
+          "expectedOutput": 120
+        },
+        {
+          "input": 7,
+          "expectedOutput": 5040
+        },
+        {
+          "input": 3,
+          "expectedOutput": 6
+        },
+        {
+          "input": 10,
+          "expectedOutput": 3628800
+        }
+      ]
+    }
+  ]
+}

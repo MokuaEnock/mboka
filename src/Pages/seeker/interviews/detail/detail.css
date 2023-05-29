@@ -57,6 +57,11 @@
   border-radius: 4px;
 }
 
+.seeker-detail-question-card-selected {
+  color: var(--primary);
+  background-color: var(--third);
+}
+
 #seeker-detail-2 {
   width: 35%;
   display: flex;
@@ -97,14 +102,18 @@
 
 #seeker-detail-2-cont > div > h5 {
   font-size: 1.2rem;
+  font-weight: bold;
   color: var(--primary);
 }
 
 #seeker-detail-2-cont > div {
+  width: 100%;
+  margin-top: 3vh;
+  border-top: thin solid lightgrey;
 }
 
-#seeker-detail-2-cont > div {
-  width: 100%;
+#seeker-detail-2-cont > div > * {
+  margin-top: 2vh;
 }
 
 #seeker-detail-3 {
