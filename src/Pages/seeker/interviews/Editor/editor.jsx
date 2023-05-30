@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import MonacoEditor from "react-monaco-editor";
 import "./editor.css";
 
-const CodeEditor = () => {
+const CodeEditor = ({selectedQuestion}) => {
   const [code, setCode] = useState("");
   const [output, setOutput] = useState("");
   const [message, setMessage] = useState("");
   const [theme, setTheme] = useState("vs-light");
+  const test_cases = selectedQuestion.testCases
 
   const runCode = () => {
     if (code.trim() === "") {
@@ -29,6 +30,8 @@ const CodeEditor = () => {
   const handleThemeChange = (event) => {
     setTheme(event.target.value);
   };
+
+  console.log(test_cases)
 
   return (
     <>
