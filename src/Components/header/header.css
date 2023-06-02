@@ -5,7 +5,8 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: var(--secondary);
+  background-color: var(--primary);
+  /* border: thin solid white; */
 }
 
 header > div {
@@ -17,35 +18,43 @@ header > div {
   justify-content: space-between;
 }
 
+.header > * {
+  /* border: thin solid white; */
+}
+
 .header > span {
   width: 60%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .header > span > a {
-  font-size: 1.1rem;
-  color: var(--primary);
-  margin-left: 5%;
+  font-size: 1.2rem;
+  color: var(--third);
+  margin-right: 5%;
+
 }
 
 .header > .logo {
   width: 15%;
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-decoration: none;
+  font-family: "Nunito Sans", sans-serif;
+  color: var(--third);
 }
 
 .header-login {
   width: 13%;
-  background-color: var(--four);
+  background-color: transparent;
+  border: thin solid var(--four);
+  color: var(--four);
   height: 6vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
-  color: var(--third);
-  border-radius: 2.5px 10px 10px;
+  font-size: 1rem;
+  border-radius: 4px;
 }

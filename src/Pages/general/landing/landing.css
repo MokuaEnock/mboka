@@ -10,10 +10,6 @@
   background-color: var(--secondary);
 }
 
-.landing > * {
-  margin-top: 3vh;
-  margin-top: 2.5vh;
-}
 
 .landing > section {
   width: 80%;
@@ -26,7 +22,8 @@
 }
 
 #landing-1 {
-  height: 70vh;
+  background-color: var(--primary);
+  height: 90vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -35,100 +32,11 @@
 
 #landing-1 > * {
   height: 100%;
+
+
 }
 
-#landing-1-1 {
-  z-index: 1;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
 
-#landing-1-1 > * {
-  /* border: thin solid black; */
-}
-
-#landing-1-1 > h2 {
-  width: 80%;
-  font-size: 4rem;
-  font-weight: bold;
-  color: var(--primary);
-  margin-bottom: 5vh;
-}
-
-#landing-1-1 > span {
-  width: 100%;
-  height: max-content;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  height: max-content;
-}
-
-#landing-1-1 > span > form {
-  width: 130%;
-  height: 9vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  background-color: var(--third);
-}
-
-#landing-1-1 > span > form > * {
-  border: none;
-  text-align: center;
-}
-
-#landing-1-1 > span > form > input {
-  width: 43%;
-  height: 80%;
-}
-
-#landing-1-1 > span > form > :first-child {
-  border-right: 2px solid var(--primary);
-}
-
-#landing-1-1 > span > form > button {
-  width: 14%;
-  height: 100%;
-  background-color: var(--primary);
-  color: var(--third);
-  font-size: 1rem;
-}
-
-#landing-1-1 > div {
-  width: 100%;
-  height: 7vh;
-  display: flex;
-}
-
-#landing-1-1 > div > a {
-  height: 100%;
-  width: 30%;
-  border: 2px solid var(--primary);
-  font-size: 1.2rem;
-  color: var(--primary);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-right: 10%;
-}
-
-#landing-1-1 > span > p {
-  font-size: 1.2rem;
-  height: 5vh;
-  margin-top: 2vh;
-}
-
-#landing-1-2 {
-  width: 50%;
-  border: thin solid black;
-}
 
 #landing-2 {
   height: 60vh;
