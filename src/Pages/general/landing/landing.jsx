@@ -7,7 +7,24 @@ export default function Landing() {
     return (
       <main className="landing" id="landing">
         <div id="landing-1">
-          
+          <div id="landing-cont">
+            <div id="landing-1-1">
+              <h2>
+               By the developers <br/> for the developers
+              </h2>
+
+              <p>
+                We use the power of Natural Language processing <br />
+                to find what suites you.
+              </p>
+
+              <span>
+                <Link to="">Find a job</Link>
+                <Link to="">Post a role</Link>
+              </span>
+            </div>
+            <div id="landing-1-2"></div>
+          </div>
         </div>
 
         <section id="landing-2">
