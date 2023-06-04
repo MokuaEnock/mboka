@@ -55,7 +55,7 @@ function Container() {
   return (
     <main id="finder" className="auth">
       <form onSubmit={handleSubmit}>
-        <div>This is the image</div>
+        <div className="auth-image"></div>
         <div>
           <h3>Welcome to your talent Hub</h3>
           <p>Join Insunity to find the right talent.</p>

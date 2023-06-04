@@ -19,8 +19,8 @@ export default function Landing() {
               </p>
 
               <span>
-                <Link to="">Find a job</Link>
-                <Link to="">Post a role</Link>
+                <Link to="/auth/finder">Find a job</Link>
+                <Link to="/auth/poster">Post a role</Link>
               </span>
             </div>
             <div id="landing-1-2"></div>

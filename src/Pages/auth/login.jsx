@@ -16,9 +16,9 @@ function Container() {
   return (
     <main id="login" className="auth">
       <form onSubmit={handleSubmit}>
-        <div>This is the image</div>
+        <div className="auth-image"></div>
         <div>
-          <h3>Hello there, Job Seeker, welcome back</h3>
+          <h3>Hey Friend, welcome back</h3>
           <p>Continue from where you left off.</p>
           <label className="auth-form-input">
             <p>Email Address</p>

@@ -1,6 +1,6 @@
 .auth > form {
   width: 80%;
-  height: 80vh;
+  height: 90vh;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -14,6 +14,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.auth-image {
+  background-color: var(--secondary);
 }
 
 .auth > form > div > * {
@@ -56,7 +60,8 @@
   border: thin solid lightgrey;
   text-align: center;
   font-size: 1rem;
-  border-radius: 2.5px 10px 10px 10px;
+  /* border-radius: 2.5px 10px 10px 10px; */
+  border-radius: 4px;
 }
 
 .auth-form-input > input:focus {
@@ -65,17 +70,19 @@
 
 .auth-form-button {
   width: 70%;
-  border: 2px solid;
-  height: 7vh;
+  border: thin solid;
+  height: 6vh;
   background-color: transparent;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: var(--primary);
   border-radius: 4px;
+  font-weight: bold;
 }
 
 .auth-form-button:hover {
   background-color: var(--four);
-  color: var(--third);
+  border: thin solid var(--four);
+  color: var(--primary);
 }
 
 #auth-form-errors {
