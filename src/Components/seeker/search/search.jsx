@@ -5,7 +5,6 @@ export default function SeekerSearch() {
   const categories = [
     { id: 2, name: "Data Science" },
     { id: 3, name: "Machine Learning" },
-    { id: 4, name: "Web Development" },
   ];
 
   return (

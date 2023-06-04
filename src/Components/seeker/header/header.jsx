@@ -12,10 +12,10 @@ export default function SeekerHeader() {
         </Link>
 
         <span id="seeker-header-info">
-          <Link to="/seeker/reccs" className="menu-link">
+          {/* <Link to="/seeker/reccs" className="menu-link">
             <FaThumbsUp />
             <span>Recommendations</span>
-          </Link>
+          </Link> */}
 
           <Link to="/bookmarks" className="menu-link">
             <FaBookmark />
