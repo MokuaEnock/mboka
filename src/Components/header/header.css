@@ -1,4 +1,6 @@
 header {
+  position: sticky;
+  top: 0;
   width: 100%;
   height: 10vh;
   display: flex;
@@ -6,7 +8,12 @@ header {
   align-items: center;
   justify-content: center;
   background-color: var(--primary);
-  /* border: thin solid white; */
+  transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+  background-color: white;
+  color: var(--primary);
 }
 
 header > div {
@@ -30,6 +37,11 @@ header > div {
   font-size: 1.2rem;
   color: var(--third);
   margin-right: 5%;
+  transition: color 0.3s ease;
+}
+
+.header > span > a.scrolled {
+  color: var(--primary);
 }
 
 .header > .logo {
@@ -37,7 +49,7 @@ header > div {
   font-size: 2.5rem;
   text-decoration: none;
   font-family: "Nunito Sans", sans-serif;
-  color: var(--third);
+  transition: color 0.3s ease;
 }
 
 .header-login {
