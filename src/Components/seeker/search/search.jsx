@@ -3,7 +3,6 @@ import "./search.css";
 export default function SeekerSearch() {
   // Define the categories of tech jobs
   const categories = [
-    { id: 1, name: "All" },
     { id: 2, name: "Data Science" },
     { id: 3, name: "Machine Learning" },
     { id: 4, name: "Web Development" },
@@ -18,6 +17,8 @@ export default function SeekerSearch() {
         </form>
 
         <span className="seeker-search-conts">
+          <button>All</button>
+          <button>Reccomendations</button>
           {categories.map((category) => (
             <button key={category.id}>{category.name}</button>
           ))}
