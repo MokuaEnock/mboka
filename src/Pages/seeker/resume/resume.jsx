@@ -1,5 +1,6 @@
 import "./resume.css";
 import SeekerHeader from "../../../Components/seeker/header/header";
+import HarvardResume from "../../../Components/pdfs/resume";
 
 export default function SeekerResume() {
   function Container() {
@@ -38,7 +39,7 @@ export default function SeekerResume() {
 
           <aside id="seeker-resumes-3">
             <h2>Summary</h2>
-            <button>Download Resume</button>
+            <HarvardResume />
           </aside>
         </section>
       </main>
