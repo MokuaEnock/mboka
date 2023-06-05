@@ -34,7 +34,6 @@ let resumeData = [
     category: "Machine Learning",
   },
 ];
-
 export default function SeekerResume() {
   function Container() {
     return (
@@ -45,7 +44,6 @@ export default function SeekerResume() {
             <p>All</p>
             <p>Data Science</p>
             <p>Machine Learning</p>
-
             <h2>Cover Letter</h2>
             <p>Templates</p>
             <p>Generate</p>
@@ -61,42 +59,12 @@ export default function SeekerResume() {
             </div>
 
             <div id="resumes-header-cont">
-              <div className="resumes-card">
-                <span className="resumes-card-body"></span>
-                <span className="resumes-card-foot">
-                  Machine Learning Engineer
-                </span>
-              </div>
-              <div className="resumes-card">
-                <span className="resumes-card-body"></span>
-                <span className="resumes-card-foot">
-                  Machine Learning Engineer
-                </span>
-              </div>
-              <div className="resumes-card">
-                <span className="resumes-card-body"></span>
-                <span className="resumes-card-foot">
-                  Machine Learning Engineer
-                </span>
-              </div>
-              <div className="resumes-card">
-                <span className="resumes-card-body"></span>
-                <span className="resumes-card-foot">
-                  Machine Learning Engineer
-                </span>
-              </div>
-              <div className="resumes-card">
-                <span className="resumes-card-body"></span>
-                <span className="resumes-card-foot">
-                  Machine Learning Engineer
-                </span>
-              </div>
-              <div className="resumes-card">
-                <span className="resumes-card-body"></span>
-                <span className="resumes-card-foot">
-                  Machine Learning Engineer
-                </span>
-              </div>
+              {resumeData.map((resume) => (
+                <div key={resume.id} className="resumes-card">
+                  <span className="resumes-card-body"></span>
+                  <span className="resumes-card-foot">{resume.title}</span>
+                </div>
+              ))}
             </div>
           </div>
 
