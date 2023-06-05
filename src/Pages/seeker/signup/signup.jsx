@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import "./signup.css";
 import SeekerSectionHeader from "../../../Components/seeker/ss-header/header";
 
@@ -43,7 +43,7 @@ export default function SeekerSignup() {
       },
       {
         section: 3,
-        text: "Education Background",
+        text: "Education",
       },
       {
         section: 4,

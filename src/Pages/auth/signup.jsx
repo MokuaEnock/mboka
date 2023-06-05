@@ -15,7 +15,7 @@ function Container() {
     event.preventDefault();
 
     const formData = {
-      job_seeker: {
+      seeker: {
         email,
         username,
         password,
@@ -24,7 +24,7 @@ function Container() {
     };
 
     try {
-      const response = await fetch("http://localhost:3000/job_seekers", {
+      const response = await fetch("http://localhost:3000/seekers", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -34,7 +34,7 @@ function Container() {
 
       if (response.ok) {
         const responseData = await response.json();
-        const seekerId = responseData.user.id;
+        const seekerId = responseData.id;
         console.log("Form submitted successfully. Seeker ID:", seekerId);
         localStorage.setItem("seekerId", seekerId);
         handleNavigate();
