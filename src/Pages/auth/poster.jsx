@@ -11,6 +11,10 @@ function Container() {
   let navigate = useNavigate();
   let [formErrors, setFormErrors] = useState([]);
 
+  function handleNavigate() {
+    navigate("/recruiter");
+  }
+
   async function handleSubmit(event) {
     event.preventDefault();
 
@@ -34,7 +38,7 @@ function Container() {
 
       if (response.ok) {
         const responseData = await response.json();
-        const recruiterId = responseData.user.id;
+        const recruiterId = responseData.id;
         console.log(recruiterId);
         localStorage.setItem("recruiterId", recruiterId);
         handleNavigate();
@@ -46,10 +50,6 @@ function Container() {
     } catch (error) {
       console.log("An error occurred while submitting the form:", error);
     }
-  }
-
-  function handleNavigate() {
-    navigate("/recruiter");
   }
 
   return (

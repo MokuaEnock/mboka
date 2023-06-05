@@ -16,7 +16,17 @@ export default function SeekerResume() {
             <p>Templates</p>
             <p>Generate</p>
           </aside>
-          <div id="seeker-resumes-2"></div>
+
+          <div id="seeker-resumes-2">
+            <div id="resumes-header">
+              <h2 className="resumes-header-title">All Resume Templates</h2>
+              <p className="resumes-header-text">
+                Review all resume templates that are related to you. Already
+                customized to fit roles related to your profile.
+              </p>
+            </div>
+          </div>
+
           <aside id="seeker-resumes-3">
             <h2>Summary</h2>
             <button>Download Resume</button>
