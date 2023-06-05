@@ -66,14 +66,13 @@ const CodeEditor = ({ selectedQuestion }) => {
         onChange={(value) => setCode(value)}
         options={{
           minimap: { enabled: false },
-          scrollBeyondLastLine: false,
+          scrollBeyondLastLine: true,
           automaticLayout: true,
           wordWrap: "on",
         }}
       />
       <div id="code-editor-output">
         <button onClick={runCode}>Run</button>
-        <button onClick={handleClipboardAccess}>Submit</button>
         {message && <p className="error-message">{message}</p>}
         {output && <p className="output">{output}</p>}
       </div>

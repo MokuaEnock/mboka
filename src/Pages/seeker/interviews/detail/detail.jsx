@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./detail.css";
 import CodeEditor from "../Editor/editor";
 
@@ -74,7 +74,7 @@ export default function SeekerInterviewDetail() {
     setSelectedQuestion(question);
   };
 
-  console.log(selectedQuestion)
+  console.log(selectedQuestion);
   return (
     <main className="interview-detail">
       <section id="seeker-detail-1">
@@ -113,7 +113,7 @@ export default function SeekerInterviewDetail() {
           <h3></h3>
           <button>Submit</button>
         </div>
-        <CodeEditor selectedQuestion={selectedQuestion}/>
+        <CodeEditor selectedQuestion={selectedQuestion} />
       </section>
     </main>
   );
