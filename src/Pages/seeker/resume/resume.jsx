@@ -148,7 +148,9 @@ export default function SeekerResume() {
               {resumeData.map((resume) => (
                 <div
                   key={resume.id}
-                  className="resumes-card"
+                  className={`resumes-card ${
+                    selectedResume === resume ? "selected-resume-card" : ""
+                  }`}
                   onClick={() => handleResumeClick(resume)}
                 >
                   <span className="resumes-card-body"></span>

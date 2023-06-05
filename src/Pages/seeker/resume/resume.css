@@ -93,6 +93,19 @@
   justify-content: space-between;
 }
 
+.selected-resume-card > .resumes-card-body {
+  background-color: transparent;
+  border-top: thin solid var(--primary);
+  border-left: thin solid var(--primary);
+  border-right: thin solid var(--primary);
+}
+
+.selected-resume-card > .resumes-card-foot {
+  background-color: transparent;
+  border: thin solid var(--primary);
+  color: var(--primary);
+}
+
 .resumes-card > * {
   width: 100%;
 }
