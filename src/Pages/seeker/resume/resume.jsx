@@ -25,6 +25,15 @@ export default function SeekerResume() {
                 customized to fit roles related to your profile.
               </p>
             </div>
+
+            <div id="resumes-header-cont">
+              <div className="resumes-card"></div>
+              <div className="resumes-card"></div>
+              <div className="resumes-card"></div>
+              <div className="resumes-card"></div>
+              <div className="resumes-card"></div>
+              <div className="resumes-card"></div>
+            </div>
           </div>
 
           <aside id="seeker-resumes-3">
