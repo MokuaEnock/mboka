@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import MonacoEditor from "react-monaco-editor";
 import "./editor.css";
 
-const CodeEditor = ({selectedQuestion}) => {
+const CodeEditor = ({ selectedQuestion }) => {
   const [code, setCode] = useState("");
   const [output, setOutput] = useState("");
   const [message, setMessage] = useState("");
-  const [theme, setTheme] = useState("vs-light");
-  const test_cases = selectedQuestion.testCases
+  const [theme, setTheme] = useState("vs-dark");
+  const test_cases = selectedQuestion.testCases;
+
+  const editorRef = useRef(null);
 
   const runCode = () => {
     if (code.trim() === "") {
@@ -31,7 +33,11 @@ const CodeEditor = ({selectedQuestion}) => {
     setTheme(event.target.value);
   };
 
-  console.log(test_cases)
+  const handleClipboardAccess = () => {
+    navigator.clipboard.readText().then((text) => {
+      setCode(text);
+    });
+  };
 
   return (
     <>
@@ -51,6 +57,7 @@ const CodeEditor = ({selectedQuestion}) => {
         </span>
       </div>
       <MonacoEditor
+        ref={editorRef}
         width="100%"
         height="50%"
         language="javascript"
@@ -66,6 +73,7 @@ const CodeEditor = ({selectedQuestion}) => {
       />
       <div id="code-editor-output">
         <button onClick={runCode}>Run</button>
+        <button onClick={handleClipboardAccess}>Submit</button>
         {message && <p className="error-message">{message}</p>}
         {output && <p className="output">{output}</p>}
       </div>

@@ -133,7 +133,7 @@ export default function SeekerInterviews() {
         <section className="seeker-interview">
           <div id="seeker-cont1">
             <span id="seeker-cont1-head">
-              <h3>Your Interviews</h3>
+              <h3>All Interviews</h3>
               <button>Filter By</button>
             </span>
             <div id="seeker-cont1-body">

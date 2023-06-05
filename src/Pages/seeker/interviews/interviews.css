@@ -41,12 +41,12 @@
 }
 
 #seeker-cont1-head > button {
-  width: 35%;
-  height: 80%;
+  width: 30%;
+  height: 70%;
   background-color: transparent;
   color: var(--primary);
   font-size: 1rem;
-  border-radius: 2.5px 10px 10px;
+  border-radius: 4px;
 }
 
 #seeker-cont1-body {
@@ -89,7 +89,7 @@
   justify-content: center;
   background-color: transparent;
   color: var(--primary);
-  border-radius: 2.5px 10px 10px;
+  border-radius: 4px;
 }
 
 /* Container 2 */
@@ -125,7 +125,7 @@
   width: 14%;
   font-size: 1rem;
   border: thin solid var(--third);
-  color: var(--third);
+  color: var(--primary);
   background-color: var(--four);
   border-radius: 5px;
   height: 80%;
