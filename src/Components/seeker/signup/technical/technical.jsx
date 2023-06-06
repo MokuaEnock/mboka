@@ -1,6 +1,8 @@
 import SeekerSectionHeader from "../../ss-header/header";
 import "./technical.css";
 
+import { useState } from "react";
+
 export default function SignupSection2({ sectionRefs, handleNextSection }) {
   return (
     <form className="seeker-signup-sections" ref={sectionRefs}>
@@ -12,18 +14,18 @@ export default function SignupSection2({ sectionRefs, handleNextSection }) {
           }
         />
         <div className="seeker-ss2-cont1">
-          <button>Machine Learning</button>
-          <button>Machine Learning</button>
-          <button>Machine Learning</button>
-          <button>Statistical Analysis</button>
-          <button>Machine Learning</button>
-          <button>Data Visualization</button>
-          <button>Data Analysis</button>
-          <button>Machine Learning</button>
-          <button>Machine Learning</button>
-          <button>Machine Learning</button>
-          <button>Machine Learning</button>
-          <button>Cloud Engineering</button>
+          <span>Machine Learning</span>
+          <span>Machine Learning</span>
+          <span>Machine Learning</span>
+          <span>Statistical Analysis</span>
+          <span>Machine Learning</span>
+          <span>Data Visualization</span>
+          <span>Data Analysis</span>
+          <span>Machine Learning</span>
+          <span>Machine Learning</span>
+          <span>Machine Learning</span>
+          <span>Machine Learning</span>
+          <span>Cloud Engineering</span>
         </div>
 
         <SeekerSectionHeader
@@ -34,18 +36,18 @@ export default function SignupSection2({ sectionRefs, handleNextSection }) {
         />
 
         <div className="seeker-ss2-cont1">
-          <button>Vs Code</button>
-          <button>Jupyter Notebook</button>
-          <button>Conda</button>
-          <button>Pytorch</button>
-          <button>TensorFlow</button>
-          <button>SkLearn</button>
-          <button>SkLearn</button>
-          <button>SkLearn</button>
-          <button>SkLearn</button>
-          <button>SkLearn</button>
-          <button>SkLearn</button>
-          <button>Google Cloud</button>
+          <span>Vs Code</span>
+          <span>Jupyter Notebook</span>
+          <span>Conda</span>
+          <span>Pytorch</span>
+          <span>TensorFlow</span>
+          <span>SkLearn</span>
+          <span>SkLearn</span>
+          <span>SkLearn</span>
+          <span>SkLearn</span>
+          <span>SkLearn</span>
+          <span>SkLearn</span>
+          <span>Google Cloud</span>
         </div>
 
         <SeekerSectionHeader
@@ -56,17 +58,17 @@ export default function SignupSection2({ sectionRefs, handleNextSection }) {
         />
 
         <div className="seeker-ss2-cont1">
-          <button>Python</button>
-          <button>Ruby</button>
-          <button>C</button>
-          <button>C++</button>
-          <button>C#</button>
-          <button>Java</button>
-          <button>JavaScript</button>
-          <button>Kotlin</button>
-          <button>Rust</button>
-          <button>Cobal</button>
-          <button>Go</button>
+          <span>Python</span>
+          <span>Ruby</span>
+          <span>C</span>
+          <span>C++</span>
+          <span>C#</span>
+          <span>Java</span>
+          <span>JavaScript</span>
+          <span>Kotlin</span>
+          <span>Rust</span>
+          <span>Cobal</span>
+          <span>Go</span>
         </div>
       </div>
       <div className="seeker-ss-buttons">

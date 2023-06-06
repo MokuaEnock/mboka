@@ -1,8 +1,5 @@
-/* Section 2 */
-
 .seeker-ss2-cont1 {
   width: 100%;
-  /* border: thin solid black; */
   display: grid;
   row-gap: 2vh;
   column-gap: 1vw;
@@ -15,9 +12,15 @@
   font-size: 1rem;
   border-radius: 4px;
   background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
 }
 
-.selected_skill_item {
+.selected-skill-item {
   border: thin solid var(--primary);
   background-color: var(--primary);
   color: var(--secondary);
