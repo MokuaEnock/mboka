@@ -1,8 +1,9 @@
 import { useState, useRef } from "react";
 import "./signup.css";
-import SeekerSectionHeader from "../../../Components/seeker/ss-header/header";
 import SignupSection1 from "../../../Components/seeker/signup/personal/personal";
 import SignupSection2 from "../../../Components/seeker/signup/technical/technical";
+import SignupSection3 from "../../../Components/seeker/signup/education/education";
+import SignupSection4 from "../../../Components/seeker/signup/projects/projects";
 
 export default function SeekerSignup() {
   const [currentSection, setCurrentSection] = useState(1);
@@ -86,34 +87,6 @@ export default function SeekerSignup() {
     );
   }
 
-  function SignupSection3() {
-    return (
-      <form className="seeker-signup-sections" ref={sectionRefs[2]}>
-        <div className="seeker-ss-cont"></div>
-        <div className="seeker-ss-buttons">
-          <p></p>
-          <button type="button" onClick={handleNextSection}>
-            Save
-          </button>
-        </div>
-      </form>
-    );
-  }
-
-  function SignupSection4() {
-    return (
-      <form className="seeker-signup-sections" ref={sectionRefs[3]}>
-        <div className="seeker-ss-cont"></div>
-        <div className="seeker-ss-buttons">
-          <p></p>
-          <button type="button" onClick={handleNextSection}>
-            Save
-          </button>
-        </div>
-      </form>
-    );
-  }
-
   function SignupSection5() {
     return (
       <form className="seeker-signup-sections" ref={sectionRefs[4]}>
@@ -171,8 +144,18 @@ export default function SeekerSignup() {
           handleNextSection={handleNextSection}
         />
       )}
-      {currentSection === 3 && <SignupSection3 />}
-      {currentSection === 4 && <SignupSection4 />}
+      {currentSection === 3 && (
+        <SignupSection3
+          sectionRefs={sectionRefs[2]}
+          handleNextSection={handleNextSection}
+        />
+      )}
+      {currentSection === 4 && (
+        <SignupSection4
+          sectionRefs={sectionRefs[3]}
+          handleNextSection={handleNextSection}
+        />
+      )}
       {currentSection === 5 && <SignupSection5 />}
       {currentSection === 6 && <SignupSection6 />}
       {currentSection === 7 && <SignupSection7 />}
