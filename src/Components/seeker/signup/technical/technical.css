@@ -6,6 +6,15 @@
   grid-template-columns: repeat(9, 1fr);
 }
 
+.seeker-ss2-cont1-1 {
+  width: 100%;
+  display: grid;
+  row-gap: 2vh;
+  column-gap: 1vw;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.seeker-ss2-cont1-1 > *,
 .seeker-ss2-cont1 > * {
   height: 6vh;
   border: thin solid var(--primary);

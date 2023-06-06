@@ -1,9 +1,45 @@
 import SeekerSectionHeader from "../../ss-header/header";
 import "./technical.css";
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function SignupSection2({ sectionRefs, handleNextSection }) {
+  const [skills, setSkills] = useState([]);
+  const [technologies, setTechnologies] = useState([]);
+  const [languages, setLanguages] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const [skillsRes, programmingRes, technologiesRes] = await Promise.all([
+          fetch("http://localhost:3000/skills"),
+          fetch("http://localhost:3000/programming_languages"),
+          fetch("http://localhost:3000/technologies"),
+        ]);
+
+        if (!skillsRes.ok || !programmingRes.ok || !technologiesRes.ok) {
+          throw new Error("Failed to fetch data");
+        }
+
+        const [skillsData, programmingData, technologiesData] =
+          await Promise.all([
+            skillsRes.json(),
+            programmingRes.json(),
+            technologiesRes.json(),
+          ]);
+
+        setSkills(skillsData);
+        setLanguages(programmingData);
+        setTechnologies(technologiesData);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <form className="seeker-signup-sections" ref={sectionRefs}>
       <div className="seeker-ss-cont">
@@ -13,19 +49,12 @@ export default function SignupSection2({ sectionRefs, handleNextSection }) {
             "Select skills that you are good at and you can actually do."
           }
         />
-        <div className="seeker-ss2-cont1">
-          <span>Machine Learning</span>
-          <span>Machine Learning</span>
-          <span>Machine Learning</span>
-          <span>Statistical Analysis</span>
-          <span>Machine Learning</span>
-          <span>Data Visualization</span>
-          <span>Data Analysis</span>
-          <span>Machine Learning</span>
-          <span>Machine Learning</span>
-          <span>Machine Learning</span>
-          <span>Machine Learning</span>
-          <span>Cloud Engineering</span>
+        <div className="seeker-ss2-cont1-1">
+          {loading ? (
+            <span>Loading skills...</span>
+          ) : (
+            skills.map((item) => <span key={item.id}>{item.name}</span>)
+          )}
         </div>
 
         <SeekerSectionHeader
@@ -36,18 +65,11 @@ export default function SignupSection2({ sectionRefs, handleNextSection }) {
         />
 
         <div className="seeker-ss2-cont1">
-          <span>Vs Code</span>
-          <span>Jupyter Notebook</span>
-          <span>Conda</span>
-          <span>Pytorch</span>
-          <span>TensorFlow</span>
-          <span>SkLearn</span>
-          <span>SkLearn</span>
-          <span>SkLearn</span>
-          <span>SkLearn</span>
-          <span>SkLearn</span>
-          <span>SkLearn</span>
-          <span>Google Cloud</span>
+          {loading ? (
+            <span>Loading skills...</span>
+          ) : (
+            technologies.map((item) => <span key={item.id}>{item.name}</span>)
+          )}
         </div>
 
         <SeekerSectionHeader
@@ -58,17 +80,11 @@ export default function SignupSection2({ sectionRefs, handleNextSection }) {
         />
 
         <div className="seeker-ss2-cont1">
-          <span>Python</span>
-          <span>Ruby</span>
-          <span>C</span>
-          <span>C++</span>
-          <span>C#</span>
-          <span>Java</span>
-          <span>JavaScript</span>
-          <span>Kotlin</span>
-          <span>Rust</span>
-          <span>Cobal</span>
-          <span>Go</span>
+          {loading ? (
+            <span>Loading skills...</span>
+          ) : (
+            languages.map((item) => <span key={item.id}>{item.name}</span>)
+          )}
         </div>
       </div>
       <div className="seeker-ss-buttons">
