@@ -23,21 +23,19 @@ export default function SignupSection1({ sectionRefs, handleNextSection }) {
     event.preventDefault();
 
     const formData = {
-      // seeker_detail: {
-      seeker_id: seekerId,
-      first_name: firstName,
-      second_name: secondName,
-      third_name: thirdName,
-      phone_number: phoneNumber,
-      country,
-      city,
-      gender,
-      professional_summary: professionalSummary,
-      objectives,
-      // },
+      seeker_detail: {
+        seeker_id: seekerId,
+        first_name: firstName,
+        second_name: secondName,
+        third_name: thirdName,
+        phone_number: phoneNumber,
+        country,
+        city,
+        gender,
+        professional_summary: professionalSummary,
+        objectives,
+      },
     };
-
-    console.log(formData);
 
     fetch("http://localhost:3000/seeker_details", {
       method: "POST",
@@ -50,6 +48,23 @@ export default function SignupSection1({ sectionRefs, handleNextSection }) {
       .then((data) => {
         console.log(data);
       });
+
+    fetch("http://localhost:3000/seeker_objectives", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        seeker_id: seekerId,
+        description: objectives,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      });
+
+    handleNextSection();
   }
 
   return (
