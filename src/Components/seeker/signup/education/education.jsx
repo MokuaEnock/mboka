@@ -175,7 +175,7 @@ export default function SignupSection3({ sectionRefs, handleNextSection }) {
 
         <div className="seeker-ss3-cont2">
           <label className="seeker-ss3-textarea">
-            <span>A description of your final thesis or project:</span>
+            <p>A description of your final thesis or project:</p>
             <textarea
               name="thesisDescription"
               value={thesisDescription}
