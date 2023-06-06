@@ -6,6 +6,11 @@
   justify-content: space-between;
 }
 
+.seeker-ss-conts-header > * {
+  margin-bottom: 1.5vh;
+  margin-top: 1.5vh;
+}
+
 .seeker-ss-conts-header > h3 {
   font-size: 1.5rem;
   font-weight: bold;

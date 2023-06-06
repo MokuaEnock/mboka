@@ -91,7 +91,8 @@
 }
 
 .seeker-ss-cont > * {
-  margin-bottom: 1vh;
+  margin-bottom: 2.5vh;
+  margin-top: 1vh;
 }
 
 .seeker-ss-buttons {
@@ -233,4 +234,29 @@
 
 .seeker-scc-textareas > textarea:focus {
   outline: none;
+}
+
+/* Section 2 */
+
+.seeker-ss2-cont1 {
+  width: 100%;
+  /* border: thin solid black; */
+  display: grid;
+  row-gap: 2vh;
+  column-gap: 1vw;
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.seeker-ss2-cont1 > * {
+  height: 6vh;
+  border: thin solid var(--primary);
+  font-size: 1rem;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.selected_skill_item {
+  border: thin solid var(--primary);
+  background-color: var(--primary);
+  color: var(--secondary);
 }

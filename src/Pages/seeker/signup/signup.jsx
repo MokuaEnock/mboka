@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import "./signup.css";
 import SeekerSectionHeader from "../../../Components/seeker/ss-header/header";
+import SignupSection1 from "../../../Components/seeker/signup/personal/personal";
 
 export default function SeekerSignup() {
   const [currentSection, setCurrentSection] = useState(1);
@@ -84,109 +85,74 @@ export default function SeekerSignup() {
     );
   }
 
-  function SignupSection1() {
-    return (
-      <form className="seeker-signup-sections" ref={sectionRefs[0]}>
-        <div className="seeker-ss-cont">
-          <SeekerSectionHeader
-            header={"Personal Details"}
-            paragraph={
-              "Please provide your personal information for the sake of identification "
-            }
-          />
-
-          <div className="seeker-ss-conts-cont-text">
-            <label>
-              <p>First Name</p>
-              <input placeholder="First Name" />
-            </label>
-            <label>
-              <p>Second Name</p>
-              <input type="text" placeholder="Second Name" />
-            </label>
-
-            <label>
-              <p>Third Name</p>
-              <input type="text" placeholder="Third Name" />
-            </label>
-
-            <label>
-              <p>Phone Number</p>
-              <input type="number" placeholder="Phone Number" />
-            </label>
-
-            <label>
-              <p>Country of residence</p>
-              <input type="text" placeholder="Country of residence" />
-            </label>
-
-            <label>
-              <p>City of residence</p>
-              <input type="text" placeholder="City of residence" />
-            </label>
-          </div>
-
-          <div className="seeker-ss-conts-cont-custom">
-            <label className="seeker-ss-customs">
-              <p>Choose your gender</p>
-
-              <span>
-                <p>
-                  <input type="radio" name="gender" value="male" /> Male
-                </p>
-                <p>
-                  <input type="radio" name="gender" value="female" /> Female
-                </p>
-              </span>
-            </label>
-
-            <label className="seeker-ss-customs">
-              <p>Upload profile image (JPEG, JPG)</p>
-              <input type="file" accept="image/jpeg, image/jpg, image/png" />
-            </label>
-
-            <label className="seeker-ss-customs">
-              <p>Upload your 3min video resume (MP4, MKV)</p>
-              <input type="file" accept="video/mp4, video/mkv" />
-            </label>
-
-            <label className="seeker-ss-customs">
-              <p>Upload your resume (PDF)</p>
-              <input type="file" accept="application/pdf" />
-            </label>
-          </div>
-
-          <SeekerSectionHeader
-            header={"Professional Summary"}
-            paragraph={"Provide us with an overview of your career journey"}
-          />
-
-          <div className="seeker-ss-conts-cont-textarea">
-            <label className="seeker-scc-textareas">
-              <p>Your professional summary</p>
-              <textarea maxLength="500" />
-            </label>
-
-            <label className="seeker-scc-textareas">
-              <p>Your career objectives</p>
-              <textarea maxLength="500" />
-            </label>
-          </div>
-        </div>
-        <div className="seeker-ss-buttons">
-          <p></p>
-          <button type="button" onClick={handleNextSection}>
-            Save
-          </button>
-        </div>
-      </form>
-    );
-  }
-
   function SignupSection2() {
     return (
       <form className="seeker-signup-sections" ref={sectionRefs[1]}>
-        <div className="seeker-ss-cont"></div>
+        <div className="seeker-ss-cont">
+          <SeekerSectionHeader
+            header={"Skills"}
+            paragraph={
+              "Select skills that you are good at and you can actually do."
+            }
+          />
+          <div className="seeker-ss2-cont1">
+            <button>Machine Learning</button>
+            <button>Machine Learning</button>
+            <button>Machine Learning</button>
+            <button>Statistical Analysis</button>
+            <button>Machine Learning</button>
+            <button>Data Visualization</button>
+            <button>Data Analysis</button>
+            <button>Machine Learning</button>
+            <button>Machine Learning</button>
+            <button>Machine Learning</button>
+            <button>Machine Learning</button>
+            <button>Cloud Engineering</button>
+          </div>
+
+          <SeekerSectionHeader
+            header={"Technologies"}
+            paragraph={
+              "Select technologies that you have previously worked with."
+            }
+          />
+
+          <div className="seeker-ss2-cont1">
+            <button>Vs Code</button>
+            <button>Jupyter Notebook</button>
+            <button>Conda</button>
+            <button>Pytorch</button>
+            <button>TensorFlow</button>
+            <button>SkLearn</button>
+            <button>SkLearn</button>
+            <button>SkLearn</button>
+            <button>SkLearn</button>
+            <button>SkLearn</button>
+            <button>SkLearn</button>
+            <button>Google Cloud</button>
+          </div>
+
+          <SeekerSectionHeader
+            header={"Programming Languages"}
+            paragraph={
+              "Select all the programming languages that you can write code confidently in."
+            }
+          />
+
+          <div className="seeker-ss2-cont1">
+            <button>Python</button>
+            <button>Ruby</button>
+            <button>C</button>
+            <button>C++</button>
+            <button>C#</button>
+            <button>Java</button>
+            <button>JavaScript</button>
+            <button>Kotlin</button>
+            <button>Rust</button>
+            <button>Cobal</button>
+            <button>Go</button>
+          </div>
+        </div>
         <div className="seeker-ss-buttons">
           <p></p>
           <button type="button" onClick={handleNextSection}>
@@ -270,7 +236,12 @@ export default function SeekerSignup() {
   return (
     <main id="seeker-signup" ref={mainRef}>
       <SignupHeader />
-      {currentSection === 1 && <SignupSection1 />}
+      {currentSection === 1 && (
+        <SignupSection1
+          sectionRefs={sectionRefs[0]}
+          handleNextSection={handleNextSection}
+        />
+      )}
       {currentSection === 2 && <SignupSection2 />}
       {currentSection === 3 && <SignupSection3 />}
       {currentSection === 4 && <SignupSection4 />}
