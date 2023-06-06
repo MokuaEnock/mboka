@@ -40,6 +40,18 @@ export default function SignupSection2({ sectionRefs, handleNextSection }) {
     fetchData();
   }, []);
 
+  const handleSpanClick = (id) => {
+    const updatedSkills = skills.map((item) => {
+      if (item.id === id) {
+        return { ...item, selected: !item.selected };
+      } else {
+        return item;
+      }
+    });
+
+    setSkills(updatedSkills);
+  };
+
   return (
     <form className="seeker-signup-sections" ref={sectionRefs}>
       <div className="seeker-ss-cont">
@@ -53,7 +65,20 @@ export default function SignupSection2({ sectionRefs, handleNextSection }) {
           {loading ? (
             <span>Loading skills...</span>
           ) : (
-            skills.map((item) => <span key={item.id}>{item.name}</span>)
+            skills.map((item) => (
+              <label
+                key={item.id}
+                className={item.selected ? "selected-skill-item" : ""}
+              >
+                <input
+                  type="checkbox"
+                  checked={item.selected}
+                  onChange={() => handleSpanClick(item.id)}
+                  style={{ display: "none" }} // Hide the checkbox
+                />
+                {item.name}
+              </label>
+            ))
           )}
         </div>
 
@@ -66,7 +91,7 @@ export default function SignupSection2({ sectionRefs, handleNextSection }) {
 
         <div className="seeker-ss2-cont1">
           {loading ? (
-            <span>Loading skills...</span>
+            <span>Loading technologies...</span>
           ) : (
             technologies.map((item) => <span key={item.id}>{item.name}</span>)
           )}
@@ -81,7 +106,7 @@ export default function SignupSection2({ sectionRefs, handleNextSection }) {
 
         <div className="seeker-ss2-cont1">
           {loading ? (
-            <span>Loading skills...</span>
+            <span>Loading languages...</span>
           ) : (
             languages.map((item) => <span key={item.id}>{item.name}</span>)
           )}
