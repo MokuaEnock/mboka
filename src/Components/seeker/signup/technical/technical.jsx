@@ -7,6 +7,9 @@ export default function SignupSection2({ sectionRefs, handleNextSection }) {
   const [technologies, setTechnologies] = useState([]);
   const [languages, setLanguages] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [selectedSkills, setSelectedSkills] = useState([]);
+  const [selectedTechnologies, setSelectedTechnologies] = useState([]);
+  const [selectedLanguages, setSelectedLanguages] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -40,35 +43,49 @@ export default function SignupSection2({ sectionRefs, handleNextSection }) {
     fetchData();
   }, []);
 
+  console.log(selectedLanguages);
+
   const handleSpanClick = (id, type) => {
-    let updatedSkills;
     if (type === "skills") {
-      updatedSkills = skills.map((item) => {
+      const updatedSkills = skills.map((item) => {
         if (item.id === id) {
-          return { ...item, selected: !item.selected };
+          const updatedItem = { ...item, selected: !item.selected };
+          return updatedItem;
         } else {
           return item;
         }
       });
       setSkills(updatedSkills);
+      const selectedSkills = updatedSkills.filter((item) => item.selected);
+      setSelectedSkills(selectedSkills);
     } else if (type === "technologies") {
       const updatedTechnologies = technologies.map((item) => {
         if (item.id === id) {
-          return { ...item, selected: !item.selected };
+          const updatedItem = { ...item, selected: !item.selected };
+          return updatedItem;
         } else {
           return item;
         }
       });
       setTechnologies(updatedTechnologies);
+      const selectedTechnologies = updatedTechnologies.filter(
+        (item) => item.selected
+      );
+      setSelectedTechnologies(selectedTechnologies);
     } else if (type === "languages") {
       const updatedLanguages = languages.map((item) => {
         if (item.id === id) {
-          return { ...item, selected: !item.selected };
+          const updatedItem = { ...item, selected: !item.selected };
+          return updatedItem;
         } else {
           return item;
         }
       });
       setLanguages(updatedLanguages);
+      const selectedLanguages = updatedLanguages.filter(
+        (item) => item.selected
+      );
+      setSelectedLanguages(selectedLanguages);
     }
   };
 
@@ -111,7 +128,7 @@ export default function SignupSection2({ sectionRefs, handleNextSection }) {
 
         <div className="seeker-ss2-cont1">
           {loading ? (
-            <span>Loading ...</span>
+            <span>Loading technologies...</span>
           ) : (
             technologies.map((item) => (
               <label
@@ -139,7 +156,7 @@ export default function SignupSection2({ sectionRefs, handleNextSection }) {
 
         <div className="seeker-ss2-cont1">
           {loading ? (
-            <span>Loading ...</span>
+            <span>Loading languages...</span>
           ) : (
             languages.map((item) => (
               <label
