@@ -25,14 +25,14 @@ export default function SignupSection1({ sectionRefs, handleNextSection }) {
     const formData = {
       // seeker_detail: {
       seeker_id: seekerId,
-      firstName,
-      secondName,
-      thirdName,
-      phoneNumber,
+      first_name: firstName,
+      second_name: secondName,
+      third_name: thirdName,
+      phone_number: phoneNumber,
       country,
       city,
       gender,
-      professionalSummary,
+      professional_summary: professionalSummary,
       objectives,
       // },
     };
