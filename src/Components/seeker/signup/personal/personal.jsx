@@ -1,7 +1,7 @@
 import "./personal.css";
 import SeekerSectionHeader from "../../ss-header/header";
-
 import { useState } from "react";
+import { data } from "jquery";
 
 export default function SignupSection1({ sectionRefs, handleNextSection }) {
   const [firstName, setFirstName] = useState("");
@@ -16,11 +16,15 @@ export default function SignupSection1({ sectionRefs, handleNextSection }) {
   const [profileImage, setProfileImage] = useState();
   const [videoResume, setVideoResume] = useState("");
   const [resume, setResume] = useState("");
+  const seekerId = localStorage.getItem("seekerId");
+  console.log(seekerId);
 
   function handleSubmit(event) {
     event.preventDefault();
 
     const formData = {
+      // seeker_detail: {
+      seeker_id: seekerId,
       firstName,
       secondName,
       thirdName,
@@ -30,11 +34,22 @@ export default function SignupSection1({ sectionRefs, handleNextSection }) {
       gender,
       professionalSummary,
       objectives,
+      // },
     };
 
     console.log(formData);
 
-    // Rest of the code
+    fetch("http://localhost:3000/seeker_details", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      });
   }
 
   return (
