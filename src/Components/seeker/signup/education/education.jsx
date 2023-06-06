@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./education.css";
 import SeekerSectionHeader from "../../ss-header/header";
 
@@ -14,32 +14,42 @@ export default function SignupSection3({ sectionRefs, handleNextSection }) {
   const [major, setMajor] = useState("");
   const [gpa, setGpa] = useState(0);
   const [thesisDescription, setThesisDescription] = useState("");
-
+  const seekerId = localStorage.getItem("seekerId");
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validate the form fields here if needed
-
     const formData = {
-      institutionName,
-      startDate,
-      endDate,
-      degreeType,
+      seeker_id: seekerId,
+      institution: institutionName,
+      start_date: startDate,
+      end_date: endDate,
+      degree_type: degreeType,
       country,
       city,
-      institutionType,
-      fieldOfStudy,
+      type_of_institution: institutionType,
+      field_of_study: fieldOfStudy,
       major,
       gpa,
-      thesisDescription,
+      thesis_description: thesisDescription,
     };
 
     console.log("Form Data:", formData);
 
-    // Perform any further actions with the form data...
-
-    // Call the next section handler or perform any other actions
-    handleNextSection();
+    fetch("http://localhost:3000/educations", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Response Data:", data);
+        handleNextSection();
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   };
 
   return (
