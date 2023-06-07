@@ -5,11 +5,3 @@
   grid-template-columns: repeat(6, 1fr);
 }
 
-/* .seeker-ss7-text {
-  border: thin solid black;
-  height: 7vh;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-} */
