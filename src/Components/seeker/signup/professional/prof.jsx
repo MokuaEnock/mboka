@@ -8,14 +8,52 @@ export default function SignupSection6({ sectionRefs, handleNextSection }) {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const [degreeType, setDegreeType] = useState("");
-  const [country, setCountry] = useState("");
-  const [city, setCity] = useState("");
   const [institutionType, setInstitutionType] = useState("");
   const [fieldOfStudy, setFieldOfStudy] = useState("");
   const [major, setMajor] = useState("");
   const [certification, setCertification] = useState("");
-  const [gpa, setGpa] = useState("");
   const [thesisDescription, setThesisDescription] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = {
+      institution_name: institutionName,
+      start_date: startDate,
+      end_date: endDate,
+      degree_type: degreeType,
+      type_of_institution: institutionType,
+      field_of_study: fieldOfStudy,
+      specialization: major,
+      certification_link: certification,
+      description: thesisDescription,
+    };
+
+    console.log(formData);
+
+    fetch("http://localhost:3000/courses", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setInstitutionName("");
+        setStartDate("");
+        setEndDate("");
+        setDegreeType("");
+        setInstitutionType("");
+        setFieldOfStudy("");
+        setMajor("");
+        setCertification("");
+        setThesisDescription("");
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  };
 
   return (
     <form className="seeker-signup-sections" ref={sectionRefs[5]}>
@@ -67,26 +105,6 @@ export default function SignupSection6({ sectionRefs, handleNextSection }) {
           </label>
 
           <label className="seeker-ss3-cont-items">
-            <span>Country:</span>
-            <input
-              type="text"
-              name="country"
-              value={country}
-              onChange={(e) => setCountry(e.target.value)}
-            />
-          </label>
-
-          <label className="seeker-ss3-cont-items">
-            <span>City:</span>
-            <input
-              type="text"
-              name="city"
-              value={city}
-              onChange={(e) => setCity(e.target.value)}
-            />
-          </label>
-
-          <label className="seeker-ss3-cont-items">
             <span>Type of Institution:</span>
             <input
               type="text"
@@ -123,22 +141,12 @@ export default function SignupSection6({ sectionRefs, handleNextSection }) {
           </label>
 
           <label className="seeker-ss3-cont-items">
-            <span>Enter your Major:</span>
+            <span>Specialization:</span>
             <input
               type="text"
               name="major"
               value={major}
               onChange={(e) => setMajor(e.target.value)}
-            />
-          </label>
-
-          <label className="seeker-ss3-cont-items">
-            <span>GPA scored:</span>
-            <input
-              type="number"
-              name="gpa"
-              value={gpa}
-              onChange={(e) => setGpa(e.target.value)}
             />
           </label>
         </div>
