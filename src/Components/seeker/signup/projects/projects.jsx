@@ -1,6 +1,7 @@
 import "./projects.css";
-
 import SeekerSectionHeader from "../../ss-header/header";
+
+import { FaPlus } from "react-icons/fa";
 
 export default function SignupSection4({ sectionRefs, handleNextSection }) {
   return (
@@ -76,6 +77,10 @@ export default function SignupSection4({ sectionRefs, handleNextSection }) {
       </div>
       <div className="seeker-ss-buttons">
         <p></p>
+        <button type="submit" id="section-add-button">
+          <FaPlus />
+          <p>Add Experience</p>
+        </button>
         <button type="button" onClick={handleNextSection}>
           Save
         </button>

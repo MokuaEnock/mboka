@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./education.css";
 import SeekerSectionHeader from "../../ss-header/header";
 
+import { FaPlus } from "react-icons/fa";
+
 export default function SignupSection3({ sectionRefs, handleNextSection }) {
   const [institutionName, setInstitutionName] = useState("");
   const [startDate, setStartDate] = useState("");
@@ -186,6 +188,10 @@ export default function SignupSection3({ sectionRefs, handleNextSection }) {
       </div>
       <div className="seeker-ss-buttons">
         <p></p>
+        <button type="submit" id="section-add-button">
+          <FaPlus />
+          <p>Add Experience</p>
+        </button>
         <button type="submit">Save</button>
       </div>
     </form>
