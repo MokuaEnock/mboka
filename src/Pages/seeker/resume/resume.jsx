@@ -169,14 +169,14 @@ export default function SeekerResume() {
                 <h4>Requirements:</h4>
                 <ul>
                   {selectedResume.requirements.map((requirement, index) => (
-                    <li key={index}>{requirement}</li>
+                    <p key={index}>{requirement}</p>
                   ))}
                 </ul>
                 <h4>Responsibilities:</h4>
                 <ul>
                   {selectedResume.responsibilities.map(
                     (responsibility, index) => (
-                      <li key={index}>{responsibility}</li>
+                      <p key={index}>{responsibility}</p>
                     )
                   )}
                 </ul>

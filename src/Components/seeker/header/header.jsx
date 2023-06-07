@@ -1,5 +1,15 @@
 import { Link } from "react-router-dom";
-import { FaThumbsUp, FaSearch, FaBookmark, FaEnvelope, FaListAlt, FaCog, FaMicrophone, FaCalendarCheck, FaCheckCircle } from "react-icons/fa";
+import {
+  FaThumbsUp,
+  FaSearch,
+  FaBookmark,
+  FaEnvelope,
+  FaListAlt,
+  FaCog,
+  FaMicrophone,
+  FaCalendarCheck,
+  FaCheckCircle,
+} from "react-icons/fa";
 import "./header.css";
 import { AiOutlineFileText } from "react-icons/ai";
 
@@ -12,11 +22,6 @@ export default function SeekerHeader() {
         </Link>
 
         <span id="seeker-header-info">
-          {/* <Link to="/seeker/reccs" className="menu-link">
-            <FaThumbsUp />
-            <span>Recommendations</span>
-          </Link> */}
-
           <Link to="/bookmarks" className="menu-link">
             <FaBookmark />
             <span>Bookmarks</span>
@@ -32,6 +37,10 @@ export default function SeekerHeader() {
           <Link to="/seeker/resumes" className="menu-link">
             <AiOutlineFileText />
             <span>Resume</span>
+          </Link>
+          <Link to="/seeker/cover" className="menu-link">
+            <FaThumbsUp />
+            <span>Cover Letter</span>
           </Link>
           <Link to="/messages" className="menu-link">
             <FaEnvelope />

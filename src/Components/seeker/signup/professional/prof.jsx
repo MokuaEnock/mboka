@@ -56,7 +56,11 @@ export default function SignupSection6({ sectionRefs, handleNextSection }) {
   };
 
   return (
-    <form className="seeker-signup-sections" ref={sectionRefs[5]}>
+    <form
+      className="seeker-signup-sections"
+      ref={sectionRefs[5]}
+      onSubmit={handleSubmit}
+    >
       <div className="seeker-ss-cont">
         <SeekerSectionHeader
           header={"Education Background"}
