@@ -42,7 +42,7 @@ export default function SeekerHeader() {
             <FaThumbsUp />
             <span>Cover Letter</span>
           </Link>
-          <Link to="/messages" className="menu-link">
+          <Link to="/seeker/messages" className="menu-link">
             <FaEnvelope />
             <span>Messages</span>
           </Link>

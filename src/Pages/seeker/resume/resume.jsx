@@ -130,9 +130,6 @@ export default function SeekerResume() {
             <p>All</p>
             <p>Data Science</p>
             <p>Machine Learning</p>
-            <h2>Cover Letter</h2>
-            <p>Templates</p>
-            <p>Generate</p>
           </aside>
 
           <div id="seeker-resumes-2">

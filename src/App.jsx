@@ -24,6 +24,7 @@ import SeekerInterviews from "./Pages/seeker/interviews/interviews";
 import SeekerInterviewDetail from "./Pages/seeker/interviews/detail/detail";
 import SeekerResume from "./Pages/seeker/resume/resume";
 import SeekerCover from "./Pages/seeker/cover/cover";
+import SeekerMessage from "./Pages/seeker/message/message";
 
 function App() {
   return (
@@ -55,7 +56,8 @@ function App() {
             <Route path=":id" element={<SeekerInterviewDetail />} />
           </Route>
           <Route path="resumes" element={<SeekerResume />}></Route>
-          <Route path="cover" element={<SeekerCover />} ></Route>
+          <Route path="cover" element={<SeekerCover />}></Route>
+          <Route path="messages" element={<SeekerMessage />}></Route>
         </Route>
 
         <Route path="/auth">
