@@ -8,22 +8,19 @@ export default function Landing() {
       <main className="landing" id="landing">
         <div id="landing-1">
           <div id="landing-cont">
-            <div id="landing-1-1">
-              <h2>
-               By the developers <br/> for the developers
-              </h2>
-
-              <p>
-                We use the power of Natural Language processing <br />
-                to find what suites you.
-              </p>
-
-              <span>
-                <Link to="/auth/finder">Find a job</Link>
-                <Link to="/auth/poster">Post a role</Link>
-              </span>
-            </div>
-            <div id="landing-1-2"></div>
+            <p className="landing-c-p0">Built for Engineers, by Engineers </p>
+            <h2>
+              Discover the <strong>Perfect</strong> Tech Talent
+              <br /> for Your Team
+            </h2>
+            <p className="landing-c-p1">
+              We employ advanced machine learning algorithms to pre-screen tech
+              talent for your team.
+            </p>
+            <span className="landing-c-links">
+              <Link>Find open roles</Link>
+              <Link>Post a role</Link>
+            </span>
           </div>
         </div>
 

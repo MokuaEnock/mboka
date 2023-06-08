@@ -22,14 +22,14 @@ export default function SeekerHeader() {
         </Link>
 
         <span id="seeker-header-info">
-          <Link to="/bookmarks" className="menu-link">
+          {/* <Link to="/bookmarks" className="menu-link">
             <FaBookmark />
             <span>Bookmarks</span>
           </Link>
           <Link to="/applied-jobs" className="menu-link">
             <FaListAlt />
             <span>Applied Jobs</span>
-          </Link>
+          </Link> */}
           <Link to="/seeker/interviews" className="menu-link">
             <FaMicrophone />
             <span>Interviews</span>
