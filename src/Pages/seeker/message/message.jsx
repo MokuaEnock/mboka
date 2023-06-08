@@ -209,7 +209,9 @@ export default function SeekerMessage() {
             </form>
           </div>
 
-          <aside id="seeker-message-3"></aside>
+          <aside id="seeker-message-3">
+            <span id="seeker-m3-header">Files Shared</span>
+          </aside>
         </section>
       </main>
     );
