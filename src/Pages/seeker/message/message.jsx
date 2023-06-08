@@ -1,4 +1,5 @@
 import "./message.css";
+import { useState } from "react";
 import SeekerHeader from "../../../Components/seeker/header/header";
 
 const conversations = [
@@ -100,7 +101,29 @@ const conversations = [
 ];
 
 export default function SeekerMessage() {
+  const [selectedChat, setSelectedChat] = useState(null);
+
   function Container() {
+    function ReceiverChat({ message }) {
+      return (
+        <div className="receiver-chat">
+          <p>{message}</p>
+        </div>
+      );
+    }
+
+    function SenderChat({ message }) {
+      return (
+        <div className="sender-chat">
+          <p>{message}</p>
+        </div>
+      );
+    }
+
+    const handleChatClick = (id) => {
+      setSelectedChat(id);
+    };
+
     return (
       <main className="seeker">
         <section className="seeker-resumes">
@@ -108,7 +131,13 @@ export default function SeekerMessage() {
             <span id="seeker-message-header">Your Messages</span>
             <div id="seeker-message-cont">
               {conversations.map((conversation) => (
-                <span className="chat-container" key={conversation.id}>
+                <span
+                  className={`chat-container ${
+                    conversation.id === selectedChat ? "selected" : ""
+                  }`}
+                  key={conversation.id}
+                  onClick={() => handleChatClick(conversation.id)}
+                >
                   {conversation.sender}
                 </span>
               ))}
@@ -126,22 +155,21 @@ export default function SeekerMessage() {
 
           <div id="seeker-message-2">
             <div id="seeker-m2-cont">
-              <div className="sender-chat">
-                <p>Hello, how have you been. Where do you stay</p>
-              </div>
-              <div className="receiver-chat">
-                <p>
-                  Hello is stay in Nairobi where do stay where can we meet when
-                  do we meet how do we meet
-                </p>
-              </div>
-              <div className="sender-chat">
-                <p>Hello, how have you been. Where do you stay</p>
-              </div>
-              <div className="sender-chat">
-                <p>Where do you stay</p>
-              </div>
+              {selectedChat && (
+                <>
+                  {conversations
+                    .find((conversation) => conversation.id === selectedChat)
+                    .messages.map((message, index) =>
+                      message.type === "sender" ? (
+                        <SenderChat key={index} message={message.content} />
+                      ) : (
+                        <ReceiverChat key={index} message={message.content} />
+                      )
+                    )}
+                </>
+              )}
             </div>
+
             <form id="seeker-m2-form">
               <input type="text" />
               <button type="submit">Send</button>
