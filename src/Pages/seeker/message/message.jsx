@@ -5,21 +5,24 @@ import SeekerHeader from "../../../Components/seeker/header/header";
 const conversations = [
   {
     id: 1,
-    sender: "John",
-    receiver: "Alice",
+    sender: "Recruiter1",
+    receiver: "Candidate1",
     messages: [
       {
-        content: "Hey Alice, how have you been?",
+        content:
+          "Hello Candidate1, thank you for your application. Can we schedule an interview?",
         timeSent: "2023-06-08T09:00:00",
         type: "sender",
       },
       {
-        content: "I've been good, thanks! How about you?",
+        content:
+          "Sure, I'm available on Thursday at 2 PM. How about a video call?",
         timeSent: "2023-06-08T09:05:00",
         type: "receiver",
       },
       {
-        content: "I'm doing great. Do you want to catch up sometime?",
+        content:
+          "That works for me. I will send you a meeting invite. Looking forward to speaking with you.",
         timeSent: "2023-06-08T09:10:00",
         type: "sender",
       },
@@ -27,16 +30,18 @@ const conversations = [
   },
   {
     id: 2,
-    sender: "Emily",
-    receiver: "Mark",
+    sender: "Recruiter2",
+    receiver: "Candidate2",
     messages: [
       {
-        content: "Hi Mark, did you receive my email?",
+        content:
+          "Hi Candidate2, we reviewed your resume and would like to proceed with a technical assessment.",
         timeSent: "2023-06-08T10:30:00",
         type: "sender",
       },
       {
-        content: "Yes, I did. I'll get back to you soon.",
+        content:
+          "Great! Please let me know the details and any preparation I should do.",
         timeSent: "2023-06-08T10:35:00",
         type: "receiver",
       },
@@ -44,16 +49,18 @@ const conversations = [
   },
   {
     id: 3,
-    sender: "Sarah",
-    receiver: "David",
+    sender: "Recruiter3",
+    receiver: "Candidate3",
     messages: [
       {
-        content: "David, can we discuss the project tomorrow?",
+        content:
+          "Hi Candidate3, we would like to invite you for an onsite interview next week.",
         timeSent: "2023-06-08T14:20:00",
         type: "sender",
       },
       {
-        content: "Sure, let's meet at 2 PM in the conference room.",
+        content:
+          "That sounds great! Please provide me with the date, time, and location.",
         timeSent: "2023-06-08T14:25:00",
         type: "receiver",
       },
@@ -61,21 +68,24 @@ const conversations = [
   },
   {
     id: 4,
-    sender: "Lisa",
-    receiver: "Michael",
+    sender: "Recruiter4",
+    receiver: "Candidate4",
     messages: [
       {
-        content: "Hey Michael, how was your trip?",
+        content:
+          "Hello Candidate4, we would like to discuss your salary expectations for the position.",
         timeSent: "2023-06-08T16:45:00",
         type: "sender",
       },
       {
-        content: "It was fantastic! I had a great time.",
+        content:
+          "Thank you for considering me. I'm open to discussing the salary based on the market standards.",
         timeSent: "2023-06-08T16:50:00",
         type: "receiver",
       },
       {
-        content: "That's awesome. I would love to hear more about it.",
+        content:
+          "Understood. We will follow up with our offer soon. Have a great day!",
         timeSent: "2023-06-08T16:55:00",
         type: "sender",
       },
@@ -83,16 +93,18 @@ const conversations = [
   },
   {
     id: 5,
-    sender: "Alex",
-    receiver: "Sophia",
+    sender: "Recruiter5",
+    receiver: "Candidate5",
     messages: [
       {
-        content: "Sophia, are you free this weekend?",
+        content:
+          "Hello Candidate5, we are impressed with your qualifications. Can we schedule a phone interview?",
         timeSent: "2023-06-08T19:30:00",
         type: "sender",
       },
       {
-        content: "Yes, I don't have any plans. What's up?",
+        content:
+          "Certainly! Please let me know your availability, and I will be happy to arrange a call.",
         timeSent: "2023-06-08T19:35:00",
         type: "receiver",
       },
