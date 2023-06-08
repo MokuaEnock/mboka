@@ -1,0 +1,167 @@
+#seeker-message-1 {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* border: thin solid lightgrey; */
+}
+
+#seeker-message-1 > * {
+  width: 100%;
+  /* border: thin solid black; */
+}
+
+#seeker-message-header {
+  width: 100%;
+  background-color: var(--primary);
+  color: var(--secondary);
+  height: 8%;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#seeker-message-cont {
+  height: 82%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 2%;
+}
+
+.chat-container {
+  border: thin solid black;
+}
+
+#seeker-message-foot {
+  height: 8%;
+  background-color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px;
+}
+
+#seeker-message-foot > * {
+  height: 80%;
+}
+
+#seeker-message-foot > span {
+  color: var(--secondary);
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#seeker-message-foot > span > p {
+  font-size: 1rem;
+}
+
+#seeker-message-foot > button {
+  background-color: transparent;
+  color: var(--third);
+  font-size: 1rem;
+  width: 23%;
+  border-radius: 5px;
+}
+
+#seeker-message-2 {
+  background-color: var(--secondary);
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.5vh;
+}
+
+#seeker-m2-cont {
+  overflow-y: scroll;
+  height: 93%;
+  width: 100%;
+}
+
+#seeker-m2-cont > * {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  width: 100%;
+  height: max-content;
+}
+
+.sender-chat {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.receiver-chat {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.sender-chat > p {
+  max-width: 70%;
+  background-color: white;
+  margin-left: 1%;
+  padding: 10px;
+  border-radius: 5px 20px 20px 20px;
+  border: thin solid lightgray;
+  font-size: 1rem;
+}
+
+.receiver-chat > p {
+  max-width: 70%;
+  background-color: var(--primary);
+  color: var(--secondary);
+  margin-right: 1%;
+  padding: 10px;
+  border-radius: 20px 20px 5px 20px;
+  border: thin solid var(--primary);
+  font-size: 1rem;
+}
+
+#seeker-m2-form {
+  height: 6vh;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: thin solid lightgrey;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+#seeker-m2-form > input {
+  border: none;
+  font-size: 1rem;
+  padding-left: 1%;
+  padding-right: 1%;
+  width: 88%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+#seeker-m2-form > button {
+  border: thin solid var(--primary);
+  background-color: var(--primary);
+  color: var(--secondary);
+  height: 100%;
+  font-size: 1rem;
+  border-radius: 5px;
+  width: 12%;
+}
+
+#seeker-message-3 {
+  border: thin solid black;
+  width: 20%;
+}
