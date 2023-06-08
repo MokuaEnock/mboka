@@ -12,11 +12,30 @@
 #seeker-cover-1 > * {
   padding-left: 1%;
   padding-right: 1%;
+  margin-bottom: 1vh;
+}
+
+#seeker-cover-1 > p {
+  border: thin solid black;
+  height: 6vh;
+  width: 98%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#seeker-cover-1 > p:hover {
+  background-color: var(--primary);
+  color: var(--secondary);
 }
 
 #seeker-c1-header {
   background-color: var(--primary);
-  color: var(--four);
+  color: var(--secondary);
   height: 7vh;
   width: 100%;
   display: flex;
@@ -52,24 +71,25 @@
 }
 
 .ai-chat {
-  width: 70%;
-  height: 30vh;
+  max-width: 70%;
+  min-width: 10%;
+  padding: 10px;
   border: thin solid var(--primary);
   background-color: white;
-  border-radius: 0px 20px 20px;
+  border-radius: 5px 20px 20px;
   margin-left: 1%;
-  padding: 10px;
 }
 
 .human-chat {
-  width: 70%;
-  height: 30vh;
+  max-width: 70%;
+  min-width: 10%;
+  min-height: 2vh;
+  padding: 10px;
   border: thin solid var(--primary);
   background-color: var(--primary);
   color: var(--secondary);
-  padding: 10px;
-  margin: 29%;
-  border-radius: 20px 20px 0px;
+  border-radius: 20px 20px 5px;
+  margin-left: 29%;
 }
 
 #seeker-c2-form {
@@ -110,8 +130,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: flex-start;
+}
+
+#seeker-cover-3 > * {
+  margin-bottom: .5vh;
+  margin-top: 0.2vh;
 }
 
 #seeker-cover-3 > button {
@@ -129,10 +153,11 @@
 }
 
 #seeker-cover-3 > button > * {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 #seeker-cover-3 > button:hover {
-  background-color: var(--four);
-  border: 2px solid var(--four);
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
+  color: var(--secondary);
 }

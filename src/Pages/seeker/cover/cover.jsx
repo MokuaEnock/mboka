@@ -2,6 +2,7 @@ import "./cover.css";
 import SeekerHeader from "../../../Components/seeker/header/header";
 
 import { IoMdDownload } from "react-icons/io";
+import { FaEye } from "react-icons/fa";
 
 export default function SeekerCover() {
   function Container() {
@@ -10,15 +11,17 @@ export default function SeekerCover() {
         <section className="seeker-resumes">
           <aside id="seeker-cover-1">
             <span id="seeker-c1-header">Your Cover Letters</span>
-            <div></div>
+            <p>Data Science</p>
+            <p>Data Analyst</p>
+            <p>Machine Learning</p>
           </aside>
 
           <div id="seeker-cover-2">
             <div id="seeker-c2-cont">
-              <div className="ai-chat"></div>
-              <div className="human-chat"></div>
-              <div className="ai-chat"></div>
-              <div className="human-chat"></div>
+              <p className="ai-chat"></p>
+              <p className="human-chat"></p>
+              <p className="ai-chat"></p>
+              <p className="human-chat"></p>
             </div>
             <form id="seeker-c2-form">
               <input type="text" />
@@ -28,8 +31,13 @@ export default function SeekerCover() {
 
           <aside id="seeker-cover-3">
             <button>
+              <FaEye />
+              <p>Preview</p>
+            </button>
+
+            <button>
               <IoMdDownload />
-              <p>Cover Letter</p>
+              <p>Download</p>
             </button>
           </aside>
         </section>
