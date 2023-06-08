@@ -113,7 +113,8 @@ const conversations = [
 ];
 
 export default function SeekerMessage() {
-  const [selectedChat, setSelectedChat] = useState(null);
+  const [selectedChat, setSelectedChat] = useState(conversations[0]?.id);
+  const [currentPage, setCurrentPage] = useState(1);
 
   function Container() {
     function ReceiverChat({ message }) {
@@ -136,13 +137,26 @@ export default function SeekerMessage() {
       setSelectedChat(id);
     };
 
+    const handleNextPage = () => {
+      setCurrentPage((prevPage) => prevPage + 1);
+    };
+
+    const handlePrevPage = () => {
+      setCurrentPage((prevPage) => prevPage - 1);
+    };
+
+    const filteredConversations = conversations.slice(
+      (currentPage - 1) * 5,
+      currentPage * 5
+    );
+
     return (
       <main className="seeker">
         <section className="seeker-resumes">
           <aside id="seeker-message-1">
             <span id="seeker-message-header">Your Messages</span>
             <div id="seeker-message-cont">
-              {conversations.map((conversation) => (
+              {filteredConversations.map((conversation) => (
                 <span
                   className={`chat-container ${
                     conversation.id === selectedChat ? "selected" : ""
@@ -155,13 +169,20 @@ export default function SeekerMessage() {
               ))}
             </div>
             <div id="seeker-message-foot">
-              <button>Back</button>
+              <button disabled={currentPage === 1} onClick={handlePrevPage}>
+                Back
+              </button>
               <span>
-                <p>1</p>
-                <p>1</p>
-                <p>1</p>
+                <p>{currentPage}</p>
+                <p>{currentPage + 1}</p>
+                <p>{currentPage + 2}</p>
               </span>
-              <button>Next</button>
+              <button
+                disabled={currentPage * 3 >= conversations.length}
+                onClick={handleNextPage}
+              >
+                Next
+              </button>
             </div>
           </aside>
 

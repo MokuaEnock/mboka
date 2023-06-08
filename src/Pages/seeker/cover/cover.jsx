@@ -18,10 +18,21 @@ export default function SeekerCover() {
 
           <div id="seeker-cover-2">
             <div id="seeker-c2-cont">
-              <p className="ai-chat"></p>
-              <p className="human-chat"></p>
-              <p className="ai-chat"></p>
-              <p className="human-chat"></p>
+              <div className="sender-chat">
+                <p>Hello, how have you been. Where do you stay</p>
+              </div>
+              <div className="receiver-chat">
+                <p>
+                  Hello is stay in Nairobi where do stay where can we meet when
+                  do we meet how do we meet
+                </p>
+              </div>
+              <div className="sender-chat">
+                <p>Hello, how have you been. Where do you stay</p>
+              </div>
+              <div className="sender-chat">
+                <p>Where do you stay</p>
+              </div>
             </div>
             <form id="seeker-c2-form">
               <input type="text" />
