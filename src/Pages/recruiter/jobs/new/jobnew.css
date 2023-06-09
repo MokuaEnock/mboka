@@ -1,0 +1,10 @@
+.recruiter-new-job-cont {
+  width: 80%;
+  height: 100%;
+  border: thin solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary);
+}

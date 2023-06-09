@@ -25,6 +25,7 @@ import SeekerInterviewDetail from "./Pages/seeker/interviews/detail/detail";
 import SeekerResume from "./Pages/seeker/resume/resume";
 import SeekerCover from "./Pages/seeker/cover/cover";
 import SeekerMessage from "./Pages/seeker/message/message";
+import RecruiterNewJob from "./Pages/recruiter/jobs/new/jobnew";
 
 function App() {
   return (
@@ -37,7 +38,8 @@ function App() {
           <Route element={<Recruiter />} path="" />
           <Route path="jobs">
             <Route element={<RecruiterJobs />} path="" />
-            <Route element={<RecruiterJobNew />} path="new"></Route>
+            {/* <Route element={<RecruiterJobNew />} path="new"></Route> */}
+            <Route element={<RecruiterNewJob />} path="new"></Route>
             <Route element={<RecruiterJobDetail />} path=":id"></Route>
           </Route>
           <Route path="candidates">
