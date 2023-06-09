@@ -11,15 +11,15 @@ export default function Landing() {
             <p className="landing-c-p0">Built for Engineers, by Engineers </p>
             <h2>
               Discover the <strong>Perfect</strong> Tech Talent
-              <br /> for Your Team
+              <br /> to <strong>Grow</strong> Your Team
             </h2>
             <p className="landing-c-p1">
               We employ advanced machine learning algorithms to pre-screen tech
               talent for your team.
             </p>
             <span className="landing-c-links">
-              <Link>Find open roles</Link>
-              <Link>Post a role</Link>
+              <Link to="/auth/finder">Find open roles</Link>
+              <Link  to="/auth/poster">Post a role</Link>
             </span>
           </div>
         </div>
@@ -31,7 +31,7 @@ export default function Landing() {
               <p>OUR SERVICES</p>
             </div>
             <div>
-              <h3>Create your profile and let our team handle the rest</h3>
+              <h3>Create your profile and let data handle the rest</h3>
               <p>
                 We use advanced machine learning algorithms to match you and
                 your future employer. Reduce the time spent on evaluating your
@@ -48,7 +48,25 @@ export default function Landing() {
         </section>
 
         <div id="landing-3">
-          <div id="landing-3-1"></div>
+          <div id="landing-3-1">
+            <div id="landing-3-1-1">
+              <h2>How we work</h2>
+              <p>
+                We have five simple steps to get you into you dream job,
+                discover the process and be proud of the process.
+              </p>
+            </div>
+            <div id="landing-3-1-2">
+              <p>
+                Keep in mind the following as you create your profile for the
+                sake of getting better reccoendations.
+                <ul>
+                  <li>Be honest</li>
+                  <li>Be detailed.</li>
+                </ul>
+              </p>
+            </div>
+          </div>
           <div id="landing-3-2">
             <div className="landing-3-2"></div>
             <div className="landing-3-2"></div>

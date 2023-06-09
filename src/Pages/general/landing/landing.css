@@ -44,7 +44,7 @@
 #landing-cont > h2 {
   font-weight: bold;
   font-size: 5rem;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   color: var(--four);
 }
 
@@ -131,10 +131,10 @@ strong {
 #landing-2-1 > :first-child > span {
   width: 50%;
   color: var(--primary);
-
   margin-top: 1.7vh;
   height: 2%;
-  border: 2px solid var(--primary);
+  border-radius: 5px;
+  border: 5px solid var(--primary);
   background-color: var(--primary);
 }
 
@@ -159,7 +159,7 @@ strong {
 }
 
 #landing-2-1 > :last-child > p {
-  color: var(--primary);
+  color: var(--five);
   font-size: 1.2rem;
 }
 
@@ -174,12 +174,13 @@ strong {
 .landing-2-2 {
   height: 100%;
   width: 23%;
-  background-color: var(--third);
+  background-color: var(--primary);
+  border-radius: 10px;
 }
 
 #landing-3 {
   height: max-content;
-  background-color: var(--third);
+  background-color: var(--primary);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -193,8 +194,44 @@ strong {
 }
 
 #landing-3-1 {
-  border: thin solid black;
-  height: 30vh;
+  height: 20vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#landing-3-1-1 {
+  width: 40%;
+  height: 100%;
+}
+
+#landing-3-1-1 > h2 {
+  color: var(--four);
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 3vh;
+}
+
+#landing-3-1-1 > p {
+  color: var(--secondary);
+  font-size: 1.2rem;
+}
+
+#landing-3-1-2 {
+  width: 40%;
+  height: 100%;
+}
+
+#landing-3-1-2 > p {
+  font-size: 1.2rem;
+  color: var(--secondary);
+}
+
+#landing-3-1-2 > ul {
+  font-size: 1rem;
+  list-style: georgian;
+  color: var(--secondary);
 }
 
 #landing-3-2 {
@@ -207,7 +244,7 @@ strong {
 }
 
 .landing-3-2 {
-  background-color: var(--secondary);
+  background-color: var(--third);
   border-radius: 5px;
 }
 
